@@ -1,0 +1,29 @@
+/* 
+  localized_ja.strings
+  PokeQuiz
+
+  Created by khayashida on 2019/05/25.
+  Copyright © 2019 jp.co.khayashida.ARCompanyCard. All rights reserved.
+*/
+
+"normal" = "ノーマル";
+"hono" = "ほのお";
+"mizu" = "みず";
+"denki" = "でんき";
+"kusa" = "くさ";
+"koori" = "こおり";
+"kakutou" = "かくとう";
+"doku" = "どく";
+"jimen" = "じめん";
+"hikou" = "ひこう";
+"esper" = "エスパー";
+"musi" = "むし";
+"iwa" = "いわ";
+"ghost" = "ゴースト";
+"dragon" = "ドラゴン";
+"aku" = "あく";
+"hagane"  = "はがね";
+"fairy" = "フェアリー";
+
+"ok" = "OK";
+"cancel" = "キャンセル";

@@ -1,24 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="39H-zM-UWk">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="4fe-g7-MUI">
+            <objects>
+                <navigationController id="39H-zM-UWk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7TX-fF-YDe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EEr-LK-ELc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ass-pT-5OF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-622" y="121"/>
+        </scene>
+        <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="PokeQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2A-6E-r34" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
+                                <rect key="frame" x="30" y="294" width="354" height="318"/>
+                                <color key="backgroundColor" red="1" green="0.97530847229999995" blue="0.021001329490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="クイズスタート">
+                                    <color key="titleColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="uPq-FL-dyI" kind="show" id="jT0-se-GPf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d2A-6E-r34" secondAttribute="trailing" constant="30" id="0hh-qg-CmL"/>
+                            <constraint firstItem="d2A-6E-r34" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="2Dt-F8-O86"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d2A-6E-r34" secondAttribute="bottom" constant="250" id="Klx-bD-yRQ"/>
+                            <constraint firstItem="d2A-6E-r34" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Z9b-bq-dGt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TGL-9f-rUx"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="218.84057971014494" y="120.53571428571428"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="wMJ-LO-uS5">
+            <objects>
+                <viewController id="uPq-FL-dyI" customClass="QuizViewController" customModule="PokeQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SuH-NA-85J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h4c-Q5-RFl">
+                                <rect key="frame" x="8" y="44" width="398" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGf-bY-0cj">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="252.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dPY-BH-1tI">
+                                        <rect key="frame" x="0.0" y="252.5" width="398" height="505.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i6B-Gn-EoO">
+                                            <size key="itemSize" width="170" height="80"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="SelectTypeCollectionViewCell" id="yAw-BD-kDJ" customClass="SelectTypeCollectionViewCell" customModule="PokeQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07B-b2-L5p" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="0.0" width="172" height="76"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                            <state key="normal" title="Button">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="selectTypeAction:" destination="yAw-BD-kDJ" eventType="touchUpInside" id="ApH-ea-EJa"/>
+                                                                <action selector="selectTypeButton:" destination="75x-sK-aAa" eventType="touchUpInside" id="ZFY-p1-BeV"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottomMargin" secondItem="07B-b2-L5p" secondAttribute="bottom" id="15z-ID-AAg"/>
+                                                    <constraint firstItem="07B-b2-L5p" firstAttribute="leading" secondItem="yAw-BD-kDJ" secondAttribute="leadingMargin" id="2e7-Sf-zTE"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="07B-b2-L5p" secondAttribute="trailing" id="kue-q8-NDA"/>
+                                                    <constraint firstItem="07B-b2-L5p" firstAttribute="top" secondItem="yAw-BD-kDJ" secondAttribute="top" id="w7Q-1i-RfB"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="selectTypeButton" destination="07B-b2-L5p" id="fSk-qc-3m4"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Oq-vg-VLP" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="758" width="398" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="5zE-V3-BGp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="決定"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="confirmAction:" destination="uPq-FL-dyI" eventType="touchUpInside" id="L8H-8Z-L28"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AGf-bY-0cj" firstAttribute="height" secondItem="dPY-BH-1tI" secondAttribute="height" multiplier="0.5" id="Cye-n4-Y9I"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kaZ-Jz-JQE" firstAttribute="trailing" secondItem="h4c-Q5-RFl" secondAttribute="trailing" constant="8" id="9bh-sc-EyV"/>
+                            <constraint firstItem="kaZ-Jz-JQE" firstAttribute="bottom" secondItem="h4c-Q5-RFl" secondAttribute="bottom" id="AgQ-k1-ZQ0"/>
+                            <constraint firstItem="h4c-Q5-RFl" firstAttribute="top" secondItem="kaZ-Jz-JQE" secondAttribute="top" id="Osx-KW-fXz"/>
+                            <constraint firstItem="h4c-Q5-RFl" firstAttribute="leading" secondItem="kaZ-Jz-JQE" secondAttribute="leading" constant="8" id="dfq-lE-cSY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kaZ-Jz-JQE"/>
+                    </view>
+                    <connections>
+                        <outlet property="quizLabel" destination="AGf-bY-0cj" id="SMC-Fy-8wd"/>
+                        <outlet property="selectTypeCollectionView" destination="dPY-BH-1tI" id="2bx-yO-myh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anq-FH-3T3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="75x-sK-aAa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1008.6956521739131" y="120.53571428571428"/>
         </scene>
     </scenes>
 </document>
