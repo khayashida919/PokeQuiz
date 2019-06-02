@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import LTMorphingLabel
 
 final class QuizViewController: UIViewController {
     
-    @IBOutlet weak var quizLabel: UILabel!
+    @IBOutlet private weak var backView: RoundView!
+    @IBOutlet private weak var quizLabel: LTMorphingLabel!
     @IBOutlet private weak var selectTypeCollectionView: UICollectionView!
+    
     var quizPokeType: PokeType!
     var selectedTypes = Set<PokeType>()
     
@@ -20,12 +23,31 @@ final class QuizViewController: UIViewController {
         
         selectTypeCollectionView.delegate = self
         selectTypeCollectionView.dataSource = self
+        
+        let gradientLayer: CAGradientLayer = {
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.colors = [R.color.bottomBackgroundColor()!.cgColor, R.color.topBackgroundColor()!.cgColor]
+            gradientLayer.frame = self.view.bounds
+            return gradientLayer
+        }()
+        view.layer.insertSublayer(gradientLayer, at: 0)
+        
         reloadQuiz()
     }
     
     private func reloadQuiz() {
         quizPokeType = PokeType.allCases.shuffled().first!
-        quizLabel.text = quizPokeType.title
+        
+        quizLabel.morphingEffect = .sparkle
+        quizLabel.pause()
+        quizLabel.text = ""
+        UIView.transition(with: quizLabel, duration: 1.5, options: [.transitionCurlUp], animations: nil) { [weak self] (result) in
+            guard let self = self else { return }
+            self.quizLabel.text = self.quizPokeType.title
+            self.quizLabel.updateProgress(progress: 0)
+            self.backView.borderColor = self.quizPokeType.color!
+        }
+        
         selectedTypes.removeAll()
         selectTypeCollectionView.reloadData()
     }
@@ -88,7 +110,7 @@ final class SelectTypeCollectionViewCell: UICollectionViewCell {
         isSelected = active
         if active {
             selectTypeButton.borderWidth = 5
-            selectTypeButton.borderColor = .red
+            selectTypeButton.borderColor = R.color.pokeBlack() ?? .black
         } else {
             selectTypeButton.borderWidth = 0
         }
@@ -99,5 +121,5 @@ final class SelectTypeCollectionViewCell: UICollectionViewCell {
         onTap?(isSelected)
         selectedStatus(active: isSelected)
     }
-
+    
 }

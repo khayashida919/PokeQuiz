@@ -1,20 +1,24 @@
 PODS:
+  - LTMorphingLabel (0.7.0)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
 
 DEPENDENCIES:
+  - LTMorphingLabel
   - R.swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - LTMorphingLabel
     - R.swift
     - R.swift.Library
 
 SPEC CHECKSUMS:
+  LTMorphingLabel: 22147fb1ec2b0306537ccc348b36ea8617179b03
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
 
-PODFILE CHECKSUM: 9745a4c0c221242491e1c5e09b61359530fa5fba
+PODFILE CHECKSUM: 38ad9576b1870ab86ff0705203aee644d5ea7d51
 
 COCOAPODS: 1.5.3

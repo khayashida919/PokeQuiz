@@ -16,8 +16,16 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.color` struct is generated, and contains static references to 18 colors.
+  /// This `R.color` struct is generated, and contains static references to 22 colors.
   struct color {
+    /// Color `BottomBackgroundColor`.
+    static let bottomBackgroundColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "BottomBackgroundColor")
+    /// Color `PokeBlack`.
+    static let pokeBlack = Rswift.ColorResource(bundle: R.hostingBundle, name: "PokeBlack")
+    /// Color `PokeRed`.
+    static let pokeRed = Rswift.ColorResource(bundle: R.hostingBundle, name: "PokeRed")
+    /// Color `TopBackgroundColor`.
+    static let topBackgroundColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "TopBackgroundColor")
     /// Color `aku`.
     static let aku = Rswift.ColorResource(bundle: R.hostingBundle, name: "aku")
     /// Color `denki`.
@@ -54,6 +62,34 @@ struct R: Rswift.Validatable {
     static let musi = Rswift.ColorResource(bundle: R.hostingBundle, name: "musi")
     /// Color `normal`.
     static let normal = Rswift.ColorResource(bundle: R.hostingBundle, name: "normal")
+    
+    /// `UIColor(named: "BottomBackgroundColor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func bottomBackgroundColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.bottomBackgroundColor, compatibleWith: traitCollection)
+    }
+    
+    /// `UIColor(named: "PokeBlack", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokeBlack(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokeBlack, compatibleWith: traitCollection)
+    }
+    
+    /// `UIColor(named: "PokeRed", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokeRed(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokeRed, compatibleWith: traitCollection)
+    }
+    
+    /// `UIColor(named: "TopBackgroundColor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func topBackgroundColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.topBackgroundColor, compatibleWith: traitCollection)
+    }
     
     /// `UIColor(named: "aku", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
@@ -531,6 +567,8 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if #available(iOS 11.0, *) {
+          if UIKit.UIColor(named: "PokeBlack", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PokeBlack' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "PokeRed", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PokeRed' is used in storyboard 'Main', but couldn't be loaded.") }
         }
       }
       
