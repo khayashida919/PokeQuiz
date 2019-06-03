@@ -7,6 +7,8 @@ target 'PokeQuiz' do
 
 pod 'R.swift'
 pod 'LTMorphingLabel'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
 
   # Pods for PokeQuiz
 

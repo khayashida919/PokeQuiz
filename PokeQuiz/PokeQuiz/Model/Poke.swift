@@ -160,6 +160,29 @@ enum PokeType: CaseIterable {
         case .fairy:    return R.color.fairy()
         }
     }
+    
+    var key: String {
+        switch self {
+        case .normal:   return R.string.localized_ja.normal.key
+        case .hono:     return R.string.localized_ja.hono.key
+        case .mizu:     return R.string.localized_ja.mizu.key
+        case .denki:    return R.string.localized_ja.denki.key
+        case .kusa:     return R.string.localized_ja.kusa.key
+        case .koori:    return R.string.localized_ja.koori.key
+        case .kakutou:  return R.string.localized_ja.kakutou.key
+        case .doku:     return R.string.localized_ja.doku.key
+        case .jimen:    return R.string.localized_ja.jimen.key
+        case .hikou:    return R.string.localized_ja.hikou.key
+        case .esper:    return R.string.localized_ja.esper.key
+        case .musi:     return R.string.localized_ja.musi.key
+        case .iwa:      return R.string.localized_ja.iwa.key
+        case .ghost:    return R.string.localized_ja.ghost.key
+        case .dragon:   return R.string.localized_ja.dragon.key
+        case .aku:      return R.string.localized_ja.aku.key
+        case .hagane:   return R.string.localized_ja.hagane.key
+        case .fairy:    return R.string.localized_ja.fairy.key
+        }
+    }
 }
 
 struct PokeResult {

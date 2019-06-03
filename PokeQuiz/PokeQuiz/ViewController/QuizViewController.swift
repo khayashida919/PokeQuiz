@@ -8,15 +8,20 @@
 
 import UIKit
 import LTMorphingLabel
+import Firebase
 
 final class QuizViewController: UIViewController {
     
     @IBOutlet private weak var backView: RoundView!
     @IBOutlet private weak var quizLabel: LTMorphingLabel!
+    @IBOutlet private weak var correctCountLabel: UILabel!
+    @IBOutlet private weak var rateLabel: UILabel!
     @IBOutlet private weak var selectTypeCollectionView: UICollectionView!
+    @IBOutlet private weak var confirmButton: RoundButton!
     
     var quizPokeType: PokeType!
     var selectedTypes = Set<PokeType>()
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,24 +51,48 @@ final class QuizViewController: UIViewController {
             self.quizLabel.text = self.quizPokeType.title
             self.quizLabel.updateProgress(progress: 0)
             self.backView.borderColor = self.quizPokeType.color!
+            self.confirmButton.isEnabled = true
         }
         
         selectedTypes.removeAll()
         selectTypeCollectionView.reloadData()
+        
+        db.collection(quizPokeType.key).getDocuments { (querySnapshot, error) in
+            var correctAnswer = 0
+            querySnapshot!.documents.forEach {
+                guard
+                    let dictioary = $0.data() as? [String: Bool],
+                    let value = dictioary[Keys.document] else {
+                        return
+                }
+                if value {
+                    correctAnswer += 1
+                }
+            }
+            if correctAnswer == 0 {
+                self.rateLabel.text = String(format: "正解率：%.1f", correctAnswer) + "%"
+            } else {
+                let rate = (Double(correctAnswer) / Double(querySnapshot!.documents.count)) * 100
+                self.rateLabel.text = String(format: "正解率：%.1f%", rate) + "%"
+            }
+        }
     }
     
     @IBAction func confirmAction(_ sender: RoundButton) {
+        sender.isEnabled = false
         let result = Poke.checkAttack(to: quizPokeType)
         if result.superiority == selectedTypes {
             let superiority = result.superiority.map { $0.title }
             showAlert(isCancel: false, title: "", message: "正解\n\(superiority)") {
                 self.reloadQuiz()
             }
+            db.collection(quizPokeType.key).addDocument(data: [Keys.document : true])
         } else {
             let superiority = result.superiority.map { $0.title }
             showAlert(isCancel: false, title: "", message: "不正解\n\(superiority)") {
                 self.reloadQuiz()
             }
+            db.collection(quizPokeType.key).addDocument(data: [Keys.document : false])
         }
     }
     

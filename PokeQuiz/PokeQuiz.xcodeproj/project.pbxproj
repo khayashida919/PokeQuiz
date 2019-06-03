@@ -21,6 +21,8 @@
 		407C51D22299573300FF3F13 /* localized_ja.strings in Resources */ = {isa = PBXBuildFile; fileRef = 407C51D42299573300FF3F13 /* localized_ja.strings */; };
 		407C51D6229A5C1400FF3F13 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51D5229A5C1400FF3F13 /* Extensions.swift */; };
 		407C51D822A2BCDD00FF3F13 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51D722A2BCDD00FF3F13 /* RoundView.swift */; };
+		40B1996222A53DC700CBB59A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B1996122A53DC700CBB59A /* Keys.swift */; };
+		40C1F57322A400BB002351CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40C1F57222A400BB002351CC /* GoogleService-Info.plist */; };
 		A4A08F40DA19355C326F653F /* Pods_PokeQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC9FF6FCEAAE3D51C96B609 /* Pods_PokeQuizTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		407C51D32299573300FF3F13 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/localized_ja.strings; sourceTree = "<group>"; };
 		407C51D5229A5C1400FF3F13 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		407C51D722A2BCDD00FF3F13 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		40B1996122A53DC700CBB59A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		40C1F57222A400BB002351CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4554E2534F23B2B99F81DABF /* Pods_PokeQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FF67BF55E0A091814DB4BD /* Pods-PokeQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeQuizTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeQuizTests/Pods-PokeQuizTests.release.xcconfig"; sourceTree = "<group>"; };
 		B57A479A3AD61E8E58A5EB9A /* Pods-PokeQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,15 +111,15 @@
 				407C51BD2299461B00FF3F13 /* R.generated.swift */,
 				407C519822991F7B00FF3F13 /* AppDelegate.swift */,
 				407C51C222994DDA00FF3F13 /* ViewController */,
-				407C51B92299235A00FF3F13 /* Poke.swift */,
+				40B1995E22A53D2100CBB59A /* Model */,
 				407C51D5229A5C1400FF3F13 /* Extensions.swift */,
-				407C51BF22994A4C00FF3F13 /* RoundButton.swift */,
-				407C51D722A2BCDD00FF3F13 /* RoundView.swift */,
+				40B1995C22A53CFD00CBB59A /* ViewParts */,
 				407C519C22991F7B00FF3F13 /* Main.storyboard */,
 				407C519F22991F7D00FF3F13 /* Assets.xcassets */,
 				407C51A122991F7D00FF3F13 /* LaunchScreen.storyboard */,
 				407C51A422991F7D00FF3F13 /* Info.plist */,
 				407C51D42299573300FF3F13 /* localized_ja.strings */,
+				40C1F57222A400BB002351CC /* GoogleService-Info.plist */,
 			);
 			path = PokeQuiz;
 			sourceTree = "<group>";
@@ -136,6 +140,24 @@
 				407C51C322994E1D00FF3F13 /* QuizViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		40B1995C22A53CFD00CBB59A /* ViewParts */ = {
+			isa = PBXGroup;
+			children = (
+				407C51BF22994A4C00FF3F13 /* RoundButton.swift */,
+				407C51D722A2BCDD00FF3F13 /* RoundView.swift */,
+			);
+			path = ViewParts;
+			sourceTree = "<group>";
+		};
+		40B1995E22A53D2100CBB59A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				407C51B92299235A00FF3F13 /* Poke.swift */,
+				40B1996122A53DC700CBB59A /* Keys.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		646C10406EC92C6D10A02C07 /* Pods */ = {
@@ -246,6 +268,7 @@
 			files = (
 				407C51A322991F7D00FF3F13 /* LaunchScreen.storyboard in Resources */,
 				407C51D22299573300FF3F13 /* localized_ja.strings in Resources */,
+				40C1F57322A400BB002351CC /* GoogleService-Info.plist in Resources */,
 				407C51A022991F7D00FF3F13 /* Assets.xcassets in Resources */,
 				407C519E22991F7B00FF3F13 /* Main.storyboard in Resources */,
 			);
@@ -268,13 +291,27 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -346,6 +383,7 @@
 				407C519922991F7B00FF3F13 /* AppDelegate.swift in Sources */,
 				407C51D822A2BCDD00FF3F13 /* RoundView.swift in Sources */,
 				407C51BC229945C900FF3F13 /* MenuViewController.swift in Sources */,
+				40B1996222A53DC700CBB59A /* Keys.swift in Sources */,
 				407C51D6229A5C1400FF3F13 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

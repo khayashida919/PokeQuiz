@@ -82,20 +82,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="h4c-Q5-RFl">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="h4c-Q5-RFl">
                                 <rect key="frame" x="8" y="44" width="398" height="810"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-se-WLP" customClass="RoundView" customModule="PokeQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="211.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="226.5"/>
                                         <subviews>
                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8O-eT-jEE">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="211.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="226.5"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xag-bc-glX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="211.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="226.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGf-bY-0cj" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="211.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="226"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                             <color key="textColor" name="PokeBlack"/>
                                                             <nil key="highlightedColor"/>
@@ -139,13 +139,38 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOk-q2-GTM" customClass="RoundView" customModule="PokeQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="223.5" width="398" height="70"/>
+                                        <rect key="frame" x="0.0" y="233.5" width="398" height="40"/>
                                         <subviews>
                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qID-8K-jDc">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="b40-yS-HES">
-                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cf6-gg-w08">
+                                                            <rect key="frame" x="16" y="0.0" width="366" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc8-Vi-1SP">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIK-2Y-PGM">
+                                                                    <rect key="frame" x="183" y="0.0" width="183" height="40"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" name="PokeBlack"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="cf6-gg-w08" secondAttribute="trailing" constant="16" id="EfE-Xj-Ggj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cf6-gg-w08" secondAttribute="bottom" id="NyR-Dd-VFd"/>
+                                                        <constraint firstItem="cf6-gg-w08" firstAttribute="leading" secondItem="b40-yS-HES" secondAttribute="leading" constant="16" id="hiP-UA-FYF"/>
+                                                        <constraint firstItem="cf6-gg-w08" firstAttribute="top" secondItem="b40-yS-HES" secondAttribute="top" id="rhq-6Z-esK"/>
+                                                    </constraints>
                                                 </view>
                                                 <blurEffect style="extraLight"/>
                                             </visualEffectView>
@@ -153,7 +178,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="qID-8K-jDc" secondAttribute="trailing" id="UtD-8o-e4t"/>
-                                            <constraint firstAttribute="height" constant="70" id="Ywt-Kf-B1b"/>
+                                            <constraint firstAttribute="height" constant="40" id="Ywt-Kf-B1b"/>
                                             <constraint firstAttribute="bottom" secondItem="qID-8K-jDc" secondAttribute="bottom" id="osI-IV-Yur"/>
                                             <constraint firstItem="qID-8K-jDc" firstAttribute="top" secondItem="vOk-q2-GTM" secondAttribute="top" id="uvh-kl-L17"/>
                                             <constraint firstItem="qID-8K-jDc" firstAttribute="leading" secondItem="vOk-q2-GTM" secondAttribute="leading" id="wWU-tL-abF"/>
@@ -165,16 +190,16 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qu1-ak-TqH" customClass="RoundView" customModule="PokeQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="305.5" width="398" height="422.5"/>
+                                        <rect key="frame" x="0.0" y="280.5" width="398" height="452.5"/>
                                         <subviews>
                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djN-ir-qWu">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="422.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="452.5"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yo2-1n-rbF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="422.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="452.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dPY-BH-1tI">
-                                                            <rect key="frame" x="3" y="3" width="392" height="416.5"/>
+                                                            <rect key="frame" x="3" y="3" width="392" height="447"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i6B-Gn-EoO">
                                                                 <size key="itemSize" width="110" height="75"/>
@@ -288,7 +313,10 @@
                     </view>
                     <connections>
                         <outlet property="backView" destination="mbB-se-WLP" id="11x-MS-u3t"/>
+                        <outlet property="confirmButton" destination="5Oq-vg-VLP" id="azp-HI-frk"/>
+                        <outlet property="correctCountLabel" destination="tc8-Vi-1SP" id="Bz1-KV-Sda"/>
                         <outlet property="quizLabel" destination="AGf-bY-0cj" id="MRr-Eq-Wxs"/>
+                        <outlet property="rateLabel" destination="YIK-2Y-PGM" id="iHJ-fk-CM6"/>
                         <outlet property="selectTypeCollectionView" destination="dPY-BH-1tI" id="2bx-yO-myh"/>
                     </connections>
                 </viewController>
