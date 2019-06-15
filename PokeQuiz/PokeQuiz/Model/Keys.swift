@@ -11,4 +11,6 @@ import Foundation
 struct Keys {
     static let collection = "ResponseRate"
     static let document = "result"
+    
+    static let ranking = "ranking"
 }

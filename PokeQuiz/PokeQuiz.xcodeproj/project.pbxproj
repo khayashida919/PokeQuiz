@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,8 @@
 		407C51D22299573300FF3F13 /* localized_ja.strings in Resources */ = {isa = PBXBuildFile; fileRef = 407C51D42299573300FF3F13 /* localized_ja.strings */; };
 		407C51D6229A5C1400FF3F13 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51D5229A5C1400FF3F13 /* Extensions.swift */; };
 		407C51D822A2BCDD00FF3F13 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51D722A2BCDD00FF3F13 /* RoundView.swift */; };
+		4086A6AB22AE9C4B005E177F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086A6AA22AE9C4B005E177F /* ResultViewController.swift */; };
+		4086A6AD22B4C0E4005E177F /* TanukiMagic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4086A6AC22B4C0E4005E177F /* TanukiMagic.ttf */; };
 		40B1996222A53DC700CBB59A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B1996122A53DC700CBB59A /* Keys.swift */; };
 		40C1F57322A400BB002351CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40C1F57222A400BB002351CC /* GoogleService-Info.plist */; };
 		A4A08F40DA19355C326F653F /* Pods_PokeQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC9FF6FCEAAE3D51C96B609 /* Pods_PokeQuizTests.framework */; };
@@ -56,6 +58,8 @@
 		407C51D32299573300FF3F13 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/localized_ja.strings; sourceTree = "<group>"; };
 		407C51D5229A5C1400FF3F13 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		407C51D722A2BCDD00FF3F13 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		4086A6AA22AE9C4B005E177F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		4086A6AC22B4C0E4005E177F /* TanukiMagic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TanukiMagic.ttf; sourceTree = "<group>"; };
 		40B1996122A53DC700CBB59A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		40C1F57222A400BB002351CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4554E2534F23B2B99F81DABF /* Pods_PokeQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +120,7 @@
 				40B1995C22A53CFD00CBB59A /* ViewParts */,
 				407C519C22991F7B00FF3F13 /* Main.storyboard */,
 				407C519F22991F7D00FF3F13 /* Assets.xcassets */,
+				4086A6AC22B4C0E4005E177F /* TanukiMagic.ttf */,
 				407C51A122991F7D00FF3F13 /* LaunchScreen.storyboard */,
 				407C51A422991F7D00FF3F13 /* Info.plist */,
 				407C51D42299573300FF3F13 /* localized_ja.strings */,
@@ -138,6 +143,7 @@
 			children = (
 				407C51BB229945C900FF3F13 /* MenuViewController.swift */,
 				407C51C322994E1D00FF3F13 /* QuizViewController.swift */,
+				4086A6AA22AE9C4B005E177F /* ResultViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -270,6 +276,7 @@
 				407C51D22299573300FF3F13 /* localized_ja.strings in Resources */,
 				40C1F57322A400BB002351CC /* GoogleService-Info.plist in Resources */,
 				407C51A022991F7D00FF3F13 /* Assets.xcassets in Resources */,
+				4086A6AD22B4C0E4005E177F /* TanukiMagic.ttf in Resources */,
 				407C519E22991F7B00FF3F13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,33 +296,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		122D4A5E72D395898546114B /* [CP] Check Pods Manifest.lock */ = {
@@ -381,6 +371,7 @@
 				407C51BE2299461B00FF3F13 /* R.generated.swift in Sources */,
 				407C51C422994E1D00FF3F13 /* QuizViewController.swift in Sources */,
 				407C519922991F7B00FF3F13 /* AppDelegate.swift in Sources */,
+				4086A6AB22AE9C4B005E177F /* ResultViewController.swift in Sources */,
 				407C51D822A2BCDD00FF3F13 /* RoundView.swift in Sources */,
 				407C51BC229945C900FF3F13 /* MenuViewController.swift in Sources */,
 				40B1996222A53DC700CBB59A /* Keys.swift in Sources */,

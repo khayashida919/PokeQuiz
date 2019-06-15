@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-7093305833453939~9722226670</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Tanuki-Permanent-Marker</string>
+	</array>
 </dict>
 </plist>
