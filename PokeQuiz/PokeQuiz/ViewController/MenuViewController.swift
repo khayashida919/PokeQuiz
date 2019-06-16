@@ -13,13 +13,7 @@ final class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let gradientLayer: CAGradientLayer = {
-            let gradientLayer = CAGradientLayer()
-            gradientLayer.colors = [R.color.bottomBackgroundColor()!.cgColor, R.color.topBackgroundColor()!.cgColor]
-            gradientLayer.frame = self.view.bounds
-            return gradientLayer
-        }()
-        view.layer.insertSublayer(gradientLayer, at: 0)
+        setGradiention()
     }
     
     override func viewWillAppear(_ animated: Bool) {

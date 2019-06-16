@@ -30,12 +30,13 @@ final class ResultViewController: UIViewController {
         bannerView.load(GADRequest())
         
         typeTableView.dataSource = self
+        typeTableView.delegate = self
         
         if result.superiority == selectedTypes {
-            titleLabel.text = "正解"
+            titleLabel.text = "せいかい"
             db.collection(quizPokeType.key).addDocument(data: [Keys.document: true])
         } else {
-            titleLabel.text = "不正解"
+            titleLabel.text = "ざんねん"
             db.collection(quizPokeType.key).addDocument(data: [Keys.document: false])
         }
     }
@@ -61,8 +62,32 @@ extension ResultViewController: UITableViewDataSource {
         return typeTableViewCell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "\(quizPokeType.title)の効果抜群相性"
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+}
+
+extension ResultViewController: UITableViewDelegate {
+ 
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.header.identifier) as? HeaderTableViewCell else { return nil }
+        cell.set(title: "\(quizPokeType.title) へはこれが効果抜群だ！")
+        return cell.contentView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
+}
+
+final class HeaderTableViewCell: UITableViewCell {
+    
+    @IBOutlet private weak var titleLabel: UILabel!
+    
+    func set(title: String) {
+        titleLabel.text = title
     }
     
 }

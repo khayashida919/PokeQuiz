@@ -21,6 +21,7 @@
 		407C51D22299573300FF3F13 /* localized_ja.strings in Resources */ = {isa = PBXBuildFile; fileRef = 407C51D42299573300FF3F13 /* localized_ja.strings */; };
 		407C51D6229A5C1400FF3F13 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51D5229A5C1400FF3F13 /* Extensions.swift */; };
 		407C51D822A2BCDD00FF3F13 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51D722A2BCDD00FF3F13 /* RoundView.swift */; };
+		4080527E22B6812F00DA0075 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080527D22B6812F00DA0075 /* GameOverViewController.swift */; };
 		4086A6AB22AE9C4B005E177F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086A6AA22AE9C4B005E177F /* ResultViewController.swift */; };
 		4086A6AD22B4C0E4005E177F /* TanukiMagic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4086A6AC22B4C0E4005E177F /* TanukiMagic.ttf */; };
 		40B1996222A53DC700CBB59A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B1996122A53DC700CBB59A /* Keys.swift */; };
@@ -58,6 +59,7 @@
 		407C51D32299573300FF3F13 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/localized_ja.strings; sourceTree = "<group>"; };
 		407C51D5229A5C1400FF3F13 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		407C51D722A2BCDD00FF3F13 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		4080527D22B6812F00DA0075 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		4086A6AA22AE9C4B005E177F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		4086A6AC22B4C0E4005E177F /* TanukiMagic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TanukiMagic.ttf; sourceTree = "<group>"; };
 		40B1996122A53DC700CBB59A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				407C51BB229945C900FF3F13 /* MenuViewController.swift */,
 				407C51C322994E1D00FF3F13 /* QuizViewController.swift */,
 				4086A6AA22AE9C4B005E177F /* ResultViewController.swift */,
+				4080527D22B6812F00DA0075 /* GameOverViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				407C519922991F7B00FF3F13 /* AppDelegate.swift in Sources */,
 				4086A6AB22AE9C4B005E177F /* ResultViewController.swift in Sources */,
 				407C51D822A2BCDD00FF3F13 /* RoundView.swift in Sources */,
+				4080527E22B6812F00DA0075 /* GameOverViewController.swift in Sources */,
 				407C51BC229945C900FF3F13 /* MenuViewController.swift in Sources */,
 				40B1996222A53DC700CBB59A /* Keys.swift in Sources */,
 				407C51D6229A5C1400FF3F13 /* Extensions.swift in Sources */,

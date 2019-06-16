@@ -23,4 +23,14 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func setGradiention() {
+        let gradientLayer: CAGradientLayer = {
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.colors = [R.color.bottomBackgroundColor()!.cgColor, R.color.topBackgroundColor()!.cgColor]
+            gradientLayer.frame = self.view.bounds
+            return gradientLayer
+        }()
+        view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
 }

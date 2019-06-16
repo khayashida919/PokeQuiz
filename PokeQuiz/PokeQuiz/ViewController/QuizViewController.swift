@@ -47,13 +47,7 @@ final class QuizViewController: UIViewController {
         selectTypeCollectionView.delegate = self
         selectTypeCollectionView.dataSource = self
         
-        let gradientLayer: CAGradientLayer = {
-            let gradientLayer = CAGradientLayer()
-            gradientLayer.colors = [R.color.bottomBackgroundColor()!.cgColor, R.color.topBackgroundColor()!.cgColor]
-            gradientLayer.frame = self.view.bounds
-            return gradientLayer
-        }()
-        view.layer.insertSublayer(gradientLayer, at: 0)
+        setGradiention()
         
         confirmButton.isEnabled = false
         DispatchQueue.main.async {
@@ -102,7 +96,7 @@ final class QuizViewController: UIViewController {
             }
         }
     }
-    private var time = 60
+    private var time = 7
     private lazy var timerCount = time
     private var rate = 1
     @objc private func timerAction(_ sender: Timer) {
@@ -110,11 +104,14 @@ final class QuizViewController: UIViewController {
         countLabel.text = "\(timerCount)"
         switch timerCount {
         case 1...5:
-            countLabel.transform.scaledBy(x: 0.5, y: 0.5)
-            countLabel.transform.scaledBy(x: 1.5, y: 1.5)
-            countLabel.transform.scaledBy(x: 1.0, y: 1.0)
+            UIView.animate(withDuration: 0.1, animations: {
+                self.countLabel.transform = CGAffineTransform(scaleX: 2, y: 2)
+            }) { (_) in
+                self.countLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
         case 0:
-            print("時間切れ！")
+            guard let gameOverViewController = R.storyboard.main.gameOverViewController() else { return }
+            present(gameOverViewController, animated: true, completion: nil)
             timer.invalidate()
         default:
             break

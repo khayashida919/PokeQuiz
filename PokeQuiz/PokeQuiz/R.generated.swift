@@ -265,8 +265,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 3 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `Header`.
+    static let header: Rswift.ReuseIdentifier<HeaderTableViewCell> = Rswift.ReuseIdentifier(identifier: "Header")
     /// Reuse identifier `SelectTypeCollectionViewCell`.
     static let selectTypeCollectionViewCell: Rswift.ReuseIdentifier<SelectTypeCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "SelectTypeCollectionViewCell")
     /// Reuse identifier `TypeTableViewCell`.
@@ -597,10 +599,15 @@ struct _R: Rswift.Validatable {
       typealias InitialController = UIKit.UINavigationController
       
       let bundle = R.hostingBundle
+      let gameOverViewController = StoryboardViewControllerResource<GameOverViewController>(identifier: "GameOverViewController")
       let menuViewController = StoryboardViewControllerResource<MenuViewController>(identifier: "MenuViewController")
       let name = "Main"
       let quizViewController = StoryboardViewControllerResource<PokeQuiz.QuizViewController>(identifier: "QuizViewController")
       let resultViewController = StoryboardViewControllerResource<ResultViewController>(identifier: "ResultViewController")
+      
+      func gameOverViewController(_: Void = ()) -> GameOverViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: gameOverViewController)
+      }
       
       func menuViewController(_: Void = ()) -> MenuViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: menuViewController)
@@ -621,6 +628,7 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "TopBackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TopBackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "mizu", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'mizu' is used in storyboard 'Main', but couldn't be loaded.") }
         }
+        if _R.storyboard.main().gameOverViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'gameOverViewController' could not be loaded from storyboard 'Main' as 'GameOverViewController'.") }
         if _R.storyboard.main().menuViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'menuViewController' could not be loaded from storyboard 'Main' as 'MenuViewController'.") }
         if _R.storyboard.main().quizViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'quizViewController' could not be loaded from storyboard 'Main' as 'PokeQuiz.QuizViewController'.") }
         if _R.storyboard.main().resultViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'resultViewController' could not be loaded from storyboard 'Main' as 'ResultViewController'.") }
