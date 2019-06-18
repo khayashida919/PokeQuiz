@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AA16275A57E4E90FE78FB07 /* Pods_PokeQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4554E2534F23B2B99F81DABF /* Pods_PokeQuiz.framework */; };
+		4075815322B929A2002C8E4E /* TanukiMagic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4075815222B929A2002C8E4E /* TanukiMagic.ttf */; };
 		407C519922991F7B00FF3F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C519822991F7B00FF3F13 /* AppDelegate.swift */; };
 		407C519E22991F7B00FF3F13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407C519C22991F7B00FF3F13 /* Main.storyboard */; };
 		407C51A022991F7D00FF3F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407C519F22991F7D00FF3F13 /* Assets.xcassets */; };
@@ -23,9 +24,9 @@
 		407C51D822A2BCDD00FF3F13 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51D722A2BCDD00FF3F13 /* RoundView.swift */; };
 		4080527E22B6812F00DA0075 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080527D22B6812F00DA0075 /* GameOverViewController.swift */; };
 		4086A6AB22AE9C4B005E177F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086A6AA22AE9C4B005E177F /* ResultViewController.swift */; };
-		4086A6AD22B4C0E4005E177F /* TanukiMagic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4086A6AC22B4C0E4005E177F /* TanukiMagic.ttf */; };
 		40B1996222A53DC700CBB59A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B1996122A53DC700CBB59A /* Keys.swift */; };
 		40C1F57322A400BB002351CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40C1F57222A400BB002351CC /* GoogleService-Info.plist */; };
+		40ECE1F622B8F7A600FC534C /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECE1F522B8F7A600FC534C /* Timer.swift */; };
 		A4A08F40DA19355C326F653F /* Pods_PokeQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC9FF6FCEAAE3D51C96B609 /* Pods_PokeQuizTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		007C806689C7A450E3FBDAC2 /* Pods-PokeQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		4075815222B929A2002C8E4E /* TanukiMagic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TanukiMagic.ttf; sourceTree = "<group>"; };
 		407C519522991F7B00FF3F13 /* PokeQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407C519822991F7B00FF3F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		407C519D22991F7B00FF3F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,9 +63,9 @@
 		407C51D722A2BCDD00FF3F13 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		4080527D22B6812F00DA0075 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		4086A6AA22AE9C4B005E177F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		4086A6AC22B4C0E4005E177F /* TanukiMagic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TanukiMagic.ttf; sourceTree = "<group>"; };
 		40B1996122A53DC700CBB59A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		40C1F57222A400BB002351CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		40ECE1F522B8F7A600FC534C /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		4554E2534F23B2B99F81DABF /* Pods_PokeQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FF67BF55E0A091814DB4BD /* Pods-PokeQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeQuizTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeQuizTests/Pods-PokeQuizTests.release.xcconfig"; sourceTree = "<group>"; };
 		B57A479A3AD61E8E58A5EB9A /* Pods-PokeQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,15 +118,16 @@
 			children = (
 				407C51BD2299461B00FF3F13 /* R.generated.swift */,
 				407C519822991F7B00FF3F13 /* AppDelegate.swift */,
+				40ECE1F422B8F78700FC534C /* Common */,
 				407C51C222994DDA00FF3F13 /* ViewController */,
 				40B1995E22A53D2100CBB59A /* Model */,
 				407C51D5229A5C1400FF3F13 /* Extensions.swift */,
 				40B1995C22A53CFD00CBB59A /* ViewParts */,
 				407C519C22991F7B00FF3F13 /* Main.storyboard */,
 				407C519F22991F7D00FF3F13 /* Assets.xcassets */,
-				4086A6AC22B4C0E4005E177F /* TanukiMagic.ttf */,
 				407C51A122991F7D00FF3F13 /* LaunchScreen.storyboard */,
 				407C51A422991F7D00FF3F13 /* Info.plist */,
+				4075815222B929A2002C8E4E /* TanukiMagic.ttf */,
 				407C51D42299573300FF3F13 /* localized_ja.strings */,
 				40C1F57222A400BB002351CC /* GoogleService-Info.plist */,
 			);
@@ -167,6 +170,14 @@
 				40B1996122A53DC700CBB59A /* Keys.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		40ECE1F422B8F78700FC534C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				40ECE1F522B8F7A600FC534C /* Timer.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		646C10406EC92C6D10A02C07 /* Pods */ = {
@@ -279,7 +290,7 @@
 				407C51D22299573300FF3F13 /* localized_ja.strings in Resources */,
 				40C1F57322A400BB002351CC /* GoogleService-Info.plist in Resources */,
 				407C51A022991F7D00FF3F13 /* Assets.xcassets in Resources */,
-				4086A6AD22B4C0E4005E177F /* TanukiMagic.ttf in Resources */,
+				4075815322B929A2002C8E4E /* TanukiMagic.ttf in Resources */,
 				407C519E22991F7B00FF3F13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +383,7 @@
 				407C51C022994A4C00FF3F13 /* RoundButton.swift in Sources */,
 				407C51BA2299235A00FF3F13 /* Poke.swift in Sources */,
 				407C51BE2299461B00FF3F13 /* R.generated.swift in Sources */,
+				40ECE1F622B8F7A600FC534C /* Timer.swift in Sources */,
 				407C51C422994E1D00FF3F13 /* QuizViewController.swift in Sources */,
 				407C519922991F7B00FF3F13 /* AppDelegate.swift in Sources */,
 				4086A6AB22AE9C4B005E177F /* ResultViewController.swift in Sources */,

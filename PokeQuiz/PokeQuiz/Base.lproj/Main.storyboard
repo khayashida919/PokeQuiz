@@ -140,7 +140,7 @@
                                                             <color key="textColor" name="PokeBlack"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フェアリー" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGf-bY-0cj" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGf-bY-0cj" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                                             <rect key="frame" x="0.0" y="20" width="359" height="137"/>
                                                             <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="60"/>
                                                             <color key="textColor" name="PokeBlack"/>
@@ -267,7 +267,7 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07B-b2-L5p" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="75"/>
                                                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="20"/>
+                                                                                <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="25"/>
                                                                                 <state key="normal">
                                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 </state>
@@ -320,7 +320,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Oq-vg-VLP" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Oq-vg-VLP" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="589" width="359" height="70"/>
                                         <color key="backgroundColor" name="PokeRed"/>
                                         <constraints>
@@ -385,13 +385,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXj-eh-44w" customClass="RoundView" customModule="PokeQuiz" customModuleProvider="target">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <rect key="frame" x="16" y="20" width="343" height="637"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-vy-uLI">
-                                        <rect key="frame" x="8" y="8" width="327" height="611"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-vy-uLI">
+                                        <rect key="frame" x="8" y="8" width="327" height="621"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vd2-Qo-p5H" customClass="RoundView" customModule="PokeQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="187"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pV2-rf-brf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="187"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                                        <color key="textColor" name="PokeBlack"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今回のポイントは‥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0D-yp-Kxf">
+                                                        <rect key="frame" x="20" y="20" width="174.5" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <color key="textColor" name="PokeBlack"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="pV2-rf-brf" firstAttribute="top" secondItem="vd2-Qo-p5H" secondAttribute="top" id="2lh-EZ-ChK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="pV2-rf-brf" secondAttribute="bottom" id="407-TZ-aNh"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="V0D-yp-Kxf" secondAttribute="trailing" id="5lY-d4-gDK"/>
+                                                    <constraint firstItem="V0D-yp-Kxf" firstAttribute="leading" secondItem="vd2-Qo-p5H" secondAttribute="leading" constant="20" id="Mdq-2c-t7b"/>
+                                                    <constraint firstItem="pV2-rf-brf" firstAttribute="leading" secondItem="vd2-Qo-p5H" secondAttribute="leading" id="Nbz-eK-3eC"/>
+                                                    <constraint firstItem="V0D-yp-Kxf" firstAttribute="top" secondItem="vd2-Qo-p5H" secondAttribute="top" constant="20" id="jcI-xY-osm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pV2-rf-brf" secondAttribute="trailing" id="wzg-9b-udk"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="PokeBlack"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFW-VJ-A0B" customClass="GADBannerView">
+                                                <rect key="frame" x="0.0" y="217" width="327" height="187"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="bwD-bM-y4x"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lB6-U1-F9Y" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="434" width="327" height="187"/>
+                                                <color key="backgroundColor" name="jimen"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="メニューへ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="mizu"/>
                                 <constraints>
                                     <constraint firstItem="8ah-vy-uLI" firstAttribute="leading" secondItem="JXj-eh-44w" secondAttribute="leading" constant="8" id="5ut-T9-4Bs"/>
                                     <constraint firstItem="8ah-vy-uLI" firstAttribute="top" secondItem="JXj-eh-44w" secondAttribute="top" constant="8" id="ET7-mf-iHd"/>
@@ -408,12 +468,16 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JXj-eh-44w" firstAttribute="top" secondItem="EHK-5y-1SW" secondAttribute="top" constant="20" id="2YM-Bf-KTg"/>
-                            <constraint firstItem="EHK-5y-1SW" firstAttribute="bottom" secondItem="JXj-eh-44w" secondAttribute="bottom" constant="20" id="HLs-qz-HeH"/>
+                            <constraint firstItem="EHK-5y-1SW" firstAttribute="bottom" secondItem="JXj-eh-44w" secondAttribute="bottom" constant="10" id="HLs-qz-HeH"/>
                             <constraint firstItem="JXj-eh-44w" firstAttribute="leading" secondItem="EHK-5y-1SW" secondAttribute="leading" constant="16" id="XpI-fP-P2d"/>
                             <constraint firstItem="EHK-5y-1SW" firstAttribute="trailing" secondItem="JXj-eh-44w" secondAttribute="trailing" constant="16" id="r8V-jq-nYo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EHK-5y-1SW"/>
                     </view>
+                    <connections>
+                        <outlet property="bannerView" destination="RFW-VJ-A0B" id="VSA-6Z-gRd"/>
+                        <outlet property="correctCountLabel" destination="pV2-rf-brf" id="kSo-dY-yfH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dh2-et-pPi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -483,7 +547,7 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pWJ-QV-bbd">
                                                                     <rect key="frame" x="0.0" y="0.0" width="319" height="23"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="backgroundColor" white="1" alpha="0.69749328987730064" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="23"/>
                                                                     <color key="textColor" name="PokeBlack"/>
                                                                     <nil key="highlightedColor"/>
@@ -595,6 +659,9 @@
         </namedColor>
         <namedColor name="TopBackgroundColor">
             <color red="0.10999999940395355" green="0.44999998807907104" blue="0.30000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="jimen">
+            <color red="0.79607843137254897" green="0.66666666666666663" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="mizu">
             <color red="0.28235294117647058" green="0.77647058823529413" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

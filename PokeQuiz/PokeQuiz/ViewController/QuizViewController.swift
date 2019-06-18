@@ -12,6 +12,8 @@ import Firebase
 
 final class QuizViewController: UIViewController {
     
+    var correctCount = 0
+    
     @IBOutlet private weak var bannerView: GADBannerView!
     @IBOutlet private weak var backView: RoundView!
     @IBOutlet private weak var countLabel: UILabel!
@@ -23,7 +25,8 @@ final class QuizViewController: UIViewController {
     
     private var quizPokeType: PokeType!
     private var selectedTypes = Set<PokeType>()
-    private let db = Firestore.firestore()
+    
+    private var timer: PokeTimer?
     
     private let feedbackGenerator: UIImpactFeedbackGenerator? = {
         if #available(iOS 10.0, *) {
@@ -35,24 +38,18 @@ final class QuizViewController: UIViewController {
         }
     }()
     
-    private var timer = Timer()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+        bannerView.start(viewController: self)
         
         selectTypeCollectionView.delegate = self
         selectTypeCollectionView.dataSource = self
         
         setGradiention()
-        
-        confirmButton.isEnabled = false
-        DispatchQueue.main.async {
-            self.reloadQuiz()
-        }
+
+        timer = PokeTimer() { self.update(title: $0) }
+        reloadQuiz()
     }
     
     private func reloadQuiz() {
@@ -68,62 +65,50 @@ final class QuizViewController: UIViewController {
             self.backView.borderColor = self.quizPokeType.color!
             self.confirmButton.isEnabled = true
             
-            self.timerCount -= 1
-            self.countLabel.text = "\(self.timerCount)"
-            self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.timerAction(_:)), userInfo: nil, repeats: true)
+            self.timer?.start()
         }
         
         selectedTypes.removeAll()
         selectTypeCollectionView.reloadData()
         
-        db.collection(quizPokeType.key).getDocuments { (querySnapshot, error) in
-            var correctAnswer = 0
-            querySnapshot!.documents.forEach {
-                guard
-                    let dictioary = $0.data() as? [String: Bool],
-                    let value = dictioary[Keys.document] else {
-                        return
-                }
-                if value {
-                    correctAnswer += 1
-                }
-            }
-            if correctAnswer == 0 {
-                self.rateLabel.text = String(format: "正解率：%.1f", correctAnswer) + "%"
+        Firestore.firestore().collection(quizPokeType.key).getDocuments { [weak self] (querySnapshot, error) in
+            let correctCount = querySnapshot!.documents
+                .compactMap { $0.data() as? [String: Bool] }
+                .compactMap { $0[Keys.document] }
+                .filter { $0 }
+                .count
+            if correctCount == 0 {
+                self?.rateLabel.text = String(format: "正解率：%.1f", correctCount) + "%"
             } else {
-                let rate = (Double(correctAnswer) / Double(querySnapshot!.documents.count)) * 100
-                self.rateLabel.text = String(format: "正解率：%.1f%", rate) + "%"
+                let rate = (Double(correctCount) / Double(querySnapshot!.documents.count)) * 100
+                self?.rateLabel.text = String(format: "正解率：%.1f%", rate) + "%"
             }
-        }
-    }
-    private var time = 7
-    private lazy var timerCount = time
-    private var rate = 1
-    @objc private func timerAction(_ sender: Timer) {
-        timerCount -= 1
-        countLabel.text = "\(timerCount)"
-        switch timerCount {
-        case 1...5:
-            UIView.animate(withDuration: 0.1, animations: {
-                self.countLabel.transform = CGAffineTransform(scaleX: 2, y: 2)
-            }) { (_) in
-                self.countLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
-            }
-        case 0:
-            guard let gameOverViewController = R.storyboard.main.gameOverViewController() else { return }
-            present(gameOverViewController, animated: true, completion: nil)
-            timer.invalidate()
-        default:
-            break
         }
     }
     
-    @IBAction func confirmAction(_ sender: RoundButton) {
-        timer.invalidate()
-        if 5 < timerCount {
-            time -= rate
-            timerCount = time
+    private func update(title: Int) {
+        DispatchQueue.main.async {
+            self.countLabel.text = title.description
+            switch title {
+            case 1...5:
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.countLabel.transform = CGAffineTransform(scaleX: 2, y: 2)
+                }) { (_) in
+                    self.countLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
+                }
+            case 0:
+                guard let gameOverViewController = R.storyboard.main.gameOverViewController() else { return }
+                gameOverViewController.correctCount = self.correctCount
+                self.present(gameOverViewController, animated: true, completion: nil)
+                self.timer?.stop()
+            default:
+                break
+            }
         }
+    }
+    
+    @IBAction private func confirmAction(_ sender: RoundButton) {
+        timer?.stop()
         sender.isEnabled = false
         let result = Poke.checkAttack(to: quizPokeType)
         guard let resultViewController = R.storyboard.main.resultViewController() else {
@@ -132,15 +117,13 @@ final class QuizViewController: UIViewController {
         resultViewController.result = result
         resultViewController.selectedTypes = selectedTypes
         resultViewController.quizPokeType = quizPokeType
-        resultViewController.reload = { self.reloadQuiz() }
+        resultViewController.reload = { [weak self] in self?.reloadQuiz() }
         present(resultViewController, animated: true)
     }
     
 }
 
-extension QuizViewController: UICollectionViewDelegate {
-    
-}
+extension QuizViewController: UICollectionViewDelegate { }
 
 extension QuizViewController: UICollectionViewDataSource {
     
@@ -187,7 +170,7 @@ final class SelectTypeCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    @IBAction func selectTypeAction(_ sender: RoundButton) {
+    @IBAction private func selectTypeAction(_ sender: RoundButton) {
         isSelected.toggle()
         onTap?(isSelected)
         selectedStatus(active: isSelected)

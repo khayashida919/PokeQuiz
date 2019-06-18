@@ -626,6 +626,7 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "PokeBlack", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PokeBlack' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "PokeRed", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PokeRed' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "TopBackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TopBackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "jimen", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'jimen' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "mizu", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'mizu' is used in storyboard 'Main', but couldn't be loaded.") }
         }
         if _R.storyboard.main().gameOverViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'gameOverViewController' could not be loaded from storyboard 'Main' as 'GameOverViewController'.") }

@@ -35,6 +35,9 @@ final class ResultViewController: UIViewController {
         if result.superiority == selectedTypes {
             titleLabel.text = "せいかい"
             db.collection(quizPokeType.key).addDocument(data: [Keys.document: true])
+            
+            guard let quizViewController = presentingViewController as? QuizViewController else { fatalError() }
+            quizViewController.correctCount += 1
         } else {
             titleLabel.text = "ざんねん"
             db.collection(quizPokeType.key).addDocument(data: [Keys.document: false])

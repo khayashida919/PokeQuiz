@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 extension UIViewController {
     
@@ -31,6 +32,16 @@ extension UIViewController {
             return gradientLayer
         }()
         view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+}
+
+extension GADBannerView {
+    
+    func start<T: UIViewController>(viewController: T) {
+        self.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        self.rootViewController = viewController
+        self.load(GADRequest())
     }
     
 }
