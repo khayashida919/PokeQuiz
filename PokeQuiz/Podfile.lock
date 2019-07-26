@@ -5,7 +5,6 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.3):
     - BoringSSL-GRPC/Interface (= 0.0.3)
   - BoringSSL-GRPC/Interface (0.0.3)
-  - ColorMatchTabs (3.3)
   - Firebase/AdMob (6.1.0):
     - Firebase/CoreOnly
     - Google-Mobile-Ads-SDK (~> 7.43)
@@ -104,7 +103,6 @@ PODS:
   - R.swift.Library (5.0.1)
 
 DEPENDENCIES:
-  - ColorMatchTabs
   - Firebase/AdMob
   - Firebase/Core
   - Firebase/Firestore
@@ -114,7 +112,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BoringSSL-GRPC
-    - ColorMatchTabs
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuthInterop
@@ -135,7 +132,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
-  ColorMatchTabs: 8d63cd25099bdb8929438f468bb52aafd288d7a0
   Firebase: 8d77bb33624ae9b62d745d82ec023de5f70f7e4f
   FirebaseAnalytics: 629301c2b9925f3537d4093a17a72751ae5b7084
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -154,6 +150,6 @@ SPEC CHECKSUMS:
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
 
-PODFILE CHECKSUM: e0fc52a73397750ceef51ee1c3ddc78d21ef5dd3
+PODFILE CHECKSUM: 009c3d11daaaa85a7e24e0ca0a49273f22dfd9d3
 
 COCOAPODS: 1.7.1

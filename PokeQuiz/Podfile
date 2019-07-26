@@ -10,7 +10,6 @@ pod 'LTMorphingLabel'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/AdMob'
-pod 'ColorMatchTabs'
 
   # Pods for PokeQuiz
 
