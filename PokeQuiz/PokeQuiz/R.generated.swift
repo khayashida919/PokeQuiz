@@ -602,7 +602,8 @@ struct _R: Rswift.Validatable {
       let gameOverViewController = StoryboardViewControllerResource<GameOverViewController>(identifier: "GameOverViewController")
       let menuViewController = StoryboardViewControllerResource<MenuViewController>(identifier: "MenuViewController")
       let name = "Main"
-      let quizViewController = StoryboardViewControllerResource<PokeQuiz.QuizViewController>(identifier: "QuizViewController")
+      let quizViewController = StoryboardViewControllerResource<QuizViewController>(identifier: "QuizViewController")
+      let rankingViewController = StoryboardViewControllerResource<RankingViewController>(identifier: "RankingViewController")
       let resultViewController = StoryboardViewControllerResource<ResultViewController>(identifier: "ResultViewController")
       
       func gameOverViewController(_: Void = ()) -> GameOverViewController? {
@@ -613,8 +614,12 @@ struct _R: Rswift.Validatable {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: menuViewController)
       }
       
-      func quizViewController(_: Void = ()) -> PokeQuiz.QuizViewController? {
+      func quizViewController(_: Void = ()) -> QuizViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: quizViewController)
+      }
+      
+      func rankingViewController(_: Void = ()) -> RankingViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: rankingViewController)
       }
       
       func resultViewController(_: Void = ()) -> ResultViewController? {
@@ -631,7 +636,8 @@ struct _R: Rswift.Validatable {
         }
         if _R.storyboard.main().gameOverViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'gameOverViewController' could not be loaded from storyboard 'Main' as 'GameOverViewController'.") }
         if _R.storyboard.main().menuViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'menuViewController' could not be loaded from storyboard 'Main' as 'MenuViewController'.") }
-        if _R.storyboard.main().quizViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'quizViewController' could not be loaded from storyboard 'Main' as 'PokeQuiz.QuizViewController'.") }
+        if _R.storyboard.main().quizViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'quizViewController' could not be loaded from storyboard 'Main' as 'QuizViewController'.") }
+        if _R.storyboard.main().rankingViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'rankingViewController' could not be loaded from storyboard 'Main' as 'RankingViewController'.") }
         if _R.storyboard.main().resultViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'resultViewController' could not be loaded from storyboard 'Main' as 'ResultViewController'.") }
       }
       

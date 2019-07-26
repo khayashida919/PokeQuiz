@@ -24,6 +24,7 @@
 		407C51D822A2BCDD00FF3F13 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51D722A2BCDD00FF3F13 /* RoundView.swift */; };
 		4080527E22B6812F00DA0075 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080527D22B6812F00DA0075 /* GameOverViewController.swift */; };
 		4086A6AB22AE9C4B005E177F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086A6AA22AE9C4B005E177F /* ResultViewController.swift */; };
+		40ABA0B822EB4CC200DBA15D /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABA0B722EB4CC200DBA15D /* RankingViewController.swift */; };
 		40B1996222A53DC700CBB59A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B1996122A53DC700CBB59A /* Keys.swift */; };
 		40C1F57322A400BB002351CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40C1F57222A400BB002351CC /* GoogleService-Info.plist */; };
 		40ECE1F622B8F7A600FC534C /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECE1F522B8F7A600FC534C /* Timer.swift */; };
@@ -63,6 +64,7 @@
 		407C51D722A2BCDD00FF3F13 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		4080527D22B6812F00DA0075 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		4086A6AA22AE9C4B005E177F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		40ABA0B722EB4CC200DBA15D /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RankingViewController.swift; path = ../../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/ViewController/RankingViewController.swift; sourceTree = "<group>"; };
 		40B1996122A53DC700CBB59A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		40C1F57222A400BB002351CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		40ECE1F522B8F7A600FC534C /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				407C51C322994E1D00FF3F13 /* QuizViewController.swift */,
 				4086A6AA22AE9C4B005E177F /* ResultViewController.swift */,
 				4080527D22B6812F00DA0075 /* GameOverViewController.swift */,
+				40ABA0B722EB4CC200DBA15D /* RankingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			files = (
 				407C51C022994A4C00FF3F13 /* RoundButton.swift in Sources */,
 				407C51BA2299235A00FF3F13 /* Poke.swift in Sources */,
+				40ABA0B822EB4CC200DBA15D /* RankingViewController.swift in Sources */,
 				407C51BE2299461B00FF3F13 /* R.generated.swift in Sources */,
 				40ECE1F622B8F7A600FC534C /* Timer.swift in Sources */,
 				407C51C422994E1D00FF3F13 /* QuizViewController.swift in Sources */,
