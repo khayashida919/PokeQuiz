@@ -48,7 +48,7 @@ final class QuizViewController: UIViewController {
         
         setGradiention()
 
-        timer = PokeTimer() { self.update(title: $0) }
+        timer = PokeTimer() { [weak self] in self?.update(title: $0) }
         reloadQuiz()
     }
     
@@ -91,10 +91,10 @@ final class QuizViewController: UIViewController {
             self.countLabel.text = title.description
             switch title {
             case 1...5:
-                UIView.animate(withDuration: 0.1, animations: {
-                    self.countLabel.transform = CGAffineTransform(scaleX: 2, y: 2)
-                }) { (_) in
-                    self.countLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
+                UIView.animate(withDuration: 0.1, animations: { [weak self] in
+                    self?.countLabel.transform = CGAffineTransform(scaleX: 2, y: 2)
+                }) { [weak self] (_) in
+                    self?.countLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
                 }
             case 0:
                 guard let gameOverViewController = R.storyboard.main.gameOverViewController() else { return }

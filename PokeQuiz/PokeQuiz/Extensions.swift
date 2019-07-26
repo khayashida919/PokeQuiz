@@ -45,3 +45,16 @@ extension GADBannerView {
     }
     
 }
+
+extension UILabel {
+    
+    @objc var substituteFontName: String {
+        get {
+            return font.fontName
+        }
+        set {
+            font = UIFont(name: newValue, size: font.pointSize)
+        }
+    }
+    
+}

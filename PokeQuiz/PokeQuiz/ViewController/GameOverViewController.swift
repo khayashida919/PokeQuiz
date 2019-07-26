@@ -20,7 +20,16 @@ final class GameOverViewController: UIViewController {
         super.viewDidLoad()
         
         bannerView.start(viewController: self)
-        correctCountLabel.text = correctCount.description
+        correctCountLabel.text = "\(correctCount.description)pt"
+    }
+    
+    @IBAction private func menuButtonAction(_ sender: RoundButton) {
+        guard let navigationController = presentingViewController as? UINavigationController else {
+            return
+        }
+        dismiss(animated: true) {
+            navigationController.popViewController(animated: true)
+        }
     }
 
 }
