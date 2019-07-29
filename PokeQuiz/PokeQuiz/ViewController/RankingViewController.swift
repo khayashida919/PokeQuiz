@@ -17,37 +17,53 @@ final class RankingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //テストコード
+        rankings.append("@")
+        rankings.append("@")
+        rankings.append("@")
+        rankings.append("@")
+        
+        navigationItem.title = "ランキング"
         setGradiention()
         
         rankingTableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = false
     }
 
 }
 
 extension RankingViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rankings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let rankingTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.typeTableViewCell, for: indexPath) else {
+        guard let rankingTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.rankingTableViewCell, for: indexPath) else {
             return UITableViewCell(frame: .zero)
         }
-//        return rankingTableViewCell
-        return UITableViewCell()
+        rankingTableViewCell.set(order: indexPath.row, name: "T##String", point: 999)
+        return rankingTableViewCell
     }
-    
     
 }
 
 final class RankingTableViewCell: UITableViewCell {
     
-    @IBOutlet private weak var rankingImageView: UIImageView!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var pointLabel: UILabel!
+    @IBOutlet weak var orderLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var pointLabel: UILabel!
     
-    func set(type: PokeType) {
-
+    
+    func set(order: Int, name: String, point: Int) {
+        orderLabel.text = "\(order)"
+        nameLabel.text = name
+        pointLabel.text = "\(point)"
     }
     
 }

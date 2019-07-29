@@ -265,10 +265,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 3 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 4 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `Header`.
     static let header: Rswift.ReuseIdentifier<HeaderTableViewCell> = Rswift.ReuseIdentifier(identifier: "Header")
+    /// Reuse identifier `RankingTableViewCell`.
+    static let rankingTableViewCell: Rswift.ReuseIdentifier<RankingTableViewCell> = Rswift.ReuseIdentifier(identifier: "RankingTableViewCell")
     /// Reuse identifier `SelectTypeCollectionViewCell`.
     static let selectTypeCollectionViewCell: Rswift.ReuseIdentifier<SelectTypeCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "SelectTypeCollectionViewCell")
     /// Reuse identifier `TypeTableViewCell`.
@@ -628,6 +630,7 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if #available(iOS 11.0, *) {
+          if UIKit.UIColor(named: "BottomBackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BottomBackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "PokeBlack", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PokeBlack' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "PokeRed", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PokeRed' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "TopBackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TopBackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
