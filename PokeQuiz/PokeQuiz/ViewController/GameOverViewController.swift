@@ -13,14 +13,29 @@ final class GameOverViewController: UIViewController {
 
     var correctCount: Int!
     
-    @IBOutlet private weak var bannerView: GADBannerView!
     @IBOutlet private weak var correctCountLabel: UILabel!
+    @IBOutlet private weak var sendRankingButton: RoundButton!
+    @IBOutlet private weak var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bannerView.start(viewController: self)
         correctCountLabel.text = "\(correctCount.description)pt"
+    }
+    
+    
+    @IBAction func sendRankingAction(_ sender: RoundButton) {
+        guard let inputNameViewController = R.storyboard.main.inputNameViewController() else {
+            return
+        }
+        inputNameViewController.point = correctCount
+        inputNameViewController.onTap = { [weak self] in
+            self?.sendRankingButton.setTitle("送信完了", for: .normal)
+            self?.sendRankingButton.isEnabled = false
+            self?.sendRankingButton.backgroundColor = R.color.pokeBlack()!
+        }
+        present(inputNameViewController, animated: true, completion: nil)
     }
     
     @IBAction private func menuButtonAction(_ sender: RoundButton) {

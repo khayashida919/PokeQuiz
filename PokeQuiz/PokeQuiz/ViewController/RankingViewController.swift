@@ -7,26 +7,32 @@
 //
 
 import UIKit
+import Firebase
 
 final class RankingViewController: UIViewController {
 
     @IBOutlet private weak var rankingTableView: UITableView!
     
-    var rankings = [String]()
+    var rankings = [Ranking]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //テストコード
-        rankings.append("@")
-        rankings.append("@")
-        rankings.append("@")
-        rankings.append("@")
+        
+        rankingTableView.dataSource = self
         
         navigationItem.title = "ランキング"
         setGradiention()
         
-        rankingTableView.dataSource = self
+        Firestore.firestore().collection(Keys.ranking).getDocuments { [weak self] (querySnapshot, error) in
+            let rankings = querySnapshot!.documents
+                .compactMap { $0.data() as? [String: String] }
+                .compactMap { Ranking(name: $0["name"]!, uuid: $0["uuid"]!, point: $0["point"]!) }
+            
+            self?.rankings = rankings
+            self?.rankingTableView.reloadData()
+        }
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,7 +53,9 @@ extension RankingViewController: UITableViewDataSource {
         guard let rankingTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.rankingTableViewCell, for: indexPath) else {
             return UITableViewCell(frame: .zero)
         }
-        rankingTableViewCell.set(order: indexPath.row, name: "T##String", point: 999)
+        rankingTableViewCell.set(order: indexPath.row + 1,
+                                 name: rankings[indexPath.row].name,
+                                 point: rankings[indexPath.row].point)
         return rankingTableViewCell
     }
     
@@ -60,10 +68,10 @@ final class RankingTableViewCell: UITableViewCell {
     @IBOutlet weak var pointLabel: UILabel!
     
     
-    func set(order: Int, name: String, point: Int) {
+    func set(order: Int, name: String, point: String) {
         orderLabel.text = "\(order)"
         nameLabel.text = name
-        pointLabel.text = "\(point)"
+        pointLabel.text = point
     }
     
 }

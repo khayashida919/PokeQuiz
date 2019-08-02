@@ -602,6 +602,7 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let gameOverViewController = StoryboardViewControllerResource<GameOverViewController>(identifier: "GameOverViewController")
+      let inputNameViewController = StoryboardViewControllerResource<InputNameViewController>(identifier: "InputNameViewController")
       let menuViewController = StoryboardViewControllerResource<MenuViewController>(identifier: "MenuViewController")
       let name = "Main"
       let quizViewController = StoryboardViewControllerResource<QuizViewController>(identifier: "QuizViewController")
@@ -610,6 +611,10 @@ struct _R: Rswift.Validatable {
       
       func gameOverViewController(_: Void = ()) -> GameOverViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: gameOverViewController)
+      }
+      
+      func inputNameViewController(_: Void = ()) -> InputNameViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: inputNameViewController)
       }
       
       func menuViewController(_: Void = ()) -> MenuViewController? {
@@ -634,10 +639,13 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "PokeBlack", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PokeBlack' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "PokeRed", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PokeRed' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "TopBackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TopBackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "hikou", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'hikou' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "hono", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'hono' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "jimen", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'jimen' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "mizu", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'mizu' is used in storyboard 'Main', but couldn't be loaded.") }
         }
         if _R.storyboard.main().gameOverViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'gameOverViewController' could not be loaded from storyboard 'Main' as 'GameOverViewController'.") }
+        if _R.storyboard.main().inputNameViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'inputNameViewController' could not be loaded from storyboard 'Main' as 'InputNameViewController'.") }
         if _R.storyboard.main().menuViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'menuViewController' could not be loaded from storyboard 'Main' as 'MenuViewController'.") }
         if _R.storyboard.main().quizViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'quizViewController' could not be loaded from storyboard 'Main' as 'QuizViewController'.") }
         if _R.storyboard.main().rankingViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'rankingViewController' could not be loaded from storyboard 'Main' as 'RankingViewController'.") }
