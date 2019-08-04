@@ -25,7 +25,7 @@ final class GameOverViewController: UIViewController {
     }
     
     
-    @IBAction func sendRankingAction(_ sender: RoundButton) {
+    @IBAction private func sendRankingAction(_ sender: RoundButton) {
         guard let inputNameViewController = R.storyboard.main.inputNameViewController() else {
             return
         }

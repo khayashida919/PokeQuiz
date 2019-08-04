@@ -52,10 +52,10 @@
                                 <rect key="frame" x="30" y="30" width="315" height="607"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GdA-6m-aaS">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="175.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="122"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2A-6E-r34" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="215.5" width="315" height="176"/>
+                                        <rect key="frame" x="0.0" y="162" width="315" height="121.5"/>
                                         <color key="backgroundColor" red="1" green="0.97530847229999995" blue="0.021001329490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="35"/>
                                         <state key="normal" title="クイズスタート">
@@ -77,7 +77,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U82-CH-xOW" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="431.5" width="315" height="175.5"/>
+                                        <rect key="frame" x="0.0" y="323.5" width="315" height="122"/>
                                         <color key="backgroundColor" red="1" green="0.97530847229999995" blue="0.021001329490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="35"/>
                                         <state key="normal" title="ランキング">
@@ -96,6 +96,28 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="o5l-Be-bto" kind="show" id="VDj-aU-m86"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOp-ny-9dK" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="485.5" width="315" height="121.5"/>
+                                        <color key="backgroundColor" red="1" green="0.97530847229999995" blue="0.021001329490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="35"/>
+                                        <state key="normal" title="相性表">
+                                            <color key="titleColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="F5l-R6-YNL" kind="show" id="9Gj-Q7-g8i"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -408,7 +430,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pV2-rf-brf">
                                                         <rect key="frame" x="0.0" y="20" width="327" height="221"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                                        <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="65"/>
                                                         <color key="textColor" name="PokeBlack"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -559,11 +581,11 @@
                                                 <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-iw-Dvc">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-iw-Dvc">
                                                 <rect key="frame" x="0.0" y="154" width="327" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vV-ID-D7j" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="50"/>
                                                         <color key="backgroundColor" name="PokeBlack"/>
                                                         <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="13"/>
                                                         <state key="normal" title="キャンセル">
@@ -579,7 +601,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-Ws-ixa" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
-                                                        <rect key="frame" x="85.5" y="0.0" width="241.5" height="50"/>
+                                                        <rect key="frame" x="93" y="0.0" width="234" height="50"/>
                                                         <color key="backgroundColor" name="hikou"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="wqL-7T-D9u"/>
@@ -635,6 +657,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqi-jU-czv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2413.5999999999999" y="118.29085457271366"/>
+        </scene>
+        <!--Compatibility View Controller-->
+        <scene sceneID="mbR-jk-l92">
+            <objects>
+                <viewController id="F5l-R6-YNL" customClass="CompatibilityViewController" customModule="PokeQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lh4-nA-z1d">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="530"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kac-IE-6H7">
+                                <rect key="frame" x="449" y="0.0" width="46" height="30"/>
+                                <state key="normal" title="参考元"/>
+                                <connections>
+                                    <action selector="referenceAction:" destination="F5l-R6-YNL" eventType="touchUpInside" id="80N-z6-N8v"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubp-Zl-8Sh">
+                                <rect key="frame" x="0.0" y="30" width="500" height="500"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Compatibility" translatesAutoresizingMaskIntoConstraints="NO" id="9KK-hd-r2t">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="500" id="MFd-a5-riB"/>
+                                            <constraint firstAttribute="height" constant="500" id="ZKj-Qn-9gi"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9KK-hd-r2t" secondAttribute="trailing" id="lMu-id-fap"/>
+                                    <constraint firstItem="9KK-hd-r2t" firstAttribute="top" secondItem="ubp-Zl-8Sh" secondAttribute="top" id="lep-nY-pza"/>
+                                    <constraint firstItem="9KK-hd-r2t" firstAttribute="leading" secondItem="ubp-Zl-8Sh" secondAttribute="leading" id="y6h-dE-zGv"/>
+                                    <constraint firstAttribute="bottom" secondItem="9KK-hd-r2t" secondAttribute="bottom" id="yuU-8b-Z0j"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="2BS-LG-M5d"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="768-oM-Mqh"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kac-IE-6H7" firstAttribute="top" secondItem="3yA-sn-9Tm" secondAttribute="top" id="4bo-MG-ZLb"/>
+                            <constraint firstItem="ubp-Zl-8Sh" firstAttribute="top" secondItem="3yA-sn-9Tm" secondAttribute="top" constant="30" id="6Qu-x6-s2k"/>
+                            <constraint firstItem="ubp-Zl-8Sh" firstAttribute="leading" secondItem="3yA-sn-9Tm" secondAttribute="leading" id="9Ef-hJ-0D4"/>
+                            <constraint firstItem="3yA-sn-9Tm" firstAttribute="trailing" secondItem="kac-IE-6H7" secondAttribute="trailing" constant="5" id="ovL-EF-EDW"/>
+                            <constraint firstItem="ubp-Zl-8Sh" firstAttribute="bottom" secondItem="Lh4-nA-z1d" secondAttribute="bottom" id="ty8-T6-J1P"/>
+                            <constraint firstItem="ubp-Zl-8Sh" firstAttribute="trailing" secondItem="3yA-sn-9Tm" secondAttribute="trailing" id="x0J-mZ-PeL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3yA-sn-9Tm"/>
+                    </view>
+                    <size key="freeformSize" width="500" height="530"/>
+                    <connections>
+                        <outlet property="imageView" destination="9KK-hd-r2t" id="bew-Yh-BBF"/>
+                        <outlet property="scrollView" destination="ubp-Zl-8Sh" id="cu2-xp-UzV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vcf-ec-VrB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-35" y="851"/>
         </scene>
         <!--Ranking View Controller-->
         <scene sceneID="WPV-l3-KZO">
@@ -942,6 +1021,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Compatibility" width="532" height="531"/>
         <namedColor name="BottomBackgroundColor">
             <color red="0.4699999988079071" green="0.92000001668930054" blue="0.12999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -13,6 +13,7 @@ import Firebase
 final class QuizViewController: UIViewController {
     
     var correctCount = 0
+    var mistakeCount = 0
     
     @IBOutlet private weak var bannerView: GADBannerView!
     @IBOutlet private weak var backView: RoundView!
@@ -53,6 +54,11 @@ final class QuizViewController: UIViewController {
     }
     
     private func reloadQuiz() {
+        if mistakeCount > 3 {
+            showGameOver()
+            return
+        }
+        
         quizPokeType = PokeType.allCases.shuffled().first!
         
         quizLabel.morphingEffect = .sparkle
@@ -97,9 +103,7 @@ final class QuizViewController: UIViewController {
                     self?.countLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
                 }
             case 0:
-                guard let gameOverViewController = R.storyboard.main.gameOverViewController() else { return }
-                gameOverViewController.correctCount = self.correctCount
-                self.present(gameOverViewController, animated: true, completion: nil)
+                self.showResult()
                 self.timer?.stop()
             default:
                 break
@@ -107,9 +111,7 @@ final class QuizViewController: UIViewController {
         }
     }
     
-    @IBAction private func confirmAction(_ sender: RoundButton) {
-        timer?.stop()
-        sender.isEnabled = false
+    private func showResult() {
         let result = Poke.checkAttack(to: quizPokeType)
         guard let resultViewController = R.storyboard.main.resultViewController() else {
             return
@@ -118,7 +120,26 @@ final class QuizViewController: UIViewController {
         resultViewController.selectedTypes = selectedTypes
         resultViewController.quizPokeType = quizPokeType
         resultViewController.reload = { [weak self] in self?.reloadQuiz() }
+        resultViewController.countup = { [weak self] correct in
+            if correct {
+                self?.correctCount += 1
+            } else {
+                self?.mistakeCount += 1
+            }
+        }
         present(resultViewController, animated: true)
+    }
+    
+    private func showGameOver() {
+        guard let gameOverViewController = R.storyboard.main.gameOverViewController() else { return }
+        gameOverViewController.correctCount = correctCount
+        present(gameOverViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction private func confirmAction(_ sender: RoundButton) {
+        timer?.stop()
+        sender.isEnabled = false
+        showResult()
     }
     
 }

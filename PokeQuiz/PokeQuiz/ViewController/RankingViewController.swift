@@ -27,6 +27,7 @@ final class RankingViewController: UIViewController {
             let rankings = querySnapshot!.documents
                 .compactMap { $0.data() as? [String: String] }
                 .compactMap { Ranking(name: $0["name"]!, uuid: $0["uuid"]!, point: $0["point"]!) }
+                .sorted { $0.point > $1.point }
             
             self?.rankings = rankings
             self?.rankingTableView.reloadData()

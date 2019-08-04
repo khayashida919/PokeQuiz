@@ -19,6 +19,7 @@ final class ResultViewController: UIViewController {
     var result: PokeResult!
     var selectedTypes: Set<PokeType>!
     var reload: (() -> Void)?
+    var countup: ((Bool) -> Void)?
     
     private let db = Firestore.firestore()
     
@@ -35,12 +36,11 @@ final class ResultViewController: UIViewController {
         if result.superiority == selectedTypes {
             titleLabel.text = "せいかい"
             db.collection(quizPokeType.key).addDocument(data: [Keys.document: true])
-            
-            guard let quizViewController = presentingViewController as? QuizViewController else { fatalError() }
-            quizViewController.correctCount += 1
+            countup?(true)
         } else {
             titleLabel.text = "ざんねん"
             db.collection(quizPokeType.key).addDocument(data: [Keys.document: false])
+            countup?(false)
         }
     }
 
