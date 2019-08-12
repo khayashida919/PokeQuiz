@@ -1,6 +1,81 @@
 
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "07B-b2-L5p"; */
-"07B-b2-L5p.normalTitle" = "Button";
+/* Class = "UIButton"; normalTitle = "決定"; ObjectID = "5Oq-vg-VLP"; */
+"5Oq-vg-VLP.normalTitle" = "決定";
+
+/* Class = "UIButton"; normalTitle = "送信"; ObjectID = "5sQ-Ws-ixa"; */
+"5sQ-Ws-ixa.normalTitle" = "送信";
+
+/* Class = "UIButton"; normalTitle = "キャンセル"; ObjectID = "5vV-ID-D7j"; */
+"5vV-ID-D7j.normalTitle" = "キャンセル";
+
+/* Class = "UITextField"; placeholder = "名前を入力"; ObjectID = "6Wy-nS-DL2"; */
+"6Wy-nS-DL2.placeholder" = "名前を入力";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7rz-cK-tDf"; */
+"7rz-cK-tDf.text" = "Label";
+
+/* Class = "UILabel"; text = "Question 0"; ObjectID = "9Jj-di-Zfd"; */
+"9Jj-di-Zfd.text" = "Question 0";
+
+/* Class = "UILabel"; text = "順位"; ObjectID = "CV6-Ib-06q"; */
+"CV6-Ib-06q.text" = "順位";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JZf-x1-XLe"; */
+"JZf-x1-XLe.text" = "Label";
+
+/* Class = "UILabel"; text = "〜ポケ相性問題アプリ〜"; ObjectID = "QPj-PG-7hn"; */
+"QPj-PG-7hn.text" = "〜ポケ相性問題アプリ〜";
+
+/* Class = "UIButton"; normalTitle = "ランキング"; ObjectID = "U82-CH-xOW"; */
+"U82-CH-xOW.normalTitle" = "ランキング";
+
+/* Class = "UILabel"; text = "今回のポイントは‥"; ObjectID = "V0D-yp-Kxf"; */
+"V0D-yp-Kxf.text" = "今回のポイントは‥";
+
+/* Class = "UIButton"; normalTitle = "相性表"; ObjectID = "ZOp-ny-9dK"; */
+"ZOp-ny-9dK.normalTitle" = "相性表";
 
 /* Class = "UIButton"; normalTitle = "クイズスタート"; ObjectID = "d2A-6E-r34"; */
 "d2A-6E-r34.normalTitle" = "クイズスタート";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dIv-86-E3I"; */
+"dIv-86-E3I.text" = "Label";
+
+/* Class = "UILabel"; text = "名前"; ObjectID = "elB-P6-Ug2"; */
+"elB-P6-Ug2.text" = "名前";
+
+/* Class = "UILabel"; text = "名前を入力！"; ObjectID = "ha7-l9-NJR"; */
+"ha7-l9-NJR.text" = "名前を入力！";
+
+/* Class = "UIButton"; normalTitle = "参考元"; ObjectID = "kac-IE-6H7"; */
+"kac-IE-6H7.normalTitle" = "参考元";
+
+/* Class = "UIButton"; normalTitle = "メニューへ"; ObjectID = "lB6-U1-F9Y"; */
+"lB6-U1-F9Y.normalTitle" = "メニューへ";
+
+/* Class = "UILabel"; text = "ポイント"; ObjectID = "nGf-l9-VTY"; */
+"nGf-l9-VTY.text" = "ポイント";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ntk-cv-HVj"; */
+"ntk-cv-HVj.text" = "Label";
+
+/* Class = "UILabel"; text = "ぽけくいず"; ObjectID = "okd-7J-JCb"; */
+"okd-7J-JCb.text" = "ぽけくいず";
+
+/* Class = "UIButton"; normalTitle = "結果をランキングへ投稿"; ObjectID = "oxJ-e4-Udn"; */
+"oxJ-e4-Udn.normalTitle" = "結果をランキングへ投稿";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pV2-rf-brf"; */
+"pV2-rf-brf.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pWJ-QV-bbd"; */
+"pWJ-QV-bbd.text" = "Label";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "qRx-yY-724"; */
+"qRx-yY-724.text" = "--";
+
+/* Class = "UIButton"; normalTitle = "次へ"; ObjectID = "qh4-gh-g94"; */
+"qh4-gh-g94.normalTitle" = "次へ";
+
+/* Class = "UILabel"; text = "効果抜群を選べ！"; ObjectID = "tc8-Vi-1SP"; */
+"tc8-Vi-1SP.text" = "効果抜群を選べ！";

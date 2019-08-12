@@ -13,12 +13,12 @@ extension UIViewController {
     
     func showAlert(isCancel: Bool, title: String, message: String, handler: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: R.string.localized_ja.ok(), style: .default) { (_) in
+        let action = UIAlertAction(title: R.string.localizable.ok(), style: .default) { (_) in
             handler?()
         }
         alert.addAction(action)
         if isCancel {
-            let cancelAction = UIAlertAction(title: R.string.localized_ja.cancel(), style: .cancel, handler: nil)
+            let cancelAction = UIAlertAction(title: R.string.localizable.cancel(), style: .cancel, handler: nil)
             alert.addAction(cancelAction)
         }
         present(alert, animated: true, completion: nil)

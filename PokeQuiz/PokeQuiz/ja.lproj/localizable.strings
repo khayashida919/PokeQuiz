@@ -1,0 +1,51 @@
+/* 
+  localizable.strings
+  PokeQuiz
+
+  Created by Kazuki Hayashida on 2019/08/12.
+  Copyright © 2019 jp.co.khayashida.ARCompanyCard. All rights reserved.
+*/
+
+/// ポケモンのタイプ
+"normal" = "ノーマル";
+"hono" = "ほのお";
+"mizu" = "みず";
+"denki" = "でんき";
+"kusa" = "くさ";
+"koori" = "こおり";
+"kakutou" = "かくとう";
+"doku" = "どく";
+"jimen" = "じめん";
+"hikou" = "ひこう";
+"esper" = "エスパー";
+"musi" = "むし";
+"iwa" = "いわ";
+"ghost" = "ゴースト";
+"dragon" = "ドラゴン";
+"aku" = "あく";
+"hagane"  = "はがね";
+"fairy" = "フェアリー";
+
+"ok" = "OK";
+"cancel" = "キャンセル";
+
+/// 共通項目
+"percent" = "%";
+
+/// QuizViewController
+"accuracy_rate" = "　正解率：%.1f";
+
+/// ResultViewController
+"good" = "せいかい";
+"bad" = "ざんねん";
+"This_is_excellent_for" = "%@ へはこれが効果抜群だ";
+
+/// GameOverViewController
+"send_complete" = "送信完了";
+
+/// CompatibilityViewController
+"compatibility_table" = "相性表";
+"confirmation" = "送信完了";
+"open_the_reference_URL_in_Safari" = "参照元を Safariで開きます";
+
+"ranking" = "ランキング";

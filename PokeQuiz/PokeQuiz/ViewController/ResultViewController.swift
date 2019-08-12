@@ -34,11 +34,11 @@ final class ResultViewController: UIViewController {
         typeTableView.delegate = self
         
         if result.superiority == selectedTypes {
-            titleLabel.text = "せいかい"
+            titleLabel.text = R.string.localizable.good()
             db.collection(quizPokeType.key).addDocument(data: [Keys.document: true])
             countup?(true)
         } else {
-            titleLabel.text = "ざんねん"
+            titleLabel.text = R.string.localizable.bad()
             db.collection(quizPokeType.key).addDocument(data: [Keys.document: false])
             countup?(false)
         }
@@ -75,7 +75,7 @@ extension ResultViewController: UITableViewDelegate {
  
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.header.identifier) as? HeaderTableViewCell else { return nil }
-        cell.set(title: "\(quizPokeType.title) へはこれが効果抜群だ！")
+        cell.set(title: R.string.localizable.this_is_excellent_for(quizPokeType.title))
         return cell.contentView
     }
     

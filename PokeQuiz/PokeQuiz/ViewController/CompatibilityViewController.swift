@@ -21,7 +21,7 @@ final class CompatibilityViewController: UIViewController {
         bannerView.start(viewController: self)
         webView.load(URLRequest(url: URL(string: "https://www.pokemon.co.jp/ex/sun_moon/common/images/fight/161215_01/img_01.png")!))
         
-        navigationItem.title = "相性表"
+        navigationItem.title = R.string.localizable.compatibility_table()
         setGradiention()
     }
     
@@ -32,9 +32,9 @@ final class CompatibilityViewController: UIViewController {
     }
 
     @IBAction func referenceAction(_ sender: UIButton) {
-        let alert = UIAlertController(title: "確認", message: "Safariで参考元URLを開きます", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+        let alert = UIAlertController(title: R.string.localizable.confirmation(), message:  R.string.localizable.open_the_reference_URL_in_Safari(), preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: R.string.localizable.cancel(), style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: R.string.localizable.ok(), style: .default, handler: { _ in
             UIApplication.shared.open(URL(string: "https://www.pokemon.co.jp/ex/sun_moon/fight/161215_01.html")!)
         })
         alert.addAction(cancelAction)

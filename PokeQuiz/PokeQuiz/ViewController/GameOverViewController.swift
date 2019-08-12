@@ -31,7 +31,7 @@ final class GameOverViewController: UIViewController {
         }
         inputNameViewController.point = correctCount
         inputNameViewController.onTap = { [weak self] in
-            self?.sendRankingButton.setTitle("送信完了", for: .normal)
+            self?.sendRankingButton.setTitle(R.string.localizable.send_complete(), for: .normal)
             self?.sendRankingButton.isEnabled = false
             self?.sendRankingButton.backgroundColor = R.color.pokeBlack()!
         }

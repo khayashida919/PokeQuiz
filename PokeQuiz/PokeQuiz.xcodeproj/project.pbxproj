@@ -18,7 +18,6 @@
 		407C51BE2299461B00FF3F13 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51BD2299461B00FF3F13 /* R.generated.swift */; };
 		407C51C022994A4C00FF3F13 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51BF22994A4C00FF3F13 /* RoundButton.swift */; };
 		407C51C422994E1D00FF3F13 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51C322994E1D00FF3F13 /* QuizViewController.swift */; };
-		407C51D22299573300FF3F13 /* localized_ja.strings in Resources */ = {isa = PBXBuildFile; fileRef = 407C51D42299573300FF3F13 /* localized_ja.strings */; };
 		407C51D6229A5C1400FF3F13 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51D5229A5C1400FF3F13 /* Extensions.swift */; };
 		407C51D822A2BCDD00FF3F13 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C51D722A2BCDD00FF3F13 /* RoundView.swift */; };
 		4080527E22B6812F00DA0075 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080527D22B6812F00DA0075 /* GameOverViewController.swift */; };
@@ -29,6 +28,7 @@
 		40A0CBA422EF252E00A8216D /* InputNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A0CBA322EF252E00A8216D /* InputNameViewController.swift */; };
 		40ABA0B822EB4CC200DBA15D /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABA0B722EB4CC200DBA15D /* RankingViewController.swift */; };
 		40B1996222A53DC700CBB59A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B1996122A53DC700CBB59A /* Keys.swift */; };
+		40BE65FF2301733A0077508E /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40BE66012301733A0077508E /* localizable.strings */; };
 		40C1F57322A400BB002351CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40C1F57222A400BB002351CC /* GoogleService-Info.plist */; };
 		40D9CCB622EF38E2005FE206 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407C519C22991F7B00FF3F13 /* Main.storyboard */; };
 		40ECE1F622B8F7A600FC534C /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ECE1F522B8F7A600FC534C /* Timer.swift */; };
@@ -62,8 +62,6 @@
 		407C51BD2299461B00FF3F13 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		407C51BF22994A4C00FF3F13 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		407C51C322994E1D00FF3F13 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		407C51CF2299570E00FF3F13 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		407C51D32299573300FF3F13 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/localized_ja.strings; sourceTree = "<group>"; };
 		407C51D5229A5C1400FF3F13 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		407C51D722A2BCDD00FF3F13 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		4080527D22B6812F00DA0075 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +72,10 @@
 		40A0CBA322EF252E00A8216D /* InputNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputNameViewController.swift; path = ../../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/ViewController/InputNameViewController.swift; sourceTree = "<group>"; };
 		40ABA0B722EB4CC200DBA15D /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RankingViewController.swift; path = ../../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/ViewController/RankingViewController.swift; sourceTree = "<group>"; };
 		40B1996122A53DC700CBB59A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		40BE66002301733A0077508E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/localizable.strings; sourceTree = "<group>"; };
+		40BE66022301736F0077508E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		40BE66032301736F0077508E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		40BE66042301736F0077508E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/localizable.strings; sourceTree = "<group>"; };
 		40C1F57222A400BB002351CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		40ECE1F522B8F7A600FC534C /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		4554E2534F23B2B99F81DABF /* Pods_PokeQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,8 +139,8 @@
 				407C519F22991F7D00FF3F13 /* Assets.xcassets */,
 				407C51A122991F7D00FF3F13 /* LaunchScreen.storyboard */,
 				407C51A422991F7D00FF3F13 /* Info.plist */,
+				40BE66012301733A0077508E /* localizable.strings */,
 				4075815222B929A2002C8E4E /* TanukiMagic.ttf */,
-				407C51D42299573300FF3F13 /* localized_ja.strings */,
 				40C1F57222A400BB002351CC /* GoogleService-Info.plist */,
 			);
 			path = PokeQuiz;
@@ -302,9 +304,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				407C51A322991F7D00FF3F13 /* LaunchScreen.storyboard in Resources */,
-				407C51D22299573300FF3F13 /* localized_ja.strings in Resources */,
 				40C1F57322A400BB002351CC /* GoogleService-Info.plist in Resources */,
 				40D9CCB622EF38E2005FE206 /* Main.storyboard in Resources */,
+				40BE65FF2301733A0077508E /* localizable.strings in Resources */,
 				407C51A022991F7D00FF3F13 /* Assets.xcassets in Resources */,
 				4075815322B929A2002C8E4E /* TanukiMagic.ttf in Resources */,
 			);
@@ -438,7 +440,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				407C519D22991F7B00FF3F13 /* Base */,
-				407C51CF2299570E00FF3F13 /* ja */,
+				40BE66022301736F0077508E /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -447,16 +449,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				407C51A222991F7D00FF3F13 /* Base */,
+				40BE66032301736F0077508E /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		407C51D42299573300FF3F13 /* localized_ja.strings */ = {
+		40BE66012301733A0077508E /* localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				407C51D32299573300FF3F13 /* ja */,
+				40BE66002301733A0077508E /* en */,
+				40BE66042301736F0077508E /* ja */,
 			);
-			name = localized_ja.strings;
+			name = localizable.strings;
+			path = ../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

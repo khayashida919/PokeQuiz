@@ -20,7 +20,7 @@ final class RankingViewController: UIViewController {
         
         rankingTableView.dataSource = self
         
-        navigationItem.title = "ランキング"
+        navigationItem.title = R.string.localizable.ranking()
         setGradiention()
         
         Firestore.firestore().collection(Keys.ranking).getDocuments { [weak self] (querySnapshot, error) in

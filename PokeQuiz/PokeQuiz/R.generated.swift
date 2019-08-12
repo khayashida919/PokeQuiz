@@ -306,250 +306,535 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
-    /// This `R.string.localized_ja` struct is generated, and contains static references to 20 localization keys.
-    struct localized_ja {
-      /// ja translation: OK
+    /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
+    struct launchScreen {
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.localizable` struct is generated, and contains static references to 30 localization keys.
+    struct localizable {
+      /// en translation: %
       /// 
-      /// Locales: ja
-      static let ok = Rswift.StringResource(key: "ok", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: あく
+      /// Locales: en, ja
+      static let percent = Rswift.StringResource(key: "percent", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: AccuracyRate：%.1f
       /// 
-      /// Locales: ja
-      static let aku = Rswift.StringResource(key: "aku", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: いわ
+      /// Locales: en, ja
+      static let accuracy_rate = Rswift.StringResource(key: "accuracy_rate", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: BUG
       /// 
-      /// Locales: ja
-      static let iwa = Rswift.StringResource(key: "iwa", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: かくとう
+      /// Locales: en, ja
+      static let musi = Rswift.StringResource(key: "musi", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Bad
       /// 
-      /// Locales: ja
-      static let kakutou = Rswift.StringResource(key: "kakutou", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: くさ
+      /// Locales: en, ja
+      static let bad = Rswift.StringResource(key: "bad", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Cencel
       /// 
-      /// Locales: ja
-      static let kusa = Rswift.StringResource(key: "kusa", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: こおり
+      /// Locales: en, ja
+      static let cancel = Rswift.StringResource(key: "cancel", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: CompatibilityTable
       /// 
-      /// Locales: ja
-      static let koori = Rswift.StringResource(key: "koori", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: じめん
+      /// Locales: en, ja
+      static let compatibility_table = Rswift.StringResource(key: "compatibility_table", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Confirmation
       /// 
-      /// Locales: ja
-      static let jimen = Rswift.StringResource(key: "jimen", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: でんき
+      /// Locales: en, ja
+      static let confirmation = Rswift.StringResource(key: "confirmation", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: DARK
       /// 
-      /// Locales: ja
-      static let denki = Rswift.StringResource(key: "denki", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: どく
+      /// Locales: en, ja
+      static let aku = Rswift.StringResource(key: "aku", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: DRAGON
       /// 
-      /// Locales: ja
-      static let doku = Rswift.StringResource(key: "doku", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: はがね
+      /// Locales: en, ja
+      static let dragon = Rswift.StringResource(key: "dragon", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: ELECTRIC
       /// 
-      /// Locales: ja
-      static let hagane = Rswift.StringResource(key: "hagane", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: ひこう
+      /// Locales: en, ja
+      static let denki = Rswift.StringResource(key: "denki", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: FAIRY
       /// 
-      /// Locales: ja
-      static let hikou = Rswift.StringResource(key: "hikou", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: ほのお
+      /// Locales: en, ja
+      static let fairy = Rswift.StringResource(key: "fairy", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: FIGHTING
       /// 
-      /// Locales: ja
-      static let hono = Rswift.StringResource(key: "hono", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: みず
+      /// Locales: en, ja
+      static let kakutou = Rswift.StringResource(key: "kakutou", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: FIRE
       /// 
-      /// Locales: ja
-      static let mizu = Rswift.StringResource(key: "mizu", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: むし
+      /// Locales: en, ja
+      static let hono = Rswift.StringResource(key: "hono", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: FLYING
       /// 
-      /// Locales: ja
-      static let musi = Rswift.StringResource(key: "musi", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: エスパー
+      /// Locales: en, ja
+      static let hikou = Rswift.StringResource(key: "hikou", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: GHOST
       /// 
-      /// Locales: ja
-      static let esper = Rswift.StringResource(key: "esper", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: キャンセル
+      /// Locales: en, ja
+      static let ghost = Rswift.StringResource(key: "ghost", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: GRASS
       /// 
-      /// Locales: ja
-      static let cancel = Rswift.StringResource(key: "cancel", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: ゴースト
+      /// Locales: en, ja
+      static let kusa = Rswift.StringResource(key: "kusa", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: GROUND
       /// 
-      /// Locales: ja
-      static let ghost = Rswift.StringResource(key: "ghost", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: ドラゴン
+      /// Locales: en, ja
+      static let jimen = Rswift.StringResource(key: "jimen", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Good
       /// 
-      /// Locales: ja
-      static let dragon = Rswift.StringResource(key: "dragon", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: ノーマル
+      /// Locales: en, ja
+      static let good = Rswift.StringResource(key: "good", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: ICE
       /// 
-      /// Locales: ja
-      static let normal = Rswift.StringResource(key: "normal", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: フェアリー
+      /// Locales: en, ja
+      static let koori = Rswift.StringResource(key: "koori", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: NORMAL
       /// 
-      /// Locales: ja
-      static let fairy = Rswift.StringResource(key: "fairy", tableName: "localized_ja", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// Locales: en, ja
+      static let normal = Rswift.StringResource(key: "normal", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: OK
+      /// 
+      /// Locales: en, ja
+      static let ok = Rswift.StringResource(key: "ok", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Open the reference URL in Safari
+      /// 
+      /// Locales: en, ja
+      static let open_the_reference_URL_in_Safari = Rswift.StringResource(key: "open_the_reference_URL_in_Safari", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: POISON
+      /// 
+      /// Locales: en, ja
+      static let doku = Rswift.StringResource(key: "doku", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: PSYCHIC
+      /// 
+      /// Locales: en, ja
+      static let esper = Rswift.StringResource(key: "esper", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: ROCK
+      /// 
+      /// Locales: en, ja
+      static let iwa = Rswift.StringResource(key: "iwa", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Ranking
+      /// 
+      /// Locales: en, ja
+      static let ranking = Rswift.StringResource(key: "ranking", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: STEEL
+      /// 
+      /// Locales: en, ja
+      static let hagane = Rswift.StringResource(key: "hagane", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Send Completely
+      /// 
+      /// Locales: en, ja
+      static let send_complete = Rswift.StringResource(key: "send_complete", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: This is excellent for %@
+      /// 
+      /// Locales: en, ja
+      static let this_is_excellent_for = Rswift.StringResource(key: "This_is_excellent_for", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: WATER
+      /// 
+      /// Locales: en, ja
+      static let mizu = Rswift.StringResource(key: "mizu", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
-      /// ja translation: OK
+      /// en translation: %
       /// 
-      /// Locales: ja
-      static func ok(_: Void = ()) -> String {
-        return NSLocalizedString("ok", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
+      /// Locales: en, ja
+      static func percent(_: Void = ()) -> String {
+        return NSLocalizedString("percent", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// ja translation: あく
+      /// en translation: AccuracyRate：%.1f
       /// 
-      /// Locales: ja
-      static func aku(_: Void = ()) -> String {
-        return NSLocalizedString("aku", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
+      /// Locales: en, ja
+      static func accuracy_rate(_ value1: Double) -> String {
+        return String(format: NSLocalizedString("accuracy_rate", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
-      /// ja translation: いわ
+      /// en translation: BUG
       /// 
-      /// Locales: ja
-      static func iwa(_: Void = ()) -> String {
-        return NSLocalizedString("iwa", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// ja translation: かくとう
-      /// 
-      /// Locales: ja
-      static func kakutou(_: Void = ()) -> String {
-        return NSLocalizedString("kakutou", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// ja translation: くさ
-      /// 
-      /// Locales: ja
-      static func kusa(_: Void = ()) -> String {
-        return NSLocalizedString("kusa", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// ja translation: こおり
-      /// 
-      /// Locales: ja
-      static func koori(_: Void = ()) -> String {
-        return NSLocalizedString("koori", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// ja translation: じめん
-      /// 
-      /// Locales: ja
-      static func jimen(_: Void = ()) -> String {
-        return NSLocalizedString("jimen", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// ja translation: でんき
-      /// 
-      /// Locales: ja
-      static func denki(_: Void = ()) -> String {
-        return NSLocalizedString("denki", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// ja translation: どく
-      /// 
-      /// Locales: ja
-      static func doku(_: Void = ()) -> String {
-        return NSLocalizedString("doku", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// ja translation: はがね
-      /// 
-      /// Locales: ja
-      static func hagane(_: Void = ()) -> String {
-        return NSLocalizedString("hagane", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// ja translation: ひこう
-      /// 
-      /// Locales: ja
-      static func hikou(_: Void = ()) -> String {
-        return NSLocalizedString("hikou", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// ja translation: ほのお
-      /// 
-      /// Locales: ja
-      static func hono(_: Void = ()) -> String {
-        return NSLocalizedString("hono", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// ja translation: みず
-      /// 
-      /// Locales: ja
-      static func mizu(_: Void = ()) -> String {
-        return NSLocalizedString("mizu", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// ja translation: むし
-      /// 
-      /// Locales: ja
+      /// Locales: en, ja
       static func musi(_: Void = ()) -> String {
-        return NSLocalizedString("musi", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("musi", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// ja translation: エスパー
+      /// en translation: Bad
       /// 
-      /// Locales: ja
-      static func esper(_: Void = ()) -> String {
-        return NSLocalizedString("esper", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
+      /// Locales: en, ja
+      static func bad(_: Void = ()) -> String {
+        return NSLocalizedString("bad", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// ja translation: キャンセル
+      /// en translation: Cencel
       /// 
-      /// Locales: ja
+      /// Locales: en, ja
       static func cancel(_: Void = ()) -> String {
-        return NSLocalizedString("cancel", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("cancel", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// ja translation: ゴースト
+      /// en translation: CompatibilityTable
       /// 
-      /// Locales: ja
-      static func ghost(_: Void = ()) -> String {
-        return NSLocalizedString("ghost", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
+      /// Locales: en, ja
+      static func compatibility_table(_: Void = ()) -> String {
+        return NSLocalizedString("compatibility_table", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// ja translation: ドラゴン
+      /// en translation: Confirmation
       /// 
-      /// Locales: ja
+      /// Locales: en, ja
+      static func confirmation(_: Void = ()) -> String {
+        return NSLocalizedString("confirmation", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: DARK
+      /// 
+      /// Locales: en, ja
+      static func aku(_: Void = ()) -> String {
+        return NSLocalizedString("aku", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: DRAGON
+      /// 
+      /// Locales: en, ja
       static func dragon(_: Void = ()) -> String {
-        return NSLocalizedString("dragon", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("dragon", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// ja translation: ノーマル
+      /// en translation: ELECTRIC
       /// 
-      /// Locales: ja
-      static func normal(_: Void = ()) -> String {
-        return NSLocalizedString("normal", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
+      /// Locales: en, ja
+      static func denki(_: Void = ()) -> String {
+        return NSLocalizedString("denki", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
-      /// ja translation: フェアリー
+      /// en translation: FAIRY
       /// 
-      /// Locales: ja
+      /// Locales: en, ja
       static func fairy(_: Void = ()) -> String {
-        return NSLocalizedString("fairy", tableName: "localized_ja", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("fairy", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: FIGHTING
+      /// 
+      /// Locales: en, ja
+      static func kakutou(_: Void = ()) -> String {
+        return NSLocalizedString("kakutou", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: FIRE
+      /// 
+      /// Locales: en, ja
+      static func hono(_: Void = ()) -> String {
+        return NSLocalizedString("hono", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: FLYING
+      /// 
+      /// Locales: en, ja
+      static func hikou(_: Void = ()) -> String {
+        return NSLocalizedString("hikou", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: GHOST
+      /// 
+      /// Locales: en, ja
+      static func ghost(_: Void = ()) -> String {
+        return NSLocalizedString("ghost", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: GRASS
+      /// 
+      /// Locales: en, ja
+      static func kusa(_: Void = ()) -> String {
+        return NSLocalizedString("kusa", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: GROUND
+      /// 
+      /// Locales: en, ja
+      static func jimen(_: Void = ()) -> String {
+        return NSLocalizedString("jimen", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Good
+      /// 
+      /// Locales: en, ja
+      static func good(_: Void = ()) -> String {
+        return NSLocalizedString("good", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: ICE
+      /// 
+      /// Locales: en, ja
+      static func koori(_: Void = ()) -> String {
+        return NSLocalizedString("koori", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: NORMAL
+      /// 
+      /// Locales: en, ja
+      static func normal(_: Void = ()) -> String {
+        return NSLocalizedString("normal", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: OK
+      /// 
+      /// Locales: en, ja
+      static func ok(_: Void = ()) -> String {
+        return NSLocalizedString("ok", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Open the reference URL in Safari
+      /// 
+      /// Locales: en, ja
+      static func open_the_reference_URL_in_Safari(_: Void = ()) -> String {
+        return NSLocalizedString("open_the_reference_URL_in_Safari", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: POISON
+      /// 
+      /// Locales: en, ja
+      static func doku(_: Void = ()) -> String {
+        return NSLocalizedString("doku", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: PSYCHIC
+      /// 
+      /// Locales: en, ja
+      static func esper(_: Void = ()) -> String {
+        return NSLocalizedString("esper", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: ROCK
+      /// 
+      /// Locales: en, ja
+      static func iwa(_: Void = ()) -> String {
+        return NSLocalizedString("iwa", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Ranking
+      /// 
+      /// Locales: en, ja
+      static func ranking(_: Void = ()) -> String {
+        return NSLocalizedString("ranking", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: STEEL
+      /// 
+      /// Locales: en, ja
+      static func hagane(_: Void = ()) -> String {
+        return NSLocalizedString("hagane", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Send Completely
+      /// 
+      /// Locales: en, ja
+      static func send_complete(_: Void = ()) -> String {
+        return NSLocalizedString("send_complete", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: This is excellent for %@
+      /// 
+      /// Locales: en, ja
+      static func this_is_excellent_for(_ value1: String) -> String {
+        return String(format: NSLocalizedString("This_is_excellent_for", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
+      /// en translation: WATER
+      /// 
+      /// Locales: en, ja
+      static func mizu(_: Void = ()) -> String {
+        return NSLocalizedString("mizu", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
     }
     
-    /// This `R.string.main` struct is generated, and contains static references to 2 localization keys.
+    /// This `R.string.main` struct is generated, and contains static references to 27 localization keys.
     struct main {
-      /// ja translation: Button
+      /// ja translation: --
       /// 
       /// Locales: ja
-      static let bb2L5pNormalTitle = Rswift.StringResource(key: "07B-b2-L5p.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      static let qRxYY724Text = Rswift.StringResource(key: "qRx-yY-724.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static let dIv86E3IText = Rswift.StringResource(key: "dIv-86-E3I.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static let jZfX1XLeText = Rswift.StringResource(key: "JZf-x1-XLe.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static let ntkCvHVjText = Rswift.StringResource(key: "ntk-cv-HVj.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static let pV2RfBrfText = Rswift.StringResource(key: "pV2-rf-brf.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static let pWJQVBbdText = Rswift.StringResource(key: "pWJ-QV-bbd.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static let rzCKTDfText = Rswift.StringResource(key: "7rz-cK-tDf.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: Question 0
+      /// 
+      /// Locales: ja
+      static let jjDiZfdText = Rswift.StringResource(key: "9Jj-di-Zfd.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 〜ポケ相性問題アプリ〜
+      /// 
+      /// Locales: ja
+      static let qPjPG7hnText = Rswift.StringResource(key: "QPj-PG-7hn.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: ぽけくいず
+      /// 
+      /// Locales: ja
+      static let okd7JJCbText = Rswift.StringResource(key: "okd-7J-JCb.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: キャンセル
+      /// 
+      /// Locales: ja
+      static let vVIDD7jNormalTitle = Rswift.StringResource(key: "5vV-ID-D7j.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
       /// ja translation: クイズスタート
       /// 
       /// Locales: ja
       static let d2A6ER34NormalTitle = Rswift.StringResource(key: "d2A-6E-r34.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      
-      /// ja translation: Button
+      /// ja translation: ポイント
       /// 
       /// Locales: ja
-      static func bb2L5pNormalTitle(_: Void = ()) -> String {
-        return NSLocalizedString("07B-b2-L5p.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      static let nGfL9VTYText = Rswift.StringResource(key: "nGf-l9-VTY.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: メニューへ
+      /// 
+      /// Locales: ja
+      static let lB6U1F9YNormalTitle = Rswift.StringResource(key: "lB6-U1-F9Y.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: ランキング
+      /// 
+      /// Locales: ja
+      static let u82CHXOWNormalTitle = Rswift.StringResource(key: "U82-CH-xOW.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 今回のポイントは‥
+      /// 
+      /// Locales: ja
+      static let v0DYpKxfText = Rswift.StringResource(key: "V0D-yp-Kxf.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 効果抜群を選べ！
+      /// 
+      /// Locales: ja
+      static let tc8Vi1SPText = Rswift.StringResource(key: "tc8-Vi-1SP.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 参考元
+      /// 
+      /// Locales: ja
+      static let kacIE6H7NormalTitle = Rswift.StringResource(key: "kac-IE-6H7.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 名前
+      /// 
+      /// Locales: ja
+      static let elBP6Ug2Text = Rswift.StringResource(key: "elB-P6-Ug2.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 名前を入力
+      /// 
+      /// Locales: ja
+      static let wyNSDL2Placeholder = Rswift.StringResource(key: "6Wy-nS-DL2.placeholder", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 名前を入力！
+      /// 
+      /// Locales: ja
+      static let ha7L9NJRText = Rswift.StringResource(key: "ha7-l9-NJR.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 次へ
+      /// 
+      /// Locales: ja
+      static let qh4GhG94NormalTitle = Rswift.StringResource(key: "qh4-gh-g94.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 決定
+      /// 
+      /// Locales: ja
+      static let oqVgVLPNormalTitle = Rswift.StringResource(key: "5Oq-vg-VLP.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 相性表
+      /// 
+      /// Locales: ja
+      static let zOpNy9dKNormalTitle = Rswift.StringResource(key: "ZOp-ny-9dK.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 結果をランキングへ投稿
+      /// 
+      /// Locales: ja
+      static let oxJE4UdnNormalTitle = Rswift.StringResource(key: "oxJ-e4-Udn.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 送信
+      /// 
+      /// Locales: ja
+      static let sQWsIxaNormalTitle = Rswift.StringResource(key: "5sQ-Ws-ixa.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 順位
+      /// 
+      /// Locales: ja
+      static let cv6Ib06qText = Rswift.StringResource(key: "CV6-Ib-06q.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      
+      /// ja translation: --
+      /// 
+      /// Locales: ja
+      static func qRxYY724Text(_: Void = ()) -> String {
+        return NSLocalizedString("qRx-yY-724.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static func dIv86E3IText(_: Void = ()) -> String {
+        return NSLocalizedString("dIv-86-E3I.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static func jZfX1XLeText(_: Void = ()) -> String {
+        return NSLocalizedString("JZf-x1-XLe.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static func ntkCvHVjText(_: Void = ()) -> String {
+        return NSLocalizedString("ntk-cv-HVj.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static func pV2RfBrfText(_: Void = ()) -> String {
+        return NSLocalizedString("pV2-rf-brf.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static func pWJQVBbdText(_: Void = ()) -> String {
+        return NSLocalizedString("pWJ-QV-bbd.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: Label
+      /// 
+      /// Locales: ja
+      static func rzCKTDfText(_: Void = ()) -> String {
+        return NSLocalizedString("7rz-cK-tDf.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: Question 0
+      /// 
+      /// Locales: ja
+      static func jjDiZfdText(_: Void = ()) -> String {
+        return NSLocalizedString("9Jj-di-Zfd.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 〜ポケ相性問題アプリ〜
+      /// 
+      /// Locales: ja
+      static func qPjPG7hnText(_: Void = ()) -> String {
+        return NSLocalizedString("QPj-PG-7hn.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: ぽけくいず
+      /// 
+      /// Locales: ja
+      static func okd7JJCbText(_: Void = ()) -> String {
+        return NSLocalizedString("okd-7J-JCb.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: キャンセル
+      /// 
+      /// Locales: ja
+      static func vVIDD7jNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("5vV-ID-D7j.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
       /// ja translation: クイズスタート
@@ -557,6 +842,111 @@ struct R: Rswift.Validatable {
       /// Locales: ja
       static func d2A6ER34NormalTitle(_: Void = ()) -> String {
         return NSLocalizedString("d2A-6E-r34.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: ポイント
+      /// 
+      /// Locales: ja
+      static func nGfL9VTYText(_: Void = ()) -> String {
+        return NSLocalizedString("nGf-l9-VTY.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: メニューへ
+      /// 
+      /// Locales: ja
+      static func lB6U1F9YNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("lB6-U1-F9Y.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: ランキング
+      /// 
+      /// Locales: ja
+      static func u82CHXOWNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("U82-CH-xOW.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 今回のポイントは‥
+      /// 
+      /// Locales: ja
+      static func v0DYpKxfText(_: Void = ()) -> String {
+        return NSLocalizedString("V0D-yp-Kxf.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 効果抜群を選べ！
+      /// 
+      /// Locales: ja
+      static func tc8Vi1SPText(_: Void = ()) -> String {
+        return NSLocalizedString("tc8-Vi-1SP.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 参考元
+      /// 
+      /// Locales: ja
+      static func kacIE6H7NormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("kac-IE-6H7.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 名前
+      /// 
+      /// Locales: ja
+      static func elBP6Ug2Text(_: Void = ()) -> String {
+        return NSLocalizedString("elB-P6-Ug2.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 名前を入力
+      /// 
+      /// Locales: ja
+      static func wyNSDL2Placeholder(_: Void = ()) -> String {
+        return NSLocalizedString("6Wy-nS-DL2.placeholder", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 名前を入力！
+      /// 
+      /// Locales: ja
+      static func ha7L9NJRText(_: Void = ()) -> String {
+        return NSLocalizedString("ha7-l9-NJR.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 次へ
+      /// 
+      /// Locales: ja
+      static func qh4GhG94NormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("qh4-gh-g94.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 決定
+      /// 
+      /// Locales: ja
+      static func oqVgVLPNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("5Oq-vg-VLP.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 相性表
+      /// 
+      /// Locales: ja
+      static func zOpNy9dKNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("ZOp-ny-9dK.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 結果をランキングへ投稿
+      /// 
+      /// Locales: ja
+      static func oxJE4UdnNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("oxJ-e4-Udn.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 送信
+      /// 
+      /// Locales: ja
+      static func sQWsIxaNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("5sQ-Ws-ixa.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 順位
+      /// 
+      /// Locales: ja
+      static func cv6Ib06qText(_: Void = ()) -> String {
+        return NSLocalizedString("CV6-Ib-06q.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

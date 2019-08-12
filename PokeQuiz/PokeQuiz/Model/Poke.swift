@@ -117,24 +117,24 @@ enum PokeType: CaseIterable {
     
     var title: String {
         switch self {
-        case .normal:   return R.string.localized_ja.normal()
-        case .hono:     return R.string.localized_ja.hono()
-        case .mizu:     return R.string.localized_ja.mizu()
-        case .denki:    return R.string.localized_ja.denki()
-        case .kusa:     return R.string.localized_ja.kusa()
-        case .koori:    return R.string.localized_ja.koori()
-        case .kakutou:  return R.string.localized_ja.kakutou()
-        case .doku:     return R.string.localized_ja.doku()
-        case .jimen:    return R.string.localized_ja.jimen()
-        case .hikou:    return R.string.localized_ja.hikou()
-        case .esper:    return R.string.localized_ja.esper()
-        case .musi:     return R.string.localized_ja.musi()
-        case .iwa:      return R.string.localized_ja.iwa()
-        case .ghost:    return R.string.localized_ja.ghost()
-        case .dragon:   return R.string.localized_ja.dragon()
-        case .aku:      return R.string.localized_ja.aku()
-        case .hagane:   return R.string.localized_ja.hagane()
-        case .fairy:    return R.string.localized_ja.fairy()
+        case .normal:   return R.string.localizable.normal()
+        case .hono:     return R.string.localizable.hono()
+        case .mizu:     return R.string.localizable.mizu()
+        case .denki:    return R.string.localizable.denki()
+        case .kusa:     return R.string.localizable.kusa()
+        case .koori:    return R.string.localizable.koori()
+        case .kakutou:  return R.string.localizable.kakutou()
+        case .doku:     return R.string.localizable.doku()
+        case .jimen:    return R.string.localizable.jimen()
+        case .hikou:    return R.string.localizable.hikou()
+        case .esper:    return R.string.localizable.esper()
+        case .musi:     return R.string.localizable.musi()
+        case .iwa:      return R.string.localizable.iwa()
+        case .ghost:    return R.string.localizable.ghost()
+        case .dragon:   return R.string.localizable.dragon()
+        case .aku:      return R.string.localizable.aku()
+        case .hagane:   return R.string.localizable.hagane()
+        case .fairy:    return R.string.localizable.fairy()
         }
     }
     
@@ -163,24 +163,24 @@ enum PokeType: CaseIterable {
     
     var key: String {
         switch self {
-        case .normal:   return R.string.localized_ja.normal.key
-        case .hono:     return R.string.localized_ja.hono.key
-        case .mizu:     return R.string.localized_ja.mizu.key
-        case .denki:    return R.string.localized_ja.denki.key
-        case .kusa:     return R.string.localized_ja.kusa.key
-        case .koori:    return R.string.localized_ja.koori.key
-        case .kakutou:  return R.string.localized_ja.kakutou.key
-        case .doku:     return R.string.localized_ja.doku.key
-        case .jimen:    return R.string.localized_ja.jimen.key
-        case .hikou:    return R.string.localized_ja.hikou.key
-        case .esper:    return R.string.localized_ja.esper.key
-        case .musi:     return R.string.localized_ja.musi.key
-        case .iwa:      return R.string.localized_ja.iwa.key
-        case .ghost:    return R.string.localized_ja.ghost.key
-        case .dragon:   return R.string.localized_ja.dragon.key
-        case .aku:      return R.string.localized_ja.aku.key
-        case .hagane:   return R.string.localized_ja.hagane.key
-        case .fairy:    return R.string.localized_ja.fairy.key
+        case .normal:   return R.string.localizable.normal.key
+        case .hono:     return R.string.localizable.hono.key
+        case .mizu:     return R.string.localizable.mizu.key
+        case .denki:    return R.string.localizable.denki.key
+        case .kusa:     return R.string.localizable.kusa.key
+        case .koori:    return R.string.localizable.koori.key
+        case .kakutou:  return R.string.localizable.kakutou.key
+        case .doku:     return R.string.localizable.doku.key
+        case .jimen:    return R.string.localizable.jimen.key
+        case .hikou:    return R.string.localizable.hikou.key
+        case .esper:    return R.string.localizable.esper.key
+        case .musi:     return R.string.localizable.musi.key
+        case .iwa:      return R.string.localizable.iwa.key
+        case .ghost:    return R.string.localizable.ghost.key
+        case .dragon:   return R.string.localizable.dragon.key
+        case .aku:      return R.string.localizable.aku.key
+        case .hagane:   return R.string.localizable.hagane.key
+        case .fairy:    return R.string.localizable.fairy.key
         }
     }
 }

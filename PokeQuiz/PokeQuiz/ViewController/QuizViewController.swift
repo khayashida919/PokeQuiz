@@ -13,7 +13,7 @@ import Firebase
 final class QuizViewController: UIViewController {
     
     var totalCount = 0
-    var correctCount = 0
+    var correctCount = 1
     var mistakeCount = 0
     
     @IBOutlet private weak var bannerView: GADBannerView!
@@ -97,10 +97,10 @@ final class QuizViewController: UIViewController {
                 .filter { $0 }
                 .count
             if correctCount == 0 {
-                self?.rateLabel.text = String(format: "正解率：%.1f", correctCount) + "%"
+                self?.rateLabel.text = R.string.localizable.accuracy_rate(Double(correctCount)) + R.string.localizable.percent()
             } else {
                 let rate = (Double(correctCount) / Double(querySnapshot!.documents.count)) * 100
-                self?.rateLabel.text = String(format: "正解率：%.1f%", rate) + "%"
+                self?.rateLabel.text = R.string.localizable.accuracy_rate(rate) + R.string.localizable.percent()
             }
         }
     }
