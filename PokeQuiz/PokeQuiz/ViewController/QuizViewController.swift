@@ -12,14 +12,18 @@ import Firebase
 
 final class QuizViewController: UIViewController {
     
+    var totalCount = 0
     var correctCount = 0
     var mistakeCount = 0
     
     @IBOutlet private weak var bannerView: GADBannerView!
+    
     @IBOutlet private weak var backView: RoundView!
     @IBOutlet private weak var countLabel: UILabel!
+    @IBOutlet private weak var questionCountLabel: UILabel!
     @IBOutlet private weak var quizLabel: LTMorphingLabel!
-    @IBOutlet private weak var correctCountLabel: UILabel!
+    @IBOutlet private var lifeImages: [UIImageView]!
+    
     @IBOutlet private weak var rateLabel: UILabel!
     @IBOutlet private weak var selectTypeCollectionView: UICollectionView!
     @IBOutlet private weak var confirmButton: RoundButton!
@@ -54,9 +58,18 @@ final class QuizViewController: UIViewController {
     }
     
     private func reloadQuiz() {
-        if mistakeCount > 3 {
+        totalCount += 1
+        questionCountLabel.text = "Question \(totalCount)"
+        
+        switch mistakeCount {
+        case 4...:
             showGameOver()
             return
+        case 1...3:
+            UIView.animate(withDuration: 1.5) {
+                self.lifeImages.dropFirst(self.mistakeCount-1).first?.alpha = 0.0
+            }
+        default: break
         }
         
         quizPokeType = PokeType.allCases.shuffled().first!

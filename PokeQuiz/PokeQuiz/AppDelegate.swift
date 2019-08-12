@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-         UILabel.appearance().substituteFontName = R.font.tanukiPermanentMarker.fontName
+        UILabel.appearance().substituteFontName = R.font.tanukiPermanentMarker.fontName
         return true
     }
 
