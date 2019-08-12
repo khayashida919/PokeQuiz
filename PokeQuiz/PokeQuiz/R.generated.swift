@@ -596,7 +596,6 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
       
       static func validate() throws {
-        if UIKit.UIImage(named: "splash", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'splash' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
       }
@@ -641,13 +640,13 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "Compatibility", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Compatibility' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "heart.fill", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heart.fill' is used in storyboard 'Main', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
           if UIKit.UIColor(named: "BottomBackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BottomBackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "PokeBlack", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PokeBlack' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "PokeRed", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PokeRed' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "TopBackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TopBackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "denki", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'denki' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "hikou", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'hikou' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "hono", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'hono' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "jimen", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'jimen' is used in storyboard 'Main', but couldn't be loaded.") }

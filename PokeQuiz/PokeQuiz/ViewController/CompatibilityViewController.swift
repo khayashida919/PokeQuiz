@@ -7,19 +7,19 @@
 //
 
 import UIKit
+import WebKit
+import Firebase
 
 final class CompatibilityViewController: UIViewController {
 
-    
-    @IBOutlet private weak var scrollView: UIScrollView!
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var webView: WKWebView!
+    @IBOutlet private weak var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrollView.minimumZoomScale = 1.0
-        scrollView.maximumZoomScale = 4.0
-        scrollView.delegate = self
+        bannerView.start(viewController: self)
+        webView.load(URLRequest(url: URL(string: "https://www.pokemon.co.jp/ex/sun_moon/common/images/fight/161215_01/img_01.png")!))
         
         navigationItem.title = "相性表"
         setGradiention()
@@ -41,12 +41,4 @@ final class CompatibilityViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
-}
-
-extension CompatibilityViewController: UIScrollViewDelegate {
-    
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return imageView
-    }
-    
 }
