@@ -10,6 +10,7 @@ pod 'LTMorphingLabel'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/AdMob'
+pod 'paper-onboarding'
 
   # Pods for PokeQuiz
 
