@@ -34,6 +34,9 @@
 
 /// QuizViewController
 "accuracy_rate" = "　正解率：%.1f";
+"quizLabel_tutorial" = "相手の属性が表示されるよ";
+"selectTypeCollectionView_tutorial" = "効果抜群の属性を全部選ぼう！";
+"lifeImages_tutorial" = "4回間違えるとゲームオーバー！";
 
 /// ResultViewController
 "good" = "せいかい";
@@ -45,7 +48,7 @@
 
 /// CompatibilityViewController
 "compatibility_table" = "相性表";
-"confirmation" = "送信完了";
-"open_the_reference_URL_in_Safari" = "参照元を Safariで開きます";
+"confirmation" = "確認";
+"open_the_reference_URL_in_Safari" = "参照元を Safari で開きます";
 
 "ranking" = "ランキング";

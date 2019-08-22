@@ -9,6 +9,7 @@
 import UIKit
 import LTMorphingLabel
 import Firebase
+import Instructions
 
 final class QuizViewController: UIViewController {
     
@@ -33,6 +34,7 @@ final class QuizViewController: UIViewController {
     
     private var timer: PokeTimer?
     
+    private let coachMarksController = CoachMarksController()
     private let feedbackGenerator: UIImpactFeedbackGenerator? = {
         if #available(iOS 10.0, *) {
             let generator = UIImpactFeedbackGenerator(style: .light)
@@ -50,11 +52,26 @@ final class QuizViewController: UIViewController {
         
         selectTypeCollectionView.delegate = self
         selectTypeCollectionView.dataSource = self
+        coachMarksController.dataSource = self
         
         setGradiention()
 
         timer = PokeTimer() { [weak self] in self?.update(title: $0) }
         reloadQuiz()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if AppData.shared.isFirstLaunch {
+            coachMarksController.start(in: .window(over: self))
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        coachMarksController.stop(immediately: true)
     }
     
     private func reloadQuiz() {
@@ -84,7 +101,12 @@ final class QuizViewController: UIViewController {
             self.backView.borderColor = self.quizPokeType.color!
             self.confirmButton.isEnabled = true
             
-            self.timer?.start()
+            /// 初回時はタイマーをスタートさせずにチュートリアルを表示する
+            if AppData.shared.isFirstLaunch {
+                AppData.shared.isFirstLaunch = false
+            } else {
+                self.timer?.start()
+            }
         }
         
         selectedTypes.removeAll()
@@ -208,6 +230,38 @@ final class SelectTypeCollectionViewCell: UICollectionViewCell {
         isSelected.toggle()
         onTap?(isSelected)
         selectedStatus(active: isSelected)
+    }
+    
+}
+
+extension QuizViewController: CoachMarksControllerDataSource, CoachMarksControllerDelegate {
+    
+    func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
+        return 3
+    }
+    
+    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkAt index: Int) -> CoachMark {
+        switch index {
+        case 0: return coachMarksController.helper.makeCoachMark(for: quizLabel)
+        case 1: return coachMarksController.helper.makeCoachMark(for: selectTypeCollectionView)
+        case 2: return coachMarksController.helper.makeCoachMark(for: lifeImages.first?.superview)
+        default: return coachMarksController.helper.makeCoachMark(for: view)
+        }
+    }
+    
+    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkViewsAt index: Int, madeFrom coachMark: CoachMark) -> (bodyView: CoachMarkBodyView, arrowView: CoachMarkArrowView?) {
+        let coachViews = coachMarksController.helper.makeDefaultCoachViews(withArrow: true, arrowOrientation: coachMark.arrowOrientation)
+        coachViews.bodyView.nextLabel.text = R.string.localizable.ok()
+        switch index {
+        case 0:
+            coachViews.bodyView.hintLabel.text = R.string.localizable.quizLabel_tutorial()
+        case 1:
+            coachViews.bodyView.hintLabel.text = R.string.localizable.selectTypeCollectionView_tutorial()
+        case 2:
+            coachViews.bodyView.hintLabel.text = R.string.localizable.lifeImages_tutorial()
+        default: break
+        }
+        return (bodyView: coachViews.bodyView, arrowView: coachViews.arrowView)
     }
     
 }

@@ -14,7 +14,7 @@ class PokeTimer {
     lazy var time = initialCount
     
     /// カウントダウンが始まる初期値
-    private var initialCount = 30
+    private var initialCount = 60
     private var timer: Timer?
     
     typealias TimeAction = (Int) -> Void

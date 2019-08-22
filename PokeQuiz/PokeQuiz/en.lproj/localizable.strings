@@ -35,6 +35,9 @@
 
 /// QuizViewController
 "accuracy_rate" = "AccuracyRate：%.1f";
+"quizLabel_tutorial" = "Enemy attributes are displayed";
+"selectTypeCollectionView_tutorial" = "Let's choose all the attributes with outstanding effects!";
+"lifeImages_tutorial" = "If you make a mistake 4 times, the game is over!";
 
 /// ResultViewController
 "good" = "Good";

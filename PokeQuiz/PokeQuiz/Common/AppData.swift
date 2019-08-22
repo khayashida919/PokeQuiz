@@ -19,6 +19,13 @@ final class AppData {
         set { UserDefaults.standard.set(newValue, forKey: "name") }
     }
     
-    private init() { }
+    var isFirstLaunch: Bool {
+        set { UserDefaults.standard.set(newValue, forKey: "isFirstLaunch") }
+        get { return UserDefaults.standard.bool(forKey: "isFirstLaunch") }
+    }
+    
+    private init() {
+        UserDefaults.standard.register(defaults: ["isFirstLaunch" : true])
+    }
     
 }

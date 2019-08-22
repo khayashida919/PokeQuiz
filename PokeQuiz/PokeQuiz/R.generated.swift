@@ -313,7 +313,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 30 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 33 localization keys.
     struct localizable {
       /// en translation: %
       /// 
@@ -355,6 +355,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let denki = Rswift.StringResource(key: "denki", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Enemy attributes are displayed
+      /// 
+      /// Locales: en, ja
+      static let quizLabel_tutorial = Rswift.StringResource(key: "quizLabel_tutorial", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: FAIRY
       /// 
       /// Locales: en, ja
@@ -391,6 +395,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let koori = Rswift.StringResource(key: "koori", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: If you make a mistake 4 times, the game is over!
+      /// 
+      /// Locales: en, ja
+      static let lifeImages_tutorial = Rswift.StringResource(key: "lifeImages_tutorial", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Let's choose all the attributes with outstanding effects!
+      /// 
+      /// Locales: en, ja
+      static let selectTypeCollectionView_tutorial = Rswift.StringResource(key: "selectTypeCollectionView_tutorial", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: NORMAL
       /// 
       /// Locales: en, ja
@@ -506,6 +518,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("denki", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Enemy attributes are displayed
+      /// 
+      /// Locales: en, ja
+      static func quizLabel_tutorial(_: Void = ()) -> String {
+        return NSLocalizedString("quizLabel_tutorial", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: FAIRY
       /// 
       /// Locales: en, ja
@@ -567,6 +586,20 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func koori(_: Void = ()) -> String {
         return NSLocalizedString("koori", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: If you make a mistake 4 times, the game is over!
+      /// 
+      /// Locales: en, ja
+      static func lifeImages_tutorial(_: Void = ()) -> String {
+        return NSLocalizedString("lifeImages_tutorial", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Let's choose all the attributes with outstanding effects!
+      /// 
+      /// Locales: en, ja
+      static func selectTypeCollectionView_tutorial(_: Void = ()) -> String {
+        return NSLocalizedString("selectTypeCollectionView_tutorial", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: NORMAL
