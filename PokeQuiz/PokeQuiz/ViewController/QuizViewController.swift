@@ -14,7 +14,7 @@ import Instructions
 final class QuizViewController: UIViewController {
     
     var totalCount = 0
-    var correctCount = 1
+    var correctCount = 0
     var mistakeCount = 0
     
     @IBOutlet private weak var bannerView: GADBannerView!
@@ -23,6 +23,8 @@ final class QuizViewController: UIViewController {
     @IBOutlet private weak var countLabel: UILabel!
     @IBOutlet private weak var questionCountLabel: UILabel!
     @IBOutlet private weak var quizLabel: LTMorphingLabel!
+    
+    @IBOutlet private weak var pointLabel: UILabel!
     @IBOutlet private var lifeImages: [UIImageView]!
     
     @IBOutlet private weak var rateLabel: UILabel!
@@ -140,8 +142,7 @@ final class QuizViewController: UIViewController {
             case 0:
                 self.showResult()
                 self.timer?.stop()
-            default:
-                break
+            default: break
             }
         }
     }
@@ -156,10 +157,12 @@ final class QuizViewController: UIViewController {
         resultViewController.quizPokeType = quizPokeType
         resultViewController.reload = { [weak self] in self?.reloadQuiz() }
         resultViewController.countup = { [weak self] correct in
+            guard let self = self else { return }
             if correct {
-                self?.correctCount += 1
+                self.correctCount += 1
+                self.pointLabel.text = "\(self.correctCount)pt"
             } else {
-                self?.mistakeCount += 1
+                self.mistakeCount += 1
             }
         }
         present(resultViewController, animated: true)

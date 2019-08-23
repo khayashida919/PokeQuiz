@@ -78,7 +78,7 @@ struct Poke {
             inferiority = Set<PokeType>(arrayLiteral: .hono, .mizu, .denki, .kusa)
             none = Set<PokeType>()
         case .aku:
-            superiority = Set<PokeType>(arrayLiteral: .kakutou, .kusa, .fairy)
+            superiority = Set<PokeType>(arrayLiteral: .kakutou, .musi, .fairy)
             inferiority = Set<PokeType>(arrayLiteral: .ghost, .aku)
             none = Set<PokeType>(arrayLiteral: .esper)
         case .hagane:

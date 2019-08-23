@@ -245,8 +245,14 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTm-SU-wO6">
                                                                     <rect key="frame" x="0.0" y="145" width="327" height="23"/>
                                                                     <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyg-44-jj8">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="42.5" height="23"/>
+                                                                            <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="25"/>
+                                                                            <color key="textColor" name="PokeBlack"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmU-lS-Bvc">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="249" height="23"/>
+                                                                            <rect key="frame" x="42.5" y="0.0" width="206.5" height="23"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </view>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gXA-mp-7Am">
@@ -484,6 +490,7 @@
                         <outlet property="bannerView" destination="i4m-vr-czx" id="JSi-q4-fTy"/>
                         <outlet property="confirmButton" destination="5Oq-vg-VLP" id="azp-HI-frk"/>
                         <outlet property="countLabel" destination="qRx-yY-724" id="k3q-em-b8l"/>
+                        <outlet property="pointLabel" destination="oyg-44-jj8" id="jPU-bL-A70"/>
                         <outlet property="questionCountLabel" destination="9Jj-di-Zfd" id="ZJY-PO-sR7"/>
                         <outlet property="quizLabel" destination="AGf-bY-0cj" id="MRr-Eq-Wxs"/>
                         <outlet property="rateLabel" destination="YIK-2Y-PGM" id="iHJ-fk-CM6"/>
