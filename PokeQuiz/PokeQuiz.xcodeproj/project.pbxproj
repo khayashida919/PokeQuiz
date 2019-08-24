@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AA16275A57E4E90FE78FB07 /* Pods_PokeQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4554E2534F23B2B99F81DABF /* Pods_PokeQuiz.framework */; };
+		4010AD7723110F4E0001E48B /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4010AD7623110F4E0001E48B /* SettingTableViewController.swift */; };
 		4075815322B929A2002C8E4E /* TanukiMagic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4075815222B929A2002C8E4E /* TanukiMagic.ttf */; };
 		407C519922991F7B00FF3F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C519822991F7B00FF3F13 /* AppDelegate.swift */; };
 		407C51A022991F7D00FF3F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407C519F22991F7D00FF3F13 /* Assets.xcassets */; };
@@ -24,7 +25,7 @@
 		4081EFC122F6665B0008B462 /* CompatibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081EFC022F6665B0008B462 /* CompatibilityViewController.swift */; };
 		4086A6AB22AE9C4B005E177F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086A6AA22AE9C4B005E177F /* ResultViewController.swift */; };
 		4094EEB622F45F8D00F5BA71 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094EEB522F45F8D00F5BA71 /* AppData.swift */; };
-		4094EEB822F4639A00F5BA71 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094EEB722F4639A00F5BA71 /* Ranking.swift */; };
+		4094EEB822F4639A00F5BA71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094EEB722F4639A00F5BA71 /* User.swift */; };
 		40A0CBA422EF252E00A8216D /* InputNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A0CBA322EF252E00A8216D /* InputNameViewController.swift */; };
 		40ABA0B822EB4CC200DBA15D /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABA0B722EB4CC200DBA15D /* RankingViewController.swift */; };
 		40B1996222A53DC700CBB59A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B1996122A53DC700CBB59A /* Keys.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		007C806689C7A450E3FBDAC2 /* Pods-PokeQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		4010AD7623110F4E0001E48B /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		4075815222B929A2002C8E4E /* TanukiMagic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TanukiMagic.ttf; sourceTree = "<group>"; };
 		407C519522991F7B00FF3F13 /* PokeQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407C519822991F7B00FF3F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +70,7 @@
 		4081EFC022F6665B0008B462 /* CompatibilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompatibilityViewController.swift; path = ../../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/ViewController/CompatibilityViewController.swift; sourceTree = "<group>"; };
 		4086A6AA22AE9C4B005E177F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		4094EEB522F45F8D00F5BA71 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppData.swift; path = ../../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/Common/AppData.swift; sourceTree = "<group>"; };
-		4094EEB722F4639A00F5BA71 /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Ranking.swift; path = ../../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/Model/Ranking.swift; sourceTree = "<group>"; };
+		4094EEB722F4639A00F5BA71 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/Model/User.swift; sourceTree = "<group>"; };
 		40A0CBA322EF252E00A8216D /* InputNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputNameViewController.swift; path = ../../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/ViewController/InputNameViewController.swift; sourceTree = "<group>"; };
 		40ABA0B722EB4CC200DBA15D /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RankingViewController.swift; path = ../../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/ViewController/RankingViewController.swift; sourceTree = "<group>"; };
 		40B1996122A53DC700CBB59A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				40ABA0B722EB4CC200DBA15D /* RankingViewController.swift */,
 				40A0CBA322EF252E00A8216D /* InputNameViewController.swift */,
 				4081EFC022F6665B0008B462 /* CompatibilityViewController.swift */,
+				4010AD7623110F4E0001E48B /* SettingTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -183,7 +186,7 @@
 			children = (
 				407C51B92299235A00FF3F13 /* Poke.swift */,
 				40B1996122A53DC700CBB59A /* Keys.swift */,
-				4094EEB722F4639A00F5BA71 /* Ranking.swift */,
+				4094EEB722F4639A00F5BA71 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -400,9 +403,10 @@
 				4081EFC122F6665B0008B462 /* CompatibilityViewController.swift in Sources */,
 				407C51C022994A4C00FF3F13 /* RoundButton.swift in Sources */,
 				407C51BA2299235A00FF3F13 /* Poke.swift in Sources */,
-				4094EEB822F4639A00F5BA71 /* Ranking.swift in Sources */,
+				4094EEB822F4639A00F5BA71 /* User.swift in Sources */,
 				40ABA0B822EB4CC200DBA15D /* RankingViewController.swift in Sources */,
 				407C51BE2299461B00FF3F13 /* R.generated.swift in Sources */,
+				4010AD7723110F4E0001E48B /* SettingTableViewController.swift in Sources */,
 				40A0CBA422EF252E00A8216D /* InputNameViewController.swift in Sources */,
 				40ECE1F622B8F7A600FC534C /* Timer.swift in Sources */,
 				407C51C422994E1D00FF3F13 /* QuizViewController.swift in Sources */,
@@ -599,6 +603,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.com.khayashida.PokeQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = WildCard_dev;
@@ -621,6 +626,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.com.khayashida.PokeQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = PokeQuiz_store;

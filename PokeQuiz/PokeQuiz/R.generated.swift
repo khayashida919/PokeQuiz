@@ -252,16 +252,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `Compatibility`.
     static let compatibility = Rswift.ImageResource(bundle: R.hostingBundle, name: "Compatibility")
+    /// Image `setting`.
+    static let setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "setting")
     /// Image `splash`.
     static let splash = Rswift.ImageResource(bundle: R.hostingBundle, name: "splash")
     
     /// `UIImage(named: "Compatibility", bundle: ..., traitCollection: ...)`
     static func compatibility(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.compatibility, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "setting", bundle: ..., traitCollection: ...)`
+    static func setting(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.setting, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "splash", bundle: ..., traitCollection: ...)`
@@ -313,7 +320,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 33 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 37 localization keys.
     struct localizable {
       /// en translation: %
       /// 
@@ -323,6 +330,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let accuracy_rate = Rswift.StringResource(key: "accuracy_rate", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Are you sure you want to hide it?
+      /// 
+      /// Locales: en, ja
+      static let are_you_sure_you_want_to_hide_it = Rswift.StringResource(key: "are_you_sure_you_want_to_hide_it?", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: BUG
       /// 
       /// Locales: en, ja
@@ -351,6 +362,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let dragon = Rswift.StringResource(key: "dragon", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Do you really want to report it?
+      /// 
+      /// Locales: en, ja
+      static let do_you_really_want_to_report_it = Rswift.StringResource(key: "do_you_really_want_to_report_it?", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: ELECTRIC
       /// 
       /// Locales: en, ja
@@ -391,6 +406,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let good = Rswift.StringResource(key: "good", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Hidden
+      /// 
+      /// Locales: en, ja
+      static let hidden = Rswift.StringResource(key: "hidden", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: ICE
       /// 
       /// Locales: en, ja
@@ -431,6 +450,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let ranking = Rswift.StringResource(key: "ranking", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Report
+      /// 
+      /// Locales: en, ja
+      static let report = Rswift.StringResource(key: "report", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: STEEL
       /// 
       /// Locales: en, ja
@@ -460,6 +483,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func accuracy_rate(_ value1: Double) -> String {
         return String(format: NSLocalizedString("accuracy_rate", tableName: "localizable", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
+      /// en translation: Are you sure you want to hide it?
+      /// 
+      /// Locales: en, ja
+      static func are_you_sure_you_want_to_hide_it(_: Void = ()) -> String {
+        return NSLocalizedString("are_you_sure_you_want_to_hide_it?", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: BUG
@@ -509,6 +539,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func dragon(_: Void = ()) -> String {
         return NSLocalizedString("dragon", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Do you really want to report it?
+      /// 
+      /// Locales: en, ja
+      static func do_you_really_want_to_report_it(_: Void = ()) -> String {
+        return NSLocalizedString("do_you_really_want_to_report_it?", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: ELECTRIC
@@ -581,6 +618,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("good", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Hidden
+      /// 
+      /// Locales: en, ja
+      static func hidden(_: Void = ()) -> String {
+        return NSLocalizedString("hidden", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: ICE
       /// 
       /// Locales: en, ja
@@ -651,6 +695,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("ranking", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Report
+      /// 
+      /// Locales: en, ja
+      static func report(_: Void = ()) -> String {
+        return NSLocalizedString("report", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: STEEL
       /// 
       /// Locales: en, ja
@@ -682,7 +733,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.main` struct is generated, and contains static references to 27 localization keys.
+    /// This `R.string.main` struct is generated, and contains static references to 29 localization keys.
     struct main {
       /// ja translation: --
       /// 
@@ -788,6 +839,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: ja
       static let sQWsIxaNormalTitle = Rswift.StringResource(key: "5sQ-Ws-ixa.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 非表示リスト
+      /// 
+      /// Locales: ja
+      static let hlmH2OXqHeader = Rswift.StringResource(key: "Hlm-h2-oXq.header", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 非表示リストをクリア
+      /// 
+      /// Locales: ja
+      static let bSLKRAsNormalTitle = Rswift.StringResource(key: "0bS-lK-rAs.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
       /// ja translation: 順位
       /// 
       /// Locales: ja
@@ -975,6 +1034,20 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("5sQ-Ws-ixa.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
+      /// ja translation: 非表示リスト
+      /// 
+      /// Locales: ja
+      static func hlmH2OXqHeader(_: Void = ()) -> String {
+        return NSLocalizedString("Hlm-h2-oXq.header", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 非表示リストをクリア
+      /// 
+      /// Locales: ja
+      static func bSLKRAsNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("0bS-lK-rAs.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// ja translation: 順位
       /// 
       /// Locales: ja
@@ -1064,6 +1137,7 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "heart.fill", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heart.fill' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "setting", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'setting' is used in storyboard 'Main', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
           if UIKit.UIColor(named: "BottomBackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BottomBackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "PokeBlack", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PokeBlack' is used in storyboard 'Main', but couldn't be loaded.") }

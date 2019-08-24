@@ -13,4 +13,5 @@ struct Keys {
     static let document = "result"
     
     static let ranking = "ranking"
+    static let report = "report"
 }

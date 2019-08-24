@@ -11,7 +11,6 @@ import Firebase
 
 final class InputNameViewController: UIViewController {
     
-    
     @IBOutlet private weak var inputNameTextField: UITextField!
     
     var point: Int!
@@ -26,7 +25,7 @@ final class InputNameViewController: UIViewController {
     @IBAction func sendRankingAction(_ sender: RoundButton) {
         AppData.shared.name = inputNameTextField.text ?? ""
         
-        let ranking = Ranking(name: AppData.shared.name,
+        let ranking = User(name: AppData.shared.name,
                               uuid: AppData.shared.uuid,
                               point: "\(point!)")
         

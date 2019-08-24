@@ -10,9 +10,12 @@ import UIKit
 
 final class MenuViewController: UIViewController {
 
+    @IBOutlet private weak var versionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        versionLabel.text = "v" + (Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String)
         setGradiention()
     }
     

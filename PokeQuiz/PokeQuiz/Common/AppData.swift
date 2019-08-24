@@ -24,8 +24,14 @@ final class AppData {
         get { return UserDefaults.standard.bool(forKey: "isFirstLaunch") }
     }
     
+    var blockList: [String] {
+        set { UserDefaults.standard.set(newValue, forKey: "block") }
+        get { UserDefaults.standard.array(forKey: "block") as! [String] }
+    }
+    
     private init() {
-        UserDefaults.standard.register(defaults: ["isFirstLaunch" : true])
+        UserDefaults.standard.register(defaults: ["isFirstLaunch": true])
+        UserDefaults.standard.register(defaults: ["block": [String]()])
     }
     
 }

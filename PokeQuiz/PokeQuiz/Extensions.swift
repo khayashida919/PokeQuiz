@@ -21,7 +21,9 @@ extension UIViewController {
             let cancelAction = UIAlertAction(title: R.string.localizable.cancel(), style: .cancel, handler: nil)
             alert.addAction(cancelAction)
         }
-        present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func setGradiention() {

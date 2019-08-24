@@ -40,6 +40,54 @@
             </objects>
             <point key="canvasLocation" x="-622" y="121"/>
         </scene>
+        <!--Setting Table View Controller-->
+        <scene sceneID="IbU-sE-OUn">
+            <objects>
+                <tableViewController id="vI8-pN-ZsC" customClass="SettingTableViewController" customModule="PokeQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="yNL-aY-xi9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Hidden List" id="Hlm-h2-oXq">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="eHN-lK-CD6">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eHN-lK-CD6" id="cxI-tM-e0D">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bS-lK-rAs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                                    <state key="normal" title="Reset Hidden List"/>
+                                                    <connections>
+                                                        <action selector="resetHiddenListAction:" destination="vI8-pN-ZsC" eventType="touchUpInside" id="rVW-UN-7Uo"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0bS-lK-rAs" firstAttribute="leading" secondItem="cxI-tM-e0D" secondAttribute="leading" id="1NI-tn-eBu"/>
+                                                <constraint firstItem="0bS-lK-rAs" firstAttribute="top" secondItem="cxI-tM-e0D" secondAttribute="top" id="HDl-I3-Jsk"/>
+                                                <constraint firstAttribute="trailing" secondItem="0bS-lK-rAs" secondAttribute="trailing" id="j07-j5-UE1"/>
+                                                <constraint firstAttribute="bottom" secondItem="0bS-lK-rAs" secondAttribute="bottom" id="ssR-3t-G1D"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="vI8-pN-ZsC" id="hH9-8t-c4q"/>
+                            <outlet property="delegate" destination="vI8-pN-ZsC" id="L8M-Hn-7qQ"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WeR-o8-YfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="-584"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -54,6 +102,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIi-sU-uXc" customClass="RoundView" customModule="PokeQuiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="300"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNe-IF-Jqc">
+                                                <rect key="frame" x="270" y="15" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="jHF-lX-4vY"/>
+                                                    <constraint firstAttribute="height" constant="30" id="qkK-Hb-mKj"/>
+                                                </constraints>
+                                                <state key="normal" image="setting"/>
+                                                <connections>
+                                                    <segue destination="vI8-pN-ZsC" kind="show" id="Bze-Jg-k8k"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PokeQuiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="okd-7J-JCb">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="300"/>
                                                 <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="60"/>
@@ -68,17 +127,28 @@
                                                 <color key="textColor" name="PokeBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaG-na-6uy">
+                                                <rect key="frame" x="300" y="285" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="okd-7J-JCb" firstAttribute="top" secondItem="fIi-sU-uXc" secondAttribute="top" id="5wM-cu-c53"/>
                                             <constraint firstAttribute="trailing" secondItem="QPj-PG-7hn" secondAttribute="trailing" id="6ao-4o-CnM"/>
                                             <constraint firstItem="QPj-PG-7hn" firstAttribute="leading" secondItem="fIi-sU-uXc" secondAttribute="leading" id="8ho-E7-mXE"/>
+                                            <constraint firstAttribute="trailing" secondItem="eNe-IF-Jqc" secondAttribute="trailing" constant="15" id="9Ui-Xk-C3l"/>
                                             <constraint firstAttribute="bottom" secondItem="okd-7J-JCb" secondAttribute="bottom" id="9ve-NT-O3A"/>
                                             <constraint firstAttribute="trailing" secondItem="okd-7J-JCb" secondAttribute="trailing" id="ByI-rZ-SPa"/>
+                                            <constraint firstItem="vaG-na-6uy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fIi-sU-uXc" secondAttribute="leading" id="HJK-AT-37e"/>
+                                            <constraint firstAttribute="bottom" secondItem="vaG-na-6uy" secondAttribute="bottom" constant="15" id="QUT-zW-TPh"/>
                                             <constraint firstAttribute="height" constant="300" id="b9e-u1-qSJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="vaG-na-6uy" secondAttribute="trailing" constant="15" id="cmQ-nt-OcO"/>
                                             <constraint firstItem="okd-7J-JCb" firstAttribute="leading" secondItem="fIi-sU-uXc" secondAttribute="leading" id="nGd-SN-aDQ"/>
                                             <constraint firstAttribute="bottom" secondItem="QPj-PG-7hn" secondAttribute="bottom" constant="90" id="op8-4s-cHa"/>
+                                            <constraint firstItem="eNe-IF-Jqc" firstAttribute="top" secondItem="fIi-sU-uXc" secondAttribute="top" constant="15" id="qjB-eI-LzQ"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -176,6 +246,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="TGL-9f-rUx"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="versionLabel" destination="vaG-na-6uy" id="MMW-Jq-2vf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -688,7 +761,7 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="15"/>
+                                                                <real key="value" value="12"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -707,7 +780,7 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="15"/>
+                                                                <real key="value" value="12"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -1116,6 +1189,7 @@
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="64" height="58"/>
+        <image name="setting" width="128" height="128"/>
         <namedColor name="BottomBackgroundColor">
             <color red="0.4699999988079071" green="0.92000001668930054" blue="0.12999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

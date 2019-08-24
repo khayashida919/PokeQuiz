@@ -79,3 +79,9 @@
 
 /* Class = "UILabel"; text = "効果抜群を選べ！"; ObjectID = "tc8-Vi-1SP"; */
 "tc8-Vi-1SP.text" = "効果抜群を選べ！";
+
+/* Class = "UIButton"; normalTitle = "非表示リストをクリア"; ObjectID = "0bS-lK-rAs"; */
+"0bS-lK-rAs.normalTitle" = "非表示リストをクリア";
+
+/* Class = "UIButton"; normalTitle = "非表示リスト"; ObjectID = "Hlm-h2-oXq"; */
+"Hlm-h2-oXq.header" = "非表示リスト";

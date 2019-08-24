@@ -41,7 +41,7 @@
 /// ResultViewController
 "good" = "せいかい";
 "bad" = "ざんねん";
-"This_is_excellent_for" = "%@ へはこれが効果抜群だ";
+"This_is_excellent_for" = "%@ へはこれが効果抜群だ!!";
 
 /// GameOverViewController
 "send_complete" = "送信完了";
@@ -52,3 +52,7 @@
 "open_the_reference_URL_in_Safari" = "参照元を Safari で開きます";
 
 "ranking" = "ランキング";
+"report" = "通報";
+"hidden" = "非表示";
+"do_you_really_want_to_report_it?" = "本当に通報しますか？";
+"are_you_sure_you_want_to_hide_it?" = "本当に非表示にしますか？";

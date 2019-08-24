@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Ranking {
+struct User {
     let name: String
     let uuid: String
     let point: String
