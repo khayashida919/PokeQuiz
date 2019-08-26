@@ -26,6 +26,8 @@ final class SettingTableViewController: UITableViewController {
         }()
         
         tableView.backgroundView = gradietionImageView
+        
+        navigationItem.title = R.string.localizable.setting()
     }
     
     override func viewWillAppear(_ animated: Bool) {

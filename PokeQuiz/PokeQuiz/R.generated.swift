@@ -320,7 +320,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 37 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 38 localization keys.
     struct localizable {
       /// en translation: %
       /// 
@@ -462,6 +462,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let send_complete = Rswift.StringResource(key: "send_complete", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Setting
+      /// 
+      /// Locales: en, ja
+      static let setting = Rswift.StringResource(key: "setting", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: This is excellent for %@
       /// 
       /// Locales: en, ja
@@ -716,6 +720,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("send_complete", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Setting
+      /// 
+      /// Locales: en, ja
+      static func setting(_: Void = ()) -> String {
+        return NSLocalizedString("setting", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: This is excellent for %@
       /// 
       /// Locales: en, ja
@@ -733,7 +744,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.main` struct is generated, and contains static references to 29 localization keys.
+    /// This `R.string.main` struct is generated, and contains static references to 30 localization keys.
     struct main {
       /// ja translation: --
       /// 
@@ -795,6 +806,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: ja
       static let u82CHXOWNormalTitle = Rswift.StringResource(key: "U82-CH-xOW.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: ランキング画面で非表示にしたユーザ情報を削除します。
+      /// 
+      /// Locales: ja
+      static let hlmH2OXqFooterTitle = Rswift.StringResource(key: "Hlm-h2-oXq.footerTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
       /// ja translation: 今回のポイントは‥
       /// 
       /// Locales: ja
@@ -842,7 +857,7 @@ struct R: Rswift.Validatable {
       /// ja translation: 非表示リスト
       /// 
       /// Locales: ja
-      static let hlmH2OXqHeader = Rswift.StringResource(key: "Hlm-h2-oXq.header", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      static let hlmH2OXqHeaderTitle = Rswift.StringResource(key: "Hlm-h2-oXq.headerTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
       /// ja translation: 非表示リストをクリア
       /// 
       /// Locales: ja
@@ -957,6 +972,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("U82-CH-xOW.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
+      /// ja translation: ランキング画面で非表示にしたユーザ情報を削除します。
+      /// 
+      /// Locales: ja
+      static func hlmH2OXqFooterTitle(_: Void = ()) -> String {
+        return NSLocalizedString("Hlm-h2-oXq.footerTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// ja translation: 今回のポイントは‥
       /// 
       /// Locales: ja
@@ -1037,8 +1059,8 @@ struct R: Rswift.Validatable {
       /// ja translation: 非表示リスト
       /// 
       /// Locales: ja
-      static func hlmH2OXqHeader(_: Void = ()) -> String {
-        return NSLocalizedString("Hlm-h2-oXq.header", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      static func hlmH2OXqHeaderTitle(_: Void = ()) -> String {
+        return NSLocalizedString("Hlm-h2-oXq.headerTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
       /// ja translation: 非表示リストをクリア

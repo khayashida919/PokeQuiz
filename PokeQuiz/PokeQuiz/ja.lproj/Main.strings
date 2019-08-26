@@ -83,5 +83,9 @@
 /* Class = "UIButton"; normalTitle = "非表示リストをクリア"; ObjectID = "0bS-lK-rAs"; */
 "0bS-lK-rAs.normalTitle" = "非表示リストをクリア";
 
-/* Class = "UIButton"; normalTitle = "非表示リスト"; ObjectID = "Hlm-h2-oXq"; */
-"Hlm-h2-oXq.header" = "非表示リスト";
+/* Class = "UITableViewSection"; headerTitle = "Hidden List"; ObjectID = "Hlm-h2-oXq"; */
+"Hlm-h2-oXq.headerTitle" = "非表示リスト";
+
+/* Class = "UITableViewSection"; headerTitle = "Deletes the user information that is hidden on the ranking screen."; ObjectID = "Hlm-h2-oXq"; */
+"Hlm-h2-oXq.footerTitle" = "ランキング画面で非表示にしたユーザ情報を削除します。";
+

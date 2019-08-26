@@ -59,4 +59,6 @@
 "do_you_really_want_to_report_it?" = "Do you really want to report it?";
 "are_you_sure_you_want_to_hide_it?" = "Are you sure you want to hide it?";
 
+/// SettingTableViewController
+"setting" = "Setting";
 

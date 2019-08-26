@@ -49,6 +49,7 @@
 /* Begin PBXFileReference section */
 		007C806689C7A450E3FBDAC2 /* Pods-PokeQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		4010AD7623110F4E0001E48B /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		4039FF162314085800B7D5DB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		4075815222B929A2002C8E4E /* TanukiMagic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TanukiMagic.ttf; sourceTree = "<group>"; };
 		407C519522991F7B00FF3F13 /* PokeQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407C519822991F7B00FF3F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		40ABA0B722EB4CC200DBA15D /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RankingViewController.swift; path = ../../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/ViewController/RankingViewController.swift; sourceTree = "<group>"; };
 		40B1996122A53DC700CBB59A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		40BE66002301733A0077508E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/localizable.strings; sourceTree = "<group>"; };
-		40BE66022301736F0077508E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		40BE66032301736F0077508E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		40BE66042301736F0077508E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/localizable.strings; sourceTree = "<group>"; };
 		40C1F57222A400BB002351CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../System/Volumes/Data/Users/khayashida/Documents/develop/PokeQuiz/PokeQuiz/PokeQuiz/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -444,7 +444,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				407C519D22991F7B00FF3F13 /* Base */,
-				40BE66022301736F0077508E /* ja */,
+				4039FF162314085800B7D5DB /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
