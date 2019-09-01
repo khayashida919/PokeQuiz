@@ -252,16 +252,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `Compatibility`.
     static let compatibility = Rswift.ImageResource(bundle: R.hostingBundle, name: "Compatibility")
+    /// Image `heart`.
+    static let heart = Rswift.ImageResource(bundle: R.hostingBundle, name: "heart")
     /// Image `setting`.
     static let setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "setting")
     
     /// `UIImage(named: "Compatibility", bundle: ..., traitCollection: ...)`
     static func compatibility(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.compatibility, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "heart", bundle: ..., traitCollection: ...)`
+    static func heart(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.heart, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "setting", bundle: ..., traitCollection: ...)`
@@ -1162,7 +1169,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "heart.fill", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heart.fill' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "heart", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heart' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "setting", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'setting' is used in storyboard 'Main', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
           if UIKit.UIColor(named: "BottomBackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BottomBackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }

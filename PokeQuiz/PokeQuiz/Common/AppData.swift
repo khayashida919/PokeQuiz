@@ -15,7 +15,7 @@ final class AppData {
     let uuid = UIDevice.current.identifierForVendor!.uuidString
     
     var name: String {
-        get { UserDefaults.standard.string(forKey: "name") ?? "" }
+        get { return UserDefaults.standard.string(forKey: "name") ?? "" }
         set { UserDefaults.standard.set(newValue, forKey: "name") }
     }
     
@@ -25,8 +25,8 @@ final class AppData {
     }
     
     var blockList: [String] {
+        get { return UserDefaults.standard.array(forKey: "block") as! [String] }
         set { UserDefaults.standard.set(newValue, forKey: "block") }
-        get { UserDefaults.standard.array(forKey: "block") as! [String] }
     }
     
     private init() {
