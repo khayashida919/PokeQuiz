@@ -125,7 +125,7 @@
                                                 <size key="shadowOffset" width="3" height="-3"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〜Compatibility Questions〜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPj-PG-7hn">
-                                                <rect key="frame" x="0.0" y="188" width="315" height="22"/>
+                                                <rect key="frame" x="0.0" y="184" width="315" height="26"/>
                                                 <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="22"/>
                                                 <color key="textColor" name="PokeBlack"/>
                                                 <nil key="highlightedColor"/>
@@ -268,15 +268,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="h4c-Q5-RFl">
                                 <rect key="frame" x="8" y="0.0" width="359" height="659"/>
                                 <subviews>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4m-vr-czx" customClass="GADBannerView">
-                                        <rect key="frame" x="0.0" y="-50" width="359" height="50"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4m-vr-czx" customClass="GADBannerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="50"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="VG5-g2-oTe"/>
                                         </constraints>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-se-WLP" customClass="RoundView" customModule="PokeQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="200"/>
+                                        <rect key="frame" x="0.0" y="57" width="359" height="200"/>
                                         <subviews>
                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8O-eT-jEE">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="200"/>
@@ -392,7 +392,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOk-q2-GTM" customClass="RoundView" customModule="PokeQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="207" width="359" height="40"/>
+                                        <rect key="frame" x="0.0" y="264" width="359" height="40"/>
                                         <subviews>
                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qID-8K-jDc">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="40"/>
@@ -443,16 +443,16 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="qu1-ak-TqH" customClass="RoundView" customModule="PokeQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="254" width="359" height="328"/>
+                                        <rect key="frame" x="0.0" y="311" width="359" height="271"/>
                                         <subviews>
                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djN-ir-qWu">
-                                                <rect key="frame" x="0.0" y="0.0" width="359" height="328"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="271"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yo2-1n-rbF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="328"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="271"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dPY-BH-1tI">
-                                                            <rect key="frame" x="3" y="3" width="353" height="322"/>
+                                                            <rect key="frame" x="3" y="3" width="353" height="265"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i6B-Gn-EoO">
                                                                 <size key="itemSize" width="110" height="90"/>
@@ -845,13 +845,6 @@
                                     <action selector="referenceAction:" destination="F5l-R6-YNL" eventType="touchUpInside" id="80N-z6-N8v"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKG-KZ-yIL" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ehs-QE-1kg"/>
-                                </constraints>
-                            </view>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVr-ye-coT">
                                 <rect key="frame" x="0.0" y="30" width="375" height="587"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -860,6 +853,13 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKG-KZ-yIL" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ehs-QE-1kg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1024,23 +1024,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9L-Yp-Suu" customClass="RoundView" customModule="PokeQuiz" customModuleProvider="target">
-                                <rect key="frame" x="20" y="30" width="335" height="617"/>
+                                <rect key="frame" x="10" y="30" width="355" height="617"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UDu-4x-D52">
-                                        <rect key="frame" x="8" y="10" width="319" height="597"/>
+                                        <rect key="frame" x="8" y="10" width="339" height="597"/>
                                         <subviews>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCj-Fe-IMG" customClass="GADBannerView">
-                                                <rect key="frame" x="0.0" y="-100" width="319" height="100"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCj-Fe-IMG" customClass="GADBannerView">
+                                                <rect key="frame" x="0.0" y="0.0" width="339" height="100"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="7Dg-rb-aTL"/>
                                                 </constraints>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7HY-uL-GJC" customClass="RoundView" customModule="PokeQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="319" height="50"/>
+                                                <rect key="frame" x="0.0" y="120" width="339" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rz-cK-tDf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="319" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="339" height="50"/>
                                                         <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="40"/>
                                                         <color key="textColor" name="PokeBlack"/>
                                                         <nil key="highlightedColor"/>
@@ -1067,18 +1067,18 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BJe-vi-M4T">
-                                                <rect key="frame" x="0.0" y="70" width="319" height="463"/>
+                                                <rect key="frame" x="0.0" y="190" width="339" height="343"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Header" id="Aoz-yR-5oR" customClass="HeaderTableViewCell" customModule="PokeQuiz" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="319" height="27"/>
+                                                        <rect key="frame" x="0.0" y="28" width="339" height="27"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Aoz-yR-5oR" id="aNn-Yi-Ibs">
-                                                            <rect key="frame" x="0.0" y="0.0" width="319" height="27"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="339" height="27"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pWJ-QV-bbd">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="27"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="339" height="27"/>
                                                                     <color key="backgroundColor" white="1" alpha="0.69749328987730064" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="23"/>
                                                                     <color key="textColor" name="PokeBlack"/>
@@ -1098,14 +1098,14 @@
                                                         </connections>
                                                     </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeTableViewCell" rowHeight="60" id="TWy-3q-PvV" customClass="TypeTableViewCell" customModule="PokeQuiz" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="55" width="319" height="60"/>
+                                                        <rect key="frame" x="0.0" y="55" width="339" height="60"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TWy-3q-PvV" id="fS9-Kq-w6I">
-                                                            <rect key="frame" x="0.0" y="0.0" width="319" height="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="339" height="60"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV7-yX-3Ut">
-                                                                    <rect key="frame" x="15" y="11" width="289" height="38"/>
+                                                                    <rect key="frame" x="15" y="11" width="309" height="38"/>
                                                                     <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="30"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1127,7 +1127,7 @@
                                                 </prototypes>
                                             </tableView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh4-gh-g94" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="553" width="319" height="44"/>
+                                                <rect key="frame" x="0.0" y="553" width="339" height="44"/>
                                                 <color key="backgroundColor" name="TopBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="Q73-0a-NAM"/>
@@ -1165,8 +1165,8 @@
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.70005751533742333" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="D9L-Yp-Suu" firstAttribute="top" secondItem="asi-Nw-Tsi" secondAttribute="top" constant="30" id="1kh-wX-DqV"/>
-                            <constraint firstItem="D9L-Yp-Suu" firstAttribute="leading" secondItem="asi-Nw-Tsi" secondAttribute="leading" constant="20" id="D4A-J4-xyH"/>
-                            <constraint firstItem="asi-Nw-Tsi" firstAttribute="trailing" secondItem="D9L-Yp-Suu" secondAttribute="trailing" constant="20" id="HyJ-eu-Ld1"/>
+                            <constraint firstItem="D9L-Yp-Suu" firstAttribute="leading" secondItem="asi-Nw-Tsi" secondAttribute="leading" constant="10" id="D4A-J4-xyH"/>
+                            <constraint firstItem="asi-Nw-Tsi" firstAttribute="trailing" secondItem="D9L-Yp-Suu" secondAttribute="trailing" constant="10" id="HyJ-eu-Ld1"/>
                             <constraint firstItem="asi-Nw-Tsi" firstAttribute="bottom" secondItem="D9L-Yp-Suu" secondAttribute="bottom" constant="20" id="Yme-6g-jnU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="asi-Nw-Tsi"/>

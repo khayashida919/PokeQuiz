@@ -20,7 +20,7 @@ final class GameOverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerView.start(viewController: self)
+        bannerView.start(viewController: self, id: Keys.BannerUnitID.gameOverViewController)
         correctCountLabel.text = "\(correctCount.description)pt"
     }
     

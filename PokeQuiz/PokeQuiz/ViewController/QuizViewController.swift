@@ -50,7 +50,7 @@ final class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerView.start(viewController: self)
+        bannerView.start(viewController: self, id: Keys.BannerUnitID.quizViewController)
         
         selectTypeCollectionView.delegate = self
         selectTypeCollectionView.dataSource = self

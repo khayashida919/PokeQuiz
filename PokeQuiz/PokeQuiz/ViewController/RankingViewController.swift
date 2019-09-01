@@ -17,8 +17,6 @@ final class RankingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TODO: 消すこと
-        AppData.shared.isFirstLaunch = true
         
         rankingTableView.dataSource = self
         rankingTableView.delegate = self

@@ -18,7 +18,8 @@ final class CompatibilityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerView.start(viewController: self)
+        bannerView.start(viewController: self, id: Keys.BannerUnitID.compatibilityViewController)
+        
         webView.load(URLRequest(url: URL(string: "https://www.pokemon.co.jp/ex/sun_moon/common/images/fight/161215_01/img_01.png")!))
         
         navigationItem.title = R.string.localizable.compatibility_table()

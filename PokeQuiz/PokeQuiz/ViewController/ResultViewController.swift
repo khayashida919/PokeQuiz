@@ -26,9 +26,7 @@ final class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+        bannerView.start(viewController: self, id: Keys.BannerUnitID.resultViewController)
         
         typeTableView.dataSource = self
         typeTableView.delegate = self
