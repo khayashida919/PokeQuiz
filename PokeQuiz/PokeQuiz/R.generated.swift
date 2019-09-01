@@ -252,14 +252,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 3 images.
+  /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
     /// Image `Compatibility`.
     static let compatibility = Rswift.ImageResource(bundle: R.hostingBundle, name: "Compatibility")
     /// Image `setting`.
     static let setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "setting")
-    /// Image `splash`.
-    static let splash = Rswift.ImageResource(bundle: R.hostingBundle, name: "splash")
     
     /// `UIImage(named: "Compatibility", bundle: ..., traitCollection: ...)`
     static func compatibility(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -269,11 +267,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "setting", bundle: ..., traitCollection: ...)`
     static func setting(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.setting, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "splash", bundle: ..., traitCollection: ...)`
-    static func splash(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.splash, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -320,7 +313,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 38 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 39 localization keys.
     struct localizable {
       /// en translation: %
       /// 
@@ -454,6 +447,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let report = Rswift.StringResource(key: "report", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Reset it.
+      /// 
+      /// Locales: en, ja
+      static let reset = Rswift.StringResource(key: "reset", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: STEEL
       /// 
       /// Locales: en, ja
@@ -704,6 +701,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func report(_: Void = ()) -> String {
         return NSLocalizedString("report", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Reset it.
+      /// 
+      /// Locales: en, ja
+      static func reset(_: Void = ()) -> String {
+        return NSLocalizedString("reset", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: STEEL

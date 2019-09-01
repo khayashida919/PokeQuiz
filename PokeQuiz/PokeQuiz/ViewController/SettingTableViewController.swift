@@ -12,7 +12,7 @@ final class SettingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let gradietionImageView: UIView = {
             let gradientLayer: CAGradientLayer = {
                 let gradientLayer = CAGradientLayer()
@@ -37,6 +37,10 @@ final class SettingTableViewController: UITableViewController {
     }
     
     @IBAction func resetHiddenListAction(_ sender: UIButton) {
-        AppData.shared.blockList = [String]()
+        showAlert(isCancel: false,
+                  title: R.string.localizable.confirmation(),
+                  message: R.string.localizable.reset()) {
+                    AppData.shared.blockList = [String]()
+        }
     }
 }
