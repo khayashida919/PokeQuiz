@@ -40,7 +40,7 @@ final class RankingViewController: UIViewController {
             guard let self = self else { return }
             let users = querySnapshot!.documents
                 .compactMap { $0.data() as? [String: String] }
-                .map { User(name: $0["name"]!, uuid: $0["uuid"]!, point: $0["point"]!) }
+                .map { User(name: $0["name"]!, uuid: $0["uuid"]!, point: Int($0["point"]!)!) }
                 .filter { !AppData.shared.blockList.contains($0.uuid) }     //ブロックされていたら非表示
                 .sorted { $0.point > $1.point }     //ポイントが高い順にソート
             
@@ -130,10 +130,10 @@ final class RankingTableViewCell: UITableViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var pointLabel: UILabel!
     
-    func set(order: Int, name: String, point: String) {
+    func set(order: Int, name: String, point: Int) {
         orderLabel.text = "\(order)"
         nameLabel.text = name
-        pointLabel.text = point
+        pointLabel.text = "\(point)"
     }
     
 }

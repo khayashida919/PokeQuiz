@@ -11,7 +11,7 @@ import Foundation
 struct User {
     let name: String
     let uuid: String
-    let point: String
+    let point: Int
     
     func toDictionary() -> [String: String] {
         let mirror = Mirror(reflecting: self)

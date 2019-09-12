@@ -27,7 +27,7 @@ final class InputNameViewController: UIViewController {
         
         let ranking = User(name: AppData.shared.name,
                               uuid: AppData.shared.uuid,
-                              point: "\(point!)")
+                              point: point)
         
         Firestore.firestore().collection(Keys.ranking).addDocument(data: ranking.toDictionary())
         dismiss(animated: true) { [weak self] in
