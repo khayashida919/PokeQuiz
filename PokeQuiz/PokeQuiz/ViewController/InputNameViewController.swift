@@ -23,7 +23,12 @@ final class InputNameViewController: UIViewController {
     }
     
     @IBAction func sendRankingAction(_ sender: RoundButton) {
-        AppData.shared.name = inputNameTextField.text ?? ""
+        guard let name = inputNameTextField.text, !name.isEmpty else {
+            showAlert(isCancel: false, title: R.string.localizable.confirmation(), message: R.string.localizable.please_enter_your_name())
+            return
+        }
+        
+        AppData.shared.name = name
         
         let ranking = User(name: AppData.shared.name,
                               uuid: AppData.shared.uuid,

@@ -320,7 +320,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 39 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 42 localization keys.
     struct localizable {
       /// en translation: %
       /// 
@@ -374,6 +374,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let quizLabel_tutorial = Rswift.StringResource(key: "quizLabel_tutorial", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Error
+      /// 
+      /// Locales: en, ja
+      static let error = Rswift.StringResource(key: "error", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: FAIRY
       /// 
       /// Locales: en, ja
@@ -442,6 +446,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let esper = Rswift.StringResource(key: "esper", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Please enter your name
+      /// 
+      /// Locales: en, ja
+      static let please_enter_your_name = Rswift.StringResource(key: "please_enter_your_name", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: ROCK
       /// 
       /// Locales: en, ja
@@ -470,6 +478,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let setting = Rswift.StringResource(key: "setting", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: The server is not in good shape  Please wait for recovery
+      /// 
+      /// Locales: en, ja
+      static let server_error = Rswift.StringResource(key: "server_error", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: This is excellent for %@
       /// 
       /// Locales: en, ja
@@ -568,6 +580,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func quizLabel_tutorial(_: Void = ()) -> String {
         return NSLocalizedString("quizLabel_tutorial", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Error
+      /// 
+      /// Locales: en, ja
+      static func error(_: Void = ()) -> String {
+        return NSLocalizedString("error", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: FAIRY
@@ -689,6 +708,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("esper", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Please enter your name
+      /// 
+      /// Locales: en, ja
+      static func please_enter_your_name(_: Void = ()) -> String {
+        return NSLocalizedString("please_enter_your_name", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: ROCK
       /// 
       /// Locales: en, ja
@@ -736,6 +762,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func setting(_: Void = ()) -> String {
         return NSLocalizedString("setting", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: The server is not in good shape  Please wait for recovery
+      /// 
+      /// Locales: en, ja
+      static func server_error(_: Void = ()) -> String {
+        return NSLocalizedString("server_error", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: This is excellent for %@

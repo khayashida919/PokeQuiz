@@ -14,11 +14,7 @@ struct User {
     let point: Int
     
     func toDictionary() -> [String: String] {
-        let mirror = Mirror(reflecting: self)
-        var dictionary = [String: String]()
-        mirror.children.forEach {
-            dictionary.updateValue($0.value as! String, forKey: $0.label!)
-        }
+        let dictionary = ["name": name, "uuid": uuid, "point": String(point)]
         return dictionary
     }
 }

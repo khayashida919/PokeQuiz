@@ -38,6 +38,10 @@ final class RankingViewController: UIViewController {
     private func getRanking(_ completion: (() -> Void)? = nil) {
         Firestore.firestore().collection(Keys.ranking).getDocuments { [weak self] (querySnapshot, error) in
             guard let self = self else { return }
+            if error != nil {
+                self.showAlert(isCancel: false, title: R.string.localizable.error(), message: R.string.localizable.server_error())
+                return
+            }
             let users = querySnapshot!.documents
                 .compactMap { $0.data() as? [String: String] }
                 .map { User(name: $0["name"]!, uuid: $0["uuid"]!, point: Int($0["point"]!)!) }

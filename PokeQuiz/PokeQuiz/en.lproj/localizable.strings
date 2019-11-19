@@ -29,9 +29,11 @@
 /// アラート
 "ok" = "OK";
 "cancel" = "Cencel";
+"error" = "Error";
 
 /// 共通項目
 "percent" = "%";
+"server_error" = "The server is not in good shape\n Please wait for recovery";
 
 /// QuizViewController
 "accuracy_rate" = "AccuracyRate：%.1f";
@@ -63,3 +65,5 @@
 "setting" = "Setting";
 "reset" = "Reset it.";
 
+/// InputNameViewController
+"please_enter_your_name" = "Please enter your name";

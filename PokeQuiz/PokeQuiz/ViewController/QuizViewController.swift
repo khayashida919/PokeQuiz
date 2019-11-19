@@ -115,16 +115,21 @@ final class QuizViewController: UIViewController {
         selectTypeCollectionView.reloadData()
         
         Firestore.firestore().collection(quizPokeType.key).getDocuments { [weak self] (querySnapshot, error) in
+            guard let self = self else { return }
+            if error != nil {
+                self.showAlert(isCancel: false, title: R.string.localizable.error(), message: R.string.localizable.server_error())
+                return
+            }
             let correctCount = querySnapshot!.documents
                 .compactMap { $0.data() as? [String: Bool] }
                 .compactMap { $0[Keys.document] }
                 .filter { $0 }
                 .count
             if correctCount == 0 {
-                self?.rateLabel.text = R.string.localizable.accuracy_rate(Double(correctCount)) + R.string.localizable.percent()
+                self.rateLabel.text = R.string.localizable.accuracy_rate(Double(correctCount)) + R.string.localizable.percent()
             } else {
                 let rate = (Double(correctCount) / Double(querySnapshot!.documents.count)) * 100
-                self?.rateLabel.text = R.string.localizable.accuracy_rate(rate) + R.string.localizable.percent()
+                self.rateLabel.text = R.string.localizable.accuracy_rate(rate) + R.string.localizable.percent()
             }
         }
     }

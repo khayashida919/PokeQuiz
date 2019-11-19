@@ -28,9 +28,11 @@
 
 "ok" = "OK";
 "cancel" = "キャンセル";
+"error" = "エラー";
 
 /// 共通項目
 "percent" = "%";
+"server_error" = "サーバの調子がよくありません\n 復旧をお待ちください";
 
 /// QuizViewController
 "accuracy_rate" = "　正解率：%.1f";
@@ -60,3 +62,6 @@
 /// SettingTableViewController
 "setting" = "設定";
 "reset" = "リセットしました";
+
+/// InputNameViewController
+"please_enter_your_name" = "名前を入力してください";
