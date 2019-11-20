@@ -117,7 +117,6 @@ final class QuizViewController: UIViewController {
         Firestore.firestore().collection(quizPokeType.key).getDocuments { [weak self] (querySnapshot, error) in
             guard let self = self else { return }
             if error != nil {
-                self.showAlert(isCancel: false, title: R.string.localizable.error(), message: R.string.localizable.server_error())
                 return
             }
             let correctCount = querySnapshot!.documents
