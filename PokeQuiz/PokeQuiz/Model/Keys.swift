@@ -9,8 +9,9 @@
 import Foundation
 
 struct Keys {
-    static let collection = "ResponseRate"
-    static let document = "result"
+    static let result = "result"
+    static let failure = "failure"
+    static let success = "success"
     
     static let ranking = "ranking"
     static let report = "report"

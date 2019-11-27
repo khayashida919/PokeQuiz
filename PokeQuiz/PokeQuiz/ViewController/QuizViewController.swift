@@ -17,6 +17,9 @@ final class QuizViewController: UIViewController {
     var correctCount = 0
     var mistakeCount = 0
     
+    var success: Int = 0    //サーバ上の問題回答に成功した合計回数
+    var failure: Int = 0    //サーバ上の問題回答に失敗した合計回数
+    
     @IBOutlet private weak var bannerView: GADBannerView!
     
     @IBOutlet private weak var backView: RoundView!
@@ -77,6 +80,8 @@ final class QuizViewController: UIViewController {
     }
     
     private func reloadQuiz() {
+        success = 0     //問題をリロード時に0へ
+        failure = 0     //問題をリロード時に0へ
         totalCount += 1
         questionCountLabel.text = "Question \(totalCount)"
         
@@ -114,20 +119,27 @@ final class QuizViewController: UIViewController {
         selectedTypes.removeAll()
         selectTypeCollectionView.reloadData()
         
-        Firestore.firestore().collection(quizPokeType.key).getDocuments { [weak self] (querySnapshot, error) in
+        Firestore.firestore().collection(quizPokeType.key).document(Keys.result).getDocument { [weak self] (documentSnapshot, error) in
+            
             guard let self = self else { return }
             if error != nil {
                 return
             }
-            let correctCount = querySnapshot!.documents
-                .compactMap { $0.data() as? [String: Bool] }
-                .compactMap { $0[Keys.document] }
-                .filter { $0 }
-                .count
-            if correctCount == 0 {
-                self.rateLabel.text = R.string.localizable.accuracy_rate(Double(correctCount)) + R.string.localizable.percent()
+            
+            guard
+                let result = documentSnapshot!.data() as? [String: Int],
+                let failure = result[Keys.failure],
+                let success = result[Keys.success] else {
+                    return
+            }
+            self.failure = failure
+            self.success = success
+            let sum = failure + success
+            
+            if sum == 0 {
+                self.rateLabel.text = R.string.localizable.accuracy_rate(Double(success)) + R.string.localizable.percent()
             } else {
-                let rate = (Double(correctCount) / Double(querySnapshot!.documents.count)) * 100
+                let rate = (Double(success) / Double(sum)) * 100
                 self.rateLabel.text = R.string.localizable.accuracy_rate(rate) + R.string.localizable.percent()
             }
         }
@@ -157,6 +169,8 @@ final class QuizViewController: UIViewController {
             return
         }
         resultViewController.result = result
+        resultViewController.success = success
+        resultViewController.failure = failure
         resultViewController.selectedTypes = selectedTypes
         resultViewController.quizPokeType = quizPokeType
         resultViewController.reload = { [weak self] in self?.reloadQuiz() }

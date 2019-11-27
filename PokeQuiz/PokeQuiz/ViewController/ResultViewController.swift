@@ -15,6 +15,9 @@ final class ResultViewController: UIViewController {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var typeTableView: UITableView!
     
+    var success: Int = 0   //サーバ上の問題回答に成功した合計回数 Quiz画面から値を上書きされる想定
+    var failure: Int = 0   //サーバ上の問題回答に失敗した合計回数 Quiz画面から値を上書きされる想定
+    
     var quizPokeType: PokeType!
     var result: PokeResult!
     var selectedTypes: Set<PokeType>!
@@ -33,11 +36,18 @@ final class ResultViewController: UIViewController {
         
         if result.superiority == selectedTypes {
             titleLabel.text = R.string.localizable.good()
-            db.collection(quizPokeType.key).addDocument(data: [Keys.document: true])
+            
+            db.collection(quizPokeType.key).document(Keys.result).setData(
+                [Keys.success: success + 1,
+                 Keys.failure: failure]
+            )
             countup?(true)
         } else {
             titleLabel.text = R.string.localizable.bad()
-            db.collection(quizPokeType.key).addDocument(data: [Keys.document: false])
+            db.collection(quizPokeType.key).document(Keys.result).setData(
+                [Keys.success: success,
+                 Keys.failure: failure + 1]
+            )
             countup?(false)
         }
     }
