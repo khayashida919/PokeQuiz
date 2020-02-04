@@ -89,3 +89,20 @@
 /* Class = "UITableViewSection"; headerTitle = "Deletes the user information that is hidden on the ranking screen."; ObjectID = "Hlm-h2-oXq"; */
 "Hlm-h2-oXq.footerTitle" = "ランキング画面で非表示にしたユーザ情報を削除します。";
 
+/* Class = "UIButton"; normalTitle = "初級"; ObjectID = "h8J-ZO-8p1"; */
+"h8J-ZO-8p1.normalTitle" = "初級";
+
+/* Class = "UILabel"; text = "ポイント"; ObjectID = "UxS-uj-urd"; */
+"UxS-uj-urd.text" = "相性を1つでも当てると正解";
+
+/* Class = "UIButton"; normalTitle = "中級"; ObjectID = "wPx-dG-eAi"; */
+"wPx-dG-eAi.normalTitle" = "中級";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lmk-O1-Rrn"; */
+"lmk-O1-Rrn.text" = "相性を3つ当てると正解";
+
+/* Class = "UIButton"; normalTitle = "上級"; ObjectID = "KZt-os-Shm"; */
+"KZt-os-Shm.normalTitle" = "上級";
+
+/* Class = "UILabel"; text = "ぽけくいず"; ObjectID = "Wwf-lH-zZB"; */
+"Wwf-lH-zZB.text" = "相性を全て当てると正解";

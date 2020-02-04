@@ -13,6 +13,8 @@ import Instructions
 
 final class QuizViewController: UIViewController {
     
+    var modeType: Mode = .advanced
+    
     var totalCount = 0
     var correctCount = 0
     var mistakeCount = 0

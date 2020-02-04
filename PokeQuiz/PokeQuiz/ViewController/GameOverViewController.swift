@@ -11,6 +11,7 @@ import Firebase
 
 final class GameOverViewController: UIViewController {
 
+    var modeType: Mode = .advanced
     var correctCount: Int!
     
     @IBOutlet private weak var correctCountLabel: UILabel!

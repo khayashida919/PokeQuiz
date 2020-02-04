@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="39H-zM-UWk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="39H-zM-UWk">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -184,7 +184,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="uPq-FL-dyI" kind="show" id="jT0-se-GPf"/>
+                                            <segue destination="MIa-c5-tsy" kind="show" id="IDu-Aa-kbL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U82-CH-xOW" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
@@ -256,6 +256,126 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="218.40000000000001" y="120.08995502248877"/>
+        </scene>
+        <!--Select Mode View Controller-->
+        <scene sceneID="cJe-y7-4PF">
+            <objects>
+                <viewController id="MIa-c5-tsy" customClass="SelectModeViewController" customModule="PokeQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ody-jv-IZe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yt9-0q-goz">
+                                <rect key="frame" x="32" y="8" width="311" height="651"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8J-ZO-8p1" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="138.5"/>
+                                        <color key="backgroundColor" red="1" green="0.97530847229999995" blue="0.021001329490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="35"/>
+                                        <state key="normal" title="Beginner">
+                                            <color key="titleColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct answer if you hit at least one compatibility" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxS-uj-urd">
+                                        <rect key="frame" x="0.0" y="146.5" width="311" height="44.5"/>
+                                        <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="19"/>
+                                        <color key="textColor" name="PokeBlack"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaE-h6-clt">
+                                        <rect key="frame" x="0.0" y="199" width="311" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPx-dG-eAi" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="230" width="311" height="138.5"/>
+                                        <color key="backgroundColor" red="1" green="0.97530847229999995" blue="0.021001329490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="35"/>
+                                        <state key="normal" title="Intermediate">
+                                            <color key="titleColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct answer if you hit 3 compatibility" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmk-O1-Rrn">
+                                        <rect key="frame" x="0.0" y="376.5" width="311" height="44.5"/>
+                                        <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="19"/>
+                                        <color key="textColor" name="PokeBlack"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POJ-yq-liX">
+                                        <rect key="frame" x="0.0" y="429" width="311" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZt-os-Shm" customClass="RoundButton" customModule="PokeQuiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="460" width="311" height="138.5"/>
+                                        <color key="backgroundColor" red="1" green="0.97530847229999995" blue="0.021001329490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="35"/>
+                                        <state key="normal" title="Advanced">
+                                            <color key="titleColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct answer if you apply all compatibility" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwf-lH-zZB">
+                                        <rect key="frame" x="0.0" y="606.5" width="311" height="44.5"/>
+                                        <fontDescription key="fontDescription" name="Tanuki-Permanent-Marker" family="Tanuki Permanent Marker" pointSize="19"/>
+                                        <color key="textColor" name="PokeBlack"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="h8J-ZO-8p1" firstAttribute="height" secondItem="wPx-dG-eAi" secondAttribute="height" id="153-2F-aH9"/>
+                                    <constraint firstItem="UxS-uj-urd" firstAttribute="height" secondItem="lmk-O1-Rrn" secondAttribute="height" id="1Gc-vg-Imd"/>
+                                    <constraint firstItem="h8J-ZO-8p1" firstAttribute="height" secondItem="KZt-os-Shm" secondAttribute="height" id="LAE-h9-2bG"/>
+                                    <constraint firstItem="QaE-h6-clt" firstAttribute="height" secondItem="POJ-yq-liX" secondAttribute="height" id="cBr-aS-oCH"/>
+                                    <constraint firstItem="h8J-ZO-8p1" firstAttribute="height" secondItem="QaE-h6-clt" secondAttribute="height" multiplier="6" id="g2U-FR-5Jc"/>
+                                    <constraint firstItem="UxS-uj-urd" firstAttribute="height" secondItem="Wwf-lH-zZB" secondAttribute="height" id="kzW-Ik-SJd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ocv-Qj-swU" firstAttribute="trailing" secondItem="Yt9-0q-goz" secondAttribute="trailing" constant="32" id="HuN-8p-5De"/>
+                            <constraint firstItem="Yt9-0q-goz" firstAttribute="leading" secondItem="ocv-Qj-swU" secondAttribute="leading" constant="32" id="I5f-X1-SkA"/>
+                            <constraint firstItem="Yt9-0q-goz" firstAttribute="top" secondItem="ocv-Qj-swU" secondAttribute="top" constant="8" id="Lqh-Qy-Ixr"/>
+                            <constraint firstItem="ocv-Qj-swU" firstAttribute="bottom" secondItem="Yt9-0q-goz" secondAttribute="bottom" constant="8" id="oUW-5y-XF2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ocv-Qj-swU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Eu-jL-IJA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Su-Te-MZg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="120"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="wMJ-LO-uS5">
@@ -564,6 +684,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kaZ-Jz-JQE"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hYz-vb-VYx"/>
                     <connections>
                         <outlet property="backView" destination="mbB-se-WLP" id="11x-MS-u3t"/>
                         <outlet property="bannerView" destination="i4m-vr-czx" id="JSi-q4-fTy"/>
@@ -583,7 +704,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anq-FH-3T3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="75x-sK-aAa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1007.2" y="120.08995502248877"/>
+            <point key="canvasLocation" x="1734" y="121"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="gZ9-fK-iee">
@@ -727,7 +848,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dh2-et-pPi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733.5999999999999" y="119.1904047976012"/>
+            <point key="canvasLocation" x="1734" y="-584"/>
         </scene>
         <!--Input Name View Controller-->
         <scene sceneID="Sox-T8-ye1">
@@ -830,7 +951,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqi-jU-czv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2413.5999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="2471" y="-584"/>
         </scene>
         <!--Compatibility View Controller-->
         <scene sceneID="mbR-jk-l92">

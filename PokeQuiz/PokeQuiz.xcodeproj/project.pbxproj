@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1AA16275A57E4E90FE78FB07 /* Pods_PokeQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4554E2534F23B2B99F81DABF /* Pods_PokeQuiz.framework */; };
 		4010AD7723110F4E0001E48B /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4010AD7623110F4E0001E48B /* SettingTableViewController.swift */; };
+		4048C12D23E9A49500EE542D /* SelectModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4048C12C23E9A49500EE542D /* SelectModeViewController.swift */; };
+		4048C12F23E9AD7A00EE542D /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4048C12E23E9AD7A00EE542D /* Mode.swift */; };
 		4075815322B929A2002C8E4E /* TanukiMagic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4075815222B929A2002C8E4E /* TanukiMagic.ttf */; };
 		407C519922991F7B00FF3F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C519822991F7B00FF3F13 /* AppDelegate.swift */; };
 		407C51A022991F7D00FF3F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407C519F22991F7D00FF3F13 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		007C806689C7A450E3FBDAC2 /* Pods-PokeQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeQuiz/Pods-PokeQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		4010AD7623110F4E0001E48B /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		4039FF162314085800B7D5DB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		4048C12C23E9A49500EE542D /* SelectModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModeViewController.swift; sourceTree = "<group>"; };
+		4048C12E23E9AD7A00EE542D /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		4075815222B929A2002C8E4E /* TanukiMagic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TanukiMagic.ttf; sourceTree = "<group>"; };
 		407C519522991F7B00FF3F13 /* PokeQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407C519822991F7B00FF3F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				407C51BB229945C900FF3F13 /* MenuViewController.swift */,
+				4048C12C23E9A49500EE542D /* SelectModeViewController.swift */,
 				407C51C322994E1D00FF3F13 /* QuizViewController.swift */,
 				4086A6AA22AE9C4B005E177F /* ResultViewController.swift */,
 				4080527D22B6812F00DA0075 /* GameOverViewController.swift */,
@@ -187,6 +192,7 @@
 				407C51B92299235A00FF3F13 /* Poke.swift */,
 				40B1996122A53DC700CBB59A /* Keys.swift */,
 				4094EEB722F4639A00F5BA71 /* User.swift */,
+				4048C12E23E9AD7A00EE542D /* Mode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -401,10 +407,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4081EFC122F6665B0008B462 /* CompatibilityViewController.swift in Sources */,
+				4048C12D23E9A49500EE542D /* SelectModeViewController.swift in Sources */,
 				407C51C022994A4C00FF3F13 /* RoundButton.swift in Sources */,
 				407C51BA2299235A00FF3F13 /* Poke.swift in Sources */,
 				4094EEB822F4639A00F5BA71 /* User.swift in Sources */,
 				40ABA0B822EB4CC200DBA15D /* RankingViewController.swift in Sources */,
+				4048C12F23E9AD7A00EE542D /* Mode.swift in Sources */,
 				407C51BE2299461B00FF3F13 /* R.generated.swift in Sources */,
 				4010AD7723110F4E0001E48B /* SettingTableViewController.swift in Sources */,
 				40A0CBA422EF252E00A8216D /* InputNameViewController.swift in Sources */,

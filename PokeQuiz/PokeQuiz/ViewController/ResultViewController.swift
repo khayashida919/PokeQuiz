@@ -11,6 +11,8 @@ import Firebase
 
 final class ResultViewController: UIViewController {
 
+    var modeType: Mode = .advanced
+    
     @IBOutlet private weak var bannerView: GADBannerView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var typeTableView: UITableView!
@@ -34,9 +36,31 @@ final class ResultViewController: UIViewController {
         typeTableView.dataSource = self
         typeTableView.delegate = self
         
-        if result.superiority == selectedTypes {
+        judgment()
+    }
+
+    @IBAction private func doneButtonAction(_ sender: RoundButton) {
+        dismiss(animated: true) {
+            self.reload?()
+        }
+    }
+    
+    private func judgment() {
+        var judg: Bool
+        switch modeType {
+        case .beginner:
+            //選んだ相性かつ正解の相性の個数が1以上の場合にtrue
+            judg = result.superiority.intersection(selectedTypes) >= 1
+        case .intermediate:
+            //選んだ相性かつ正解の相性の個数が3以上の場合にtrue
+            judg = result.superiority.intersection(selectedTypes) >= 3
+        case .advanced:
+            //選んだ相性が正解の相性ちと完全一致している場合true
+            judg = result.superiority == selectedTypes
+        }
+        if judg {
             titleLabel.text = R.string.localizable.good()
-            
+
             db.collection(quizPokeType.key).document(Keys.result).setData(
                 [Keys.success: success + 1,
                  Keys.failure: failure]
@@ -49,12 +73,6 @@ final class ResultViewController: UIViewController {
                  Keys.failure: failure + 1]
             )
             countup?(false)
-        }
-    }
-
-    @IBAction private func doneButtonAction(_ sender: RoundButton) {
-        dismiss(animated: true) {
-            self.reload?()
         }
     }
 }

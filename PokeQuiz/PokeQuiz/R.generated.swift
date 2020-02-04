@@ -320,7 +320,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 42 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 43 localization keys.
     struct localizable {
       /// en translation: %
       /// 
@@ -470,6 +470,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let hagane = Rswift.StringResource(key: "hagane", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Select Mode
+      /// 
+      /// Locales: en, ja
+      static let select_mode = Rswift.StringResource(key: "select_mode", tableName: "localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Send Completely
       /// 
       /// Locales: en, ja
@@ -750,6 +754,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("hagane", tableName: "localizable", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Select Mode
+      /// 
+      /// Locales: en, ja
+      static func select_mode(_: Void = ()) -> String {
+        return NSLocalizedString("select_mode", tableName: "localizable", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Send Completely
       /// 
       /// Locales: en, ja
@@ -788,7 +799,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.main` struct is generated, and contains static references to 30 localization keys.
+    /// This `R.string.main` struct is generated, and contains static references to 36 localization keys.
     struct main {
       /// ja translation: --
       /// 
@@ -854,10 +865,22 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: ja
       static let hlmH2OXqFooterTitle = Rswift.StringResource(key: "Hlm-h2-oXq.footerTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 上級
+      /// 
+      /// Locales: ja
+      static let kZtOsShmNormalTitle = Rswift.StringResource(key: "KZt-os-Shm.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 中級
+      /// 
+      /// Locales: ja
+      static let wPxDGEAiNormalTitle = Rswift.StringResource(key: "wPx-dG-eAi.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
       /// ja translation: 今回のポイントは‥
       /// 
       /// Locales: ja
       static let v0DYpKxfText = Rswift.StringResource(key: "V0D-yp-Kxf.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 初級
+      /// 
+      /// Locales: ja
+      static let h8JZO8p1NormalTitle = Rswift.StringResource(key: "h8J-ZO-8p1.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
       /// ja translation: 効果抜群を選べ！
       /// 
       /// Locales: ja
@@ -886,6 +909,18 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: ja
       static let oqVgVLPNormalTitle = Rswift.StringResource(key: "5Oq-vg-VLP.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 相性を1つでも当てると正解
+      /// 
+      /// Locales: ja
+      static let uxSUjUrdText = Rswift.StringResource(key: "UxS-uj-urd.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 相性を3つ当てると正解
+      /// 
+      /// Locales: ja
+      static let lmkO1RrnText = Rswift.StringResource(key: "lmk-O1-Rrn.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 相性を全て当てると正解
+      /// 
+      /// Locales: ja
+      static let wwfLHZZBText = Rswift.StringResource(key: "Wwf-lH-zZB.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
       /// ja translation: 相性表
       /// 
       /// Locales: ja
@@ -1023,11 +1058,32 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Hlm-h2-oXq.footerTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
+      /// ja translation: 上級
+      /// 
+      /// Locales: ja
+      static func kZtOsShmNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("KZt-os-Shm.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 中級
+      /// 
+      /// Locales: ja
+      static func wPxDGEAiNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("wPx-dG-eAi.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// ja translation: 今回のポイントは‥
       /// 
       /// Locales: ja
       static func v0DYpKxfText(_: Void = ()) -> String {
         return NSLocalizedString("V0D-yp-Kxf.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 初級
+      /// 
+      /// Locales: ja
+      static func h8JZO8p1NormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("h8J-ZO-8p1.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
       /// ja translation: 効果抜群を選べ！
@@ -1077,6 +1133,27 @@ struct R: Rswift.Validatable {
       /// Locales: ja
       static func oqVgVLPNormalTitle(_: Void = ()) -> String {
         return NSLocalizedString("5Oq-vg-VLP.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 相性を1つでも当てると正解
+      /// 
+      /// Locales: ja
+      static func uxSUjUrdText(_: Void = ()) -> String {
+        return NSLocalizedString("UxS-uj-urd.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 相性を3つ当てると正解
+      /// 
+      /// Locales: ja
+      static func lmkO1RrnText(_: Void = ()) -> String {
+        return NSLocalizedString("lmk-O1-Rrn.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 相性を全て当てると正解
+      /// 
+      /// Locales: ja
+      static func wwfLHZZBText(_: Void = ()) -> String {
+        return NSLocalizedString("Wwf-lH-zZB.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
       /// ja translation: 相性表

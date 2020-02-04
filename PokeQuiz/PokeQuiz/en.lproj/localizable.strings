@@ -35,6 +35,9 @@
 "percent" = "%";
 "server_error" = "The server is not in good shape\n Please wait for recovery";
 
+/// SelectModeViewController
+"select_mode" = "Select Mode";
+
 /// QuizViewController
 "accuracy_rate" = "AccuracyRate：%.1f";
 "quizLabel_tutorial" = "Enemy attributes are displayed";
