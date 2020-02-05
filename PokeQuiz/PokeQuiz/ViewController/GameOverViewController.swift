@@ -30,6 +30,7 @@ final class GameOverViewController: UIViewController {
         guard let inputNameViewController = R.storyboard.main.inputNameViewController() else {
             return
         }
+        inputNameViewController.modeType = modeType
         inputNameViewController.point = correctCount
         inputNameViewController.onTap = { [weak self] in
             self?.sendRankingButton.setTitle(R.string.localizable.send_complete(), for: .normal)

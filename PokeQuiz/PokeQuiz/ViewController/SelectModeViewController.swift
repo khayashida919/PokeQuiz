@@ -23,4 +23,23 @@ final class SelectModeViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
 
+    @IBAction func beginnerButtonAction(_ sender: RoundButton) {
+        showQuizViewController(mode: .beginner)
+    }
+    
+    @IBAction func intermediateButtonAction(_ sender: RoundButton) {
+        showQuizViewController(mode: .intermediate)
+    }
+    
+    @IBAction func advancedButtonAction(_ sender: RoundButton) {
+        showQuizViewController(mode: .advanced)
+    }
+    
+    private func showQuizViewController(mode: Mode) {
+        guard let quizViewController = R.storyboard.main.quizViewController() else {
+            return
+        }
+        quizViewController.modeType = mode
+        navigationController?.show(quizViewController, sender: nil)
+    }
 }

@@ -17,4 +17,12 @@ enum Mode {
     case intermediate
     /// 全て相性があっていれば正解
     case advanced
+    
+    var rankingKey: String {
+        switch self {
+        case .beginner: return Keys.beginnerRanking
+        case .intermediate: return Keys.intermediateRanking
+        case .advanced: return Keys.advancedRanking
+        }
+    }
 }

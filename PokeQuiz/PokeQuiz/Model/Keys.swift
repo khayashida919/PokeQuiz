@@ -13,7 +13,10 @@ struct Keys {
     static let failure = "failure"
     static let success = "success"
     
-    static let ranking = "ranking"
+    static let beginnerRanking = "beginner_ranking"     //初級用ランキングKey
+    static let intermediateRanking = "intermediate_ranking" //中級用ランキングKey
+    static let advancedRanking = "ranking"  //上級用ランキングKey
+    
     static let report = "report"
     
     struct BannerUnitID {

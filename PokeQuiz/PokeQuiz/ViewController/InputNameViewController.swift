@@ -13,6 +13,7 @@ final class InputNameViewController: UIViewController {
     
     @IBOutlet private weak var inputNameTextField: UITextField!
     
+    var modeType: Mode = .advanced
     var point: Int!
     var onTap: (() -> ())?
     
@@ -34,7 +35,7 @@ final class InputNameViewController: UIViewController {
                               uuid: AppData.shared.uuid,
                               point: point)
         
-        Firestore.firestore().collection(Keys.ranking).addDocument(data: ranking.toDictionary())
+        Firestore.firestore().collection(Keys.advancedRanking).addDocument(data: ranking.toDictionary())
         dismiss(animated: true) { [weak self] in
             self?.onTap?()
         }

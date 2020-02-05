@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 final class ResultViewController: UIViewController {
-
+    
     var modeType: Mode = .advanced
     
     @IBOutlet private weak var bannerView: GADBannerView!
@@ -30,7 +30,7 @@ final class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         bannerView.start(viewController: self, id: Keys.BannerUnitID.resultViewController)
         
         typeTableView.dataSource = self
@@ -38,7 +38,7 @@ final class ResultViewController: UIViewController {
         
         judgment()
     }
-
+    
     @IBAction private func doneButtonAction(_ sender: RoundButton) {
         dismiss(animated: true) {
             self.reload?()
@@ -46,33 +46,54 @@ final class ResultViewController: UIViewController {
     }
     
     private func judgment() {
-        var judg: Bool
         switch modeType {
         case .beginner:
             //選んだ相性かつ正解の相性の個数が1以上の場合にtrue
-            judg = result.superiority.intersection(selectedTypes) >= 1
+            if result.superiority.intersection(selectedTypes).count >= 1 {
+                titleLabel.text = R.string.localizable.good()
+                countup?(true)
+            } else {
+                titleLabel.text = R.string.localizable.bad()
+                countup?(false)
+            }
         case .intermediate:
-            //選んだ相性かつ正解の相性の個数が3以上の場合にtrue
-            judg = result.superiority.intersection(selectedTypes) >= 3
+            //正解の数が2以下だった場合は完全一致している場合にtrue
+            if 2 >= result.superiority.count {
+                if result.superiority == selectedTypes {
+                    titleLabel.text = R.string.localizable.good()
+                    countup?(true)
+                } else {
+                    titleLabel.text = R.string.localizable.bad()
+                    countup?(false)
+                }
+            } else {    //正解の数が3以上だった場合は完全一致している場合にtrue
+                //選んだ相性かつ正解の相性の個数が3以上の場合にtrue
+                if result.superiority.intersection(selectedTypes).count >= 3 {
+                    titleLabel.text = R.string.localizable.good()
+                    countup?(true)
+                } else {
+                    titleLabel.text = R.string.localizable.bad()
+                    countup?(false)
+                }
+            }
         case .advanced:
             //選んだ相性が正解の相性ちと完全一致している場合true
-            judg = result.superiority == selectedTypes
-        }
-        if judg {
-            titleLabel.text = R.string.localizable.good()
-
-            db.collection(quizPokeType.key).document(Keys.result).setData(
-                [Keys.success: success + 1,
-                 Keys.failure: failure]
-            )
-            countup?(true)
-        } else {
-            titleLabel.text = R.string.localizable.bad()
-            db.collection(quizPokeType.key).document(Keys.result).setData(
-                [Keys.success: success,
-                 Keys.failure: failure + 1]
-            )
-            countup?(false)
+            if result.superiority == selectedTypes {
+                titleLabel.text = R.string.localizable.good()
+                
+                db.collection(quizPokeType.key).document(Keys.result).setData(
+                    [Keys.success: success + 1,
+                     Keys.failure: failure]
+                )
+                countup?(true)
+            } else {
+                titleLabel.text = R.string.localizable.bad()
+                db.collection(quizPokeType.key).document(Keys.result).setData(
+                    [Keys.success: success,
+                     Keys.failure: failure + 1]
+                )
+                countup?(false)
+            }
         }
     }
 }
@@ -98,7 +119,7 @@ extension ResultViewController: UITableViewDataSource {
 }
 
 extension ResultViewController: UITableViewDelegate {
- 
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.header.identifier) as? HeaderTableViewCell else { return nil }
         cell.set(title: R.string.localizable.this_is_excellent_for(quizPokeType.title))

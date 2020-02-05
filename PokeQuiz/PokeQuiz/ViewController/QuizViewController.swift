@@ -67,6 +67,11 @@ final class QuizViewController: UIViewController {
         reloadQuiz()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -170,6 +175,7 @@ final class QuizViewController: UIViewController {
         guard let resultViewController = R.storyboard.main.resultViewController() else {
             return
         }
+        resultViewController.modeType = modeType
         resultViewController.result = result
         resultViewController.success = success
         resultViewController.failure = failure
@@ -190,6 +196,7 @@ final class QuizViewController: UIViewController {
     
     private func showGameOver() {
         guard let gameOverViewController = R.storyboard.main.gameOverViewController() else { return }
+        gameOverViewController.modeType = modeType
         gameOverViewController.correctCount = correctCount
         present(gameOverViewController, animated: true, completion: nil)
     }
