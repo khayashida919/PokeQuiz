@@ -913,7 +913,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: ja
       static let uxSUjUrdText = Rswift.StringResource(key: "UxS-uj-urd.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
-      /// ja translation: 相性を3つ当てると正解
+      /// ja translation: 相性を3つ以上当てると正解
       /// 
       /// Locales: ja
       static let lmkO1RrnText = Rswift.StringResource(key: "lmk-O1-Rrn.text", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
@@ -1142,7 +1142,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("UxS-uj-urd.text", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
-      /// ja translation: 相性を3つ当てると正解
+      /// ja translation: 相性を3つ以上当てると正解
       /// 
       /// Locales: ja
       static func lmkO1RrnText(_: Void = ()) -> String {

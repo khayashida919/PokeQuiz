@@ -99,7 +99,7 @@
 "wPx-dG-eAi.normalTitle" = "中級";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "lmk-O1-Rrn"; */
-"lmk-O1-Rrn.text" = "相性を3つ当てると正解";
+"lmk-O1-Rrn.text" = "相性を3つ以上当てると正解";
 
 /* Class = "UIButton"; normalTitle = "上級"; ObjectID = "KZt-os-Shm"; */
 "KZt-os-Shm.normalTitle" = "上級";

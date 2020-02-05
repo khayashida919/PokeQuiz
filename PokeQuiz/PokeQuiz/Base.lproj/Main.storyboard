@@ -1027,53 +1027,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RxV-sV-dgZ">
-                                <rect key="frame" x="16" y="0.0" width="343" height="647"/>
+                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="6c4-uD-Mx2">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KzB-rM-N3H">
-                                            <rect key="frame" x="8" y="0.0" width="327" height="28"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Sqx-7O-MgE">
+                                            <rect key="frame" x="8" y="4" width="327" height="72"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Rank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV6-Ib-06q">
-                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="28"/>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rP8-kJ-t3N">
+                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="41"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="TSI-0d-0ar"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Bn4-iv-3iF"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" name="PokeBlack"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elB-P6-Ug2">
-                                                    <rect key="frame" x="70" y="0.0" width="171.5" height="28"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" name="PokeBlack"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGf-l9-VTY">
-                                                    <rect key="frame" x="241.5" y="0.0" width="85.5" height="28"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" name="PokeBlack"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <segments>
+                                                        <segment title="Beginner"/>
+                                                        <segment title="Intermediate"/>
+                                                        <segment title="Advanced"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KzB-rM-N3H">
+                                                    <rect key="frame" x="0.0" y="44" width="327" height="28"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Rank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV6-Ib-06q">
+                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="28"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="TSI-0d-0ar"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="PokeBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elB-P6-Ug2">
+                                                            <rect key="frame" x="70" y="0.0" width="171.5" height="28"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="PokeBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGf-l9-VTY">
+                                                            <rect key="frame" x="241.5" y="0.0" width="85.5" height="28"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="PokeBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="nGf-l9-VTY" firstAttribute="width" secondItem="elB-P6-Ug2" secondAttribute="width" multiplier="0.5" id="hhJ-Lc-Ego"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="nGf-l9-VTY" firstAttribute="width" secondItem="elB-P6-Ug2" secondAttribute="width" multiplier="0.5" id="hhJ-Lc-Ego"/>
-                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="0.20202464788732394" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="KzB-rM-N3H" firstAttribute="top" secondItem="6c4-uD-Mx2" secondAttribute="top" id="Oqv-1Z-fFM"/>
-                                        <constraint firstAttribute="bottom" secondItem="KzB-rM-N3H" secondAttribute="bottom" id="bEA-66-SZ1"/>
-                                        <constraint firstItem="KzB-rM-N3H" firstAttribute="leading" secondItem="6c4-uD-Mx2" secondAttribute="leading" constant="8" id="j7i-kU-CgN"/>
-                                        <constraint firstAttribute="trailing" secondItem="KzB-rM-N3H" secondAttribute="trailing" constant="8" id="rO9-Gk-gTm"/>
+                                        <constraint firstAttribute="bottom" secondItem="Sqx-7O-MgE" secondAttribute="bottom" constant="4" id="Uo7-Gg-yUh"/>
+                                        <constraint firstItem="Sqx-7O-MgE" firstAttribute="top" secondItem="6c4-uD-Mx2" secondAttribute="top" constant="4" id="WEV-9G-442"/>
+                                        <constraint firstItem="Sqx-7O-MgE" firstAttribute="leading" secondItem="6c4-uD-Mx2" secondAttribute="leading" constant="8" id="aad-s4-3bq"/>
+                                        <constraint firstAttribute="trailing" secondItem="Sqx-7O-MgE" secondAttribute="trailing" constant="8" id="wjL-0a-XVi"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RankingTableViewCell" id="nrL-bA-hT1" customClass="RankingTableViewCell" customModule="PokeQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="343" height="80"/>
+                                        <rect key="frame" x="0.0" y="108" width="343" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nrL-bA-hT1" id="ohM-Te-MH2">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
@@ -1135,7 +1151,7 @@
                             <constraint firstItem="RxV-sV-dgZ" firstAttribute="leading" secondItem="32v-OP-FbA" secondAttribute="leading" constant="16" id="Lqd-Wc-rnh"/>
                             <constraint firstItem="32v-OP-FbA" firstAttribute="trailing" secondItem="RxV-sV-dgZ" secondAttribute="trailing" constant="16" id="TxV-Ij-Uck"/>
                             <constraint firstItem="RxV-sV-dgZ" firstAttribute="top" secondItem="Nv2-55-giM" secondAttribute="top" id="dh1-2r-sHB"/>
-                            <constraint firstItem="32v-OP-FbA" firstAttribute="bottom" secondItem="RxV-sV-dgZ" secondAttribute="bottom" constant="20" id="r9F-Wc-wUc"/>
+                            <constraint firstAttribute="bottom" secondItem="RxV-sV-dgZ" secondAttribute="bottom" id="r9F-Wc-wUc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="32v-OP-FbA"/>
                     </view>
