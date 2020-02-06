@@ -106,3 +106,12 @@
 
 /* Class = "UILabel"; text = "ぽけくいず"; ObjectID = "Wwf-lH-zZB"; */
 "Wwf-lH-zZB.text" = "相性を全て当てると正解";
+
+/* Class = "UISegmentedControl"; text = "初級"; ObjectID = "rP8-kJ-t3N"; */
+"rP8-kJ-t3N.segmentTitles[0]" = "初級";
+
+/* Class = "UISegmentedControl"; text = "中級"; ObjectID = "rP8-kJ-t3N"; */
+"rP8-kJ-t3N.segmentTitles[1]" = "中級";
+
+/* Class = "UISegmentedControl"; text = "上級"; ObjectID = "rP8-kJ-t3N"; */
+"rP8-kJ-t3N.segmentTitles[2]" = "上級";

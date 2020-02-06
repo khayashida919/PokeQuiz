@@ -35,7 +35,14 @@ final class InputNameViewController: UIViewController {
                               uuid: AppData.shared.uuid,
                               point: point)
         
-        Firestore.firestore().collection(Keys.advancedRanking).addDocument(data: ranking.toDictionary())
+        var key: String
+        switch modeType {
+        case .beginner: key = Keys.beginnerRanking
+        case .intermediate: key = Keys.intermediateRanking
+        case .advanced: key = Keys.advancedRanking
+        }
+        
+        Firestore.firestore().collection(key).addDocument(data: ranking.toDictionary())
         dismiss(animated: true) { [weak self] in
             self?.onTap?()
         }

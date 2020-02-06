@@ -12,6 +12,7 @@ import Firebase
 final class RankingViewController: UIViewController {
     
     @IBOutlet private weak var rankingTableView: UITableView!
+    @IBOutlet private weak var modeTypeSegmentedControl: UISegmentedControl!
     
     var users = [User]()
     
@@ -21,10 +22,13 @@ final class RankingViewController: UIViewController {
         rankingTableView.dataSource = self
         rankingTableView.delegate = self
         
+        let font = UIFont(name: "Tanuki-Permanent-Marker", size: 20) ?? UIFont()
+        modeTypeSegmentedControl.setTitleTextAttributes([.font : font], for: .normal)
+        
         navigationItem.title = R.string.localizable.ranking()
         setGradiention()
         
-        getRanking() {
+        getRanking(key: Keys.beginnerRanking) {
             self.rankingTableView.reloadData()
         }
     }
@@ -35,8 +39,17 @@ final class RankingViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
-    private func getRanking(_ completion: (() -> Void)? = nil) {
-        Firestore.firestore().collection(Keys.advancedRanking).getDocuments { [weak self] (querySnapshot, error) in
+    @IBAction func modeChangeAction(_ sender: UISegmentedControl) {
+        let keys = [Keys.beginnerRanking, Keys.intermediateRanking, Keys.advancedRanking]
+        let key = keys[sender.selectedSegmentIndex]
+        
+        getRanking(key: key) {
+            self.rankingTableView.reloadData()
+        }
+    }
+    
+    private func getRanking(key: String, completion: (() -> Void)? = nil) {
+        Firestore.firestore().collection(key).getDocuments { [weak self] (querySnapshot, error) in
             guard let self = self else { return }
             if error != nil {
                 self.showAlert(isCancel: false, title: R.string.localizable.error(), message: R.string.localizable.server_error())
@@ -62,7 +75,10 @@ final class RankingViewController: UIViewController {
         guard !blocks.contains(user.uuid) else { return }  //既に登録されていたらreturn
         AppData.shared.blockList = blocks + [user.uuid]
         
-        getRanking() {
+        let keys = [Keys.beginnerRanking, Keys.intermediateRanking, Keys.advancedRanking]
+        let key = keys[modeTypeSegmentedControl.selectedSegmentIndex]
+        
+        getRanking(key: key) {
             self.rankingTableView.reloadData()
         }
     }

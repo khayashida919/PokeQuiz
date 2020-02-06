@@ -799,7 +799,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.main` struct is generated, and contains static references to 36 localization keys.
+    /// This `R.string.main` struct is generated, and contains static references to 39 localization keys.
     struct main {
       /// ja translation: --
       /// 
@@ -869,6 +869,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: ja
       static let kZtOsShmNormalTitle = Rswift.StringResource(key: "KZt-os-Shm.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 上級
+      /// 
+      /// Locales: ja
+      static let rP8KJT3NSegmentTitles2 = Rswift.StringResource(key: "rP8-kJ-t3N.segmentTitles[2]", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 中級
+      /// 
+      /// Locales: ja
+      static let rP8KJT3NSegmentTitles1 = Rswift.StringResource(key: "rP8-kJ-t3N.segmentTitles[1]", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
       /// ja translation: 中級
       /// 
       /// Locales: ja
@@ -881,6 +889,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: ja
       static let h8JZO8p1NormalTitle = Rswift.StringResource(key: "h8J-ZO-8p1.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
+      /// ja translation: 初級
+      /// 
+      /// Locales: ja
+      static let rP8KJT3NSegmentTitles0 = Rswift.StringResource(key: "rP8-kJ-t3N.segmentTitles[0]", tableName: "Main", bundle: R.hostingBundle, locales: ["ja"], comment: nil)
       /// ja translation: 効果抜群を選べ！
       /// 
       /// Locales: ja
@@ -1065,6 +1077,20 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("KZt-os-Shm.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
+      /// ja translation: 上級
+      /// 
+      /// Locales: ja
+      static func rP8KJT3NSegmentTitles2(_: Void = ()) -> String {
+        return NSLocalizedString("rP8-kJ-t3N.segmentTitles[2]", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 中級
+      /// 
+      /// Locales: ja
+      static func rP8KJT3NSegmentTitles1(_: Void = ()) -> String {
+        return NSLocalizedString("rP8-kJ-t3N.segmentTitles[1]", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// ja translation: 中級
       /// 
       /// Locales: ja
@@ -1084,6 +1110,13 @@ struct R: Rswift.Validatable {
       /// Locales: ja
       static func h8JZO8p1NormalTitle(_: Void = ()) -> String {
         return NSLocalizedString("h8J-ZO-8p1.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ja translation: 初級
+      /// 
+      /// Locales: ja
+      static func rP8KJT3NSegmentTitles0(_: Void = ()) -> String {
+        return NSLocalizedString("rP8-kJ-t3N.segmentTitles[0]", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
       /// ja translation: 効果抜群を選べ！
